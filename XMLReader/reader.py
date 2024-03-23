@@ -104,9 +104,9 @@ def calculate_statistics(data):
                 prepared_data.append({'date': date, 'value': stats})
 
         df = pd.DataFrame(prepared_data)
-        df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d').dt.date
-        df = df.groupby('date').agg({'value': 'sum'}).reset_index()
+        df['date'] = pd.to_datetime(df['date'])
         df.set_index('date', inplace=True)
+        df.sort_index(inplace=True)
 
         # Calculate basic statistics
         value['max'] = df['value'].max()
