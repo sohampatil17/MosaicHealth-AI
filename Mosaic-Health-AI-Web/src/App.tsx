@@ -1,5 +1,8 @@
-import { CssBaseline } from '@mui/joy';
+import { Box, CssBaseline } from '@mui/joy';
 import { CssVarsProvider, extendTheme } from '@mui/joy/styles';
+import NavBar from './components/Navbar';
+import Left_Pane from './components/Left_Pane';
+import Data_Insights from './components/Data_Insights';
 
 const my_theme = extendTheme({
   colorSchemes: {
@@ -26,8 +29,11 @@ export default function App() {
       modeStorageKey="joy-identify-system-mode"
     >
       <CssBaseline />
-      {/*<DarkModeDetector />*/}
-      <TodoList />
-    </CssVarsProvider>
+      <NavBar />
+      <Box sx={{ display: 'flex', width: '100%', flexFlow: 1 }}>
+        <Left_Pane />
+        <Data_Insights />
+      </Box>
+    </CssVarsProvider >
   );
 }
