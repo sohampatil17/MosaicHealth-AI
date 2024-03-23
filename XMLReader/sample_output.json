@@ -1,0 +1,651 @@
+{
+    "categories": [
+        "DietaryWater",
+        "BodyMassIndex",
+        "Height",
+        "BodyMass",
+        "HeartRate",
+        "OxygenSaturation",
+        "BloodPressureSystolic",
+        "BloodPressureDiastolic",
+        "RespiratoryRate",
+        "StepCount",
+        "DistanceWalkingRunning",
+        "BasalEnergyBurned",
+        "ActiveEnergyBurned",
+        "FlightsClimbed",
+        "DietaryFatTotal",
+        "DietaryFatPolyunsaturated",
+        "DietaryFatMonounsaturated",
+        "DietaryFatSaturated",
+        "DietaryCholesterol",
+        "DietarySodium",
+        "DietaryCarbohydrates",
+        "DietaryFiber",
+        "DietarySugar",
+        "DietaryEnergyConsumed",
+        "DietaryProtein",
+        "DietaryVitaminC",
+        "DietaryCalcium",
+        "DietaryIron",
+        "DietaryPotassium",
+        "NumberOfTimesFallen",
+        "AppleExerciseTime",
+        "DietaryCaffeine",
+        "DistanceCycling",
+        "DistanceSwimming",
+        "SwimmingStrokeCount",
+        "RestingHeartRate",
+        "VO2Max",
+        "WalkingHeartRateAverage",
+        "EnvironmentalAudioExposure",
+        "HeadphoneAudioExposure",
+        "WalkingDoubleSupportPercentage",
+        "SixMinuteWalkTestDistance",
+        "AppleStandTime",
+        "WalkingSpeed",
+        "WalkingStepLength",
+        "WalkingAsymmetryPercentage",
+        "StairAscentSpeed",
+        "StairDescentSpeed",
+        "HKDataTypeSleepDurationGoal",
+        "AppleWalkingSteadiness",
+        "RunningStrideLength",
+        "RunningVerticalOscillation",
+        "RunningGroundContactTime",
+        "HeartRateRecoveryOneMinute",
+        "RunningPower",
+        "EnvironmentalSoundReduction",
+        "RunningSpeed",
+        "TimeInDaylight",
+        "PhysicalEffort",
+        "SleepAnalysis",
+        "AppleStandHour",
+        "MindfulSession",
+        "HighHeartRateEvent",
+        "LowHeartRateEvent",
+        "AudioExposureEvent",
+        "ToothbrushingEvent",
+        "HeadphoneAudioExposureEvent",
+        "HandwashingEvent",
+        "HeartRateVariabilitySDNN"
+    ],
+    "data": {
+        "DietaryWater": {
+            "unit": "mL",
+            "max": 1000.0,
+            "min": 0.0,
+            "median": 0.0,
+            "mean": 208.33333333333334,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "BodyMassIndex": {
+            "unit": "count",
+            "max": 17.4855,
+            "min": 17.4855,
+            "median": 17.4855,
+            "mean": 17.4855,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "Height": {
+            "unit": "ft",
+            "max": 5.83333,
+            "min": 5.08333,
+            "median": 5.5,
+            "mean": 5.499998333333333,
+            "1_month_trend": null,
+            "6_month_trend": 1.44921739130435
+        },
+        "BodyMass": {
+            "unit": "lb",
+            "max": 150.0,
+            "min": 115.0,
+            "median": 137.2,
+            "mean": 137.85794392523363,
+            "1_month_trend": -0.9132420091324266,
+            "6_month_trend": -0.4592422502870199
+        },
+        "HeartRate": {
+            "unit": "count/min",
+            "max": 196.0,
+            "min": 38.0,
+            "median": 91.0,
+            "mean": 92.44891846206912,
+            "1_month_trend": -0.36431810741446424,
+            "6_month_trend": 5.397564033634755
+        },
+        "OxygenSaturation": {
+            "unit": "%",
+            "max": 1.0,
+            "min": 0.81,
+            "median": 0.96,
+            "mean": 0.9638227710679875,
+            "1_month_trend": -0.3049101830298449,
+            "6_month_trend": -0.37267392870750127
+        },
+        "BloodPressureSystolic": {
+            "unit": "mmHg",
+            "max": 124.0,
+            "min": 106.0,
+            "median": 113.0,
+            "mean": 114.33333333333333,
+            "1_month_trend": null,
+            "6_month_trend": 9.734513274336283
+        },
+        "BloodPressureDiastolic": {
+            "unit": "mmHg",
+            "max": 75.0,
+            "min": 64.0,
+            "median": 71.0,
+            "mean": 70.4,
+            "1_month_trend": null,
+            "6_month_trend": 7.142857142857142
+        },
+        "RespiratoryRate": {
+            "unit": "count/min",
+            "max": 36.0,
+            "min": 7.5,
+            "median": 16.0,
+            "mean": 16.72933808404349,
+            "1_month_trend": -0.9150276994261882,
+            "6_month_trend": 1.9192620473593391
+        },
+        "StepCount": {
+            "unit": "count",
+            "max": 1940.0,
+            "min": 1.0,
+            "median": 46.0,
+            "mean": 116.82584116462493,
+            "1_month_trend": -1.1851981940879979,
+            "6_month_trend": 54.794933723700154
+        },
+        "DistanceWalkingRunning": {
+            "unit": "mi",
+            "max": 1.73592,
+            "min": 2.75064e-06,
+            "median": 0.017719,
+            "mean": 0.03690585657306773,
+            "1_month_trend": -16.964598277994334,
+            "6_month_trend": 5.390163919873813
+        },
+        "BasalEnergyBurned": {
+            "unit": "Cal",
+            "max": 71.419,
+            "min": 0.043,
+            "median": 0.675,
+            "mean": 5.4058020386745556,
+            "1_month_trend": -3.460491606044785,
+            "6_month_trend": -8.08502600828368
+        },
+        "ActiveEnergyBurned": {
+            "unit": "Cal",
+            "max": 181.0,
+            "min": 0.001,
+            "median": 0.269,
+            "mean": 0.6298361919834331,
+            "1_month_trend": -12.111013142297747,
+            "6_month_trend": 93.35446329186571
+        },
+        "FlightsClimbed": {
+            "unit": "count",
+            "max": 30.0,
+            "min": 1.0,
+            "median": 1.0,
+            "mean": 1.9314594384784578,
+            "1_month_trend": -4.576639166304819,
+            "6_month_trend": 1.8665699360585621
+        },
+        "DietaryFatTotal": {
+            "unit": "g",
+            "max": 114.5,
+            "min": 0.0,
+            "median": 22.000500000000002,
+            "mean": 26.811640337837833,
+            "1_month_trend": -20.275049476000653,
+            "6_month_trend": null
+        },
+        "DietaryFatPolyunsaturated": {
+            "unit": "g",
+            "max": 15.3805,
+            "min": 0.0,
+            "median": 1.0,
+            "mean": 2.069104834586466,
+            "1_month_trend": 23.700777262544246,
+            "6_month_trend": null
+        },
+        "DietaryFatMonounsaturated": {
+            "unit": "g",
+            "max": 47.6796,
+            "min": 0.0,
+            "median": 2.0,
+            "mean": 5.71893067669173,
+            "1_month_trend": -44.64478306008643,
+            "6_month_trend": null
+        },
+        "DietaryFatSaturated": {
+            "unit": "g",
+            "max": 40.0,
+            "min": 0.0,
+            "median": 4.85,
+            "mean": 7.050768952380953,
+            "1_month_trend": 14.72249959212817,
+            "6_month_trend": null
+        },
+        "DietaryCholesterol": {
+            "unit": "mg",
+            "max": 770.284,
+            "min": 0.0,
+            "median": 7.0,
+            "mean": 38.68985815602837,
+            "1_month_trend": 13.735467059320108,
+            "6_month_trend": null
+        },
+        "DietarySodium": {
+            "unit": "mg",
+            "max": 4557.69,
+            "min": 0.0,
+            "median": 563.075,
+            "mean": 777.8001841059602,
+            "1_month_trend": -4.959484462444228,
+            "6_month_trend": null
+        },
+        "DietaryCarbohydrates": {
+            "unit": "g",
+            "max": 332.75,
+            "min": 0.0,
+            "median": 65.3763,
+            "mean": 78.69067647058824,
+            "1_month_trend": 2.075331987127568,
+            "6_month_trend": null
+        },
+        "DietaryFiber": {
+            "unit": "g",
+            "max": 43.5588,
+            "min": 0.0,
+            "median": 5.0,
+            "mean": 6.62251306122449,
+            "1_month_trend": 4.648884810121317,
+            "6_month_trend": null
+        },
+        "DietarySugar": {
+            "unit": "g",
+            "max": 174.0,
+            "min": 0.0,
+            "median": 16.942,
+            "mean": 26.960914385620917,
+            "1_month_trend": 13.123891500243253,
+            "6_month_trend": null
+        },
+        "DietaryEnergyConsumed": {
+            "unit": "Cal",
+            "max": 2612.5,
+            "min": 0.0,
+            "median": 542.1925,
+            "mean": 610.321,
+            "1_month_trend": -10.846974762291502,
+            "6_month_trend": null
+        },
+        "DietaryProtein": {
+            "unit": "g",
+            "max": 86.25,
+            "min": 0.0,
+            "median": 15.54375,
+            "mean": 18.972312171052632,
+            "1_month_trend": -16.39259080384065,
+            "6_month_trend": null
+        },
+        "DietaryVitaminC": {
+            "unit": "mg",
+            "max": 324.335,
+            "min": 0.0,
+            "median": 4.8,
+            "mean": 20.035124060150377,
+            "1_month_trend": -46.47115700639038,
+            "6_month_trend": null
+        },
+        "DietaryCalcium": {
+            "unit": "mg",
+            "max": 3463.88,
+            "min": 0.0,
+            "median": 81.575,
+            "mean": 212.46135864661656,
+            "1_month_trend": 50.56708317188442,
+            "6_month_trend": null
+        },
+        "DietaryIron": {
+            "unit": "mg",
+            "max": 27.155,
+            "min": 0.0,
+            "median": 1.99623,
+            "mean": 2.657724842105263,
+            "1_month_trend": 71.59754126779785,
+            "6_month_trend": null
+        },
+        "DietaryPotassium": {
+            "unit": "mg",
+            "max": 2269.13,
+            "min": 0.0,
+            "median": 289.14,
+            "mean": 407.884995890411,
+            "1_month_trend": -38.16962329843735,
+            "6_month_trend": null
+        },
+        "NumberOfTimesFallen": {
+            "unit": "count",
+            "max": 1.0,
+            "min": 1.0,
+            "median": 1.0,
+            "mean": 1.0,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "AppleExerciseTime": {
+            "unit": "min",
+            "max": 1.0,
+            "min": 1.0,
+            "median": 1.0,
+            "mean": 1.0,
+            "1_month_trend": 0.0,
+            "6_month_trend": 0.0
+        },
+        "DietaryCaffeine": {
+            "unit": "mg",
+            "max": 220.0,
+            "min": 28.0,
+            "median": 79.5,
+            "mean": 95.92307692307692,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "DistanceCycling": {
+            "unit": "mi",
+            "max": 1.67513,
+            "min": 2.26054e-15,
+            "median": 0.005371245,
+            "mean": 0.12429351839973589,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "DistanceSwimming": {
+            "unit": "yd",
+            "max": 302.599,
+            "min": 15.7836,
+            "median": 50.0,
+            "mean": 61.211441379310344,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "SwimmingStrokeCount": {
+            "unit": "count",
+            "max": 60.0,
+            "min": 3.0,
+            "median": 14.0,
+            "mean": 13.206896551724139,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "RestingHeartRate": {
+            "unit": "count/min",
+            "max": 95.0,
+            "min": 51.0,
+            "median": 67.0,
+            "mean": 68.37906423473434,
+            "1_month_trend": 4.452592980618129,
+            "6_month_trend": -0.8147140494778367
+        },
+        "VO2Max": {
+            "unit": "mL/min\u00b7kg",
+            "max": 48.7075,
+            "min": 34.41,
+            "median": 42.835,
+            "mean": 42.901075694444444,
+            "1_month_trend": 6.0932856999766205,
+            "6_month_trend": -1.556209471710876
+        },
+        "WalkingHeartRateAverage": {
+            "unit": "count/min",
+            "max": 154.0,
+            "min": 77.0,
+            "median": 113.5,
+            "mean": 113.40361445783132,
+            "1_month_trend": -0.15564202334629468,
+            "6_month_trend": 0.8483308065744528
+        },
+        "EnvironmentalAudioExposure": {
+            "unit": "dBASPL",
+            "max": 109.363,
+            "min": 31.288,
+            "median": 60.84825,
+            "mean": 59.658646194665835,
+            "1_month_trend": 2.887574000417301,
+            "6_month_trend": -2.806133420272366
+        },
+        "HeadphoneAudioExposure": {
+            "unit": "dBASPL",
+            "max": 102.738,
+            "min": 0.0,
+            "median": 70.27235,
+            "mean": 66.53899553173666,
+            "1_month_trend": 3.6079515836358955,
+            "6_month_trend": 2.303153299020109
+        },
+        "WalkingDoubleSupportPercentage": {
+            "unit": "%",
+            "max": 0.332,
+            "min": 0.181,
+            "median": 0.268,
+            "mean": 0.2680365443930381,
+            "1_month_trend": -0.5441432972544238,
+            "6_month_trend": -1.60172170022951
+        },
+        "SixMinuteWalkTestDistance": {
+            "unit": "m",
+            "max": 500.0,
+            "min": 493.0,
+            "median": 500.0,
+            "mean": 499.89814814814815,
+            "1_month_trend": 0.0,
+            "6_month_trend": 0.0
+        },
+        "AppleStandTime": {
+            "unit": "min",
+            "max": 5.0,
+            "min": 1.0,
+            "median": 2.0,
+            "mean": 2.3365664245909894,
+            "1_month_trend": 1.0326284513956558,
+            "6_month_trend": -0.8253950058043521
+        },
+        "WalkingSpeed": {
+            "unit": "mi/hr",
+            "max": 4.98837,
+            "min": 0.850036,
+            "median": 2.84091,
+            "mean": 2.8194603093827277,
+            "1_month_trend": 0.42195723798294965,
+            "6_month_trend": 3.366170236064302
+        },
+        "WalkingStepLength": {
+            "unit": "in",
+            "max": 54.3307,
+            "min": 10.2362,
+            "median": 28.7402,
+            "mean": 28.278948150048993,
+            "1_month_trend": -0.43162156867331336,
+            "6_month_trend": -0.8252507197278353
+        },
+        "WalkingAsymmetryPercentage": {
+            "unit": "%",
+            "max": 1.0,
+            "min": 0.0,
+            "median": 0.0,
+            "mean": 0.01976727618142959,
+            "1_month_trend": 45.436424100156465,
+            "6_month_trend": -18.912157957411484
+        },
+        "StairAscentSpeed": {
+            "unit": "ft/s",
+            "max": 3.86805,
+            "min": 0.656362,
+            "median": 1.00976,
+            "mean": 1.0820915486820872,
+            "1_month_trend": 8.700936386487292,
+            "6_month_trend": 1.226884014308337
+        },
+        "StairDescentSpeed": {
+            "unit": "ft/s",
+            "max": 3.08003,
+            "min": 0.65675,
+            "median": 1.0823200000000002,
+            "mean": 1.2253981604991393,
+            "1_month_trend": -1.8382636675919304,
+            "6_month_trend": 4.5660030544124846
+        },
+        "HKDataTypeSleepDurationGoal": {
+            "unit": "hr",
+            "max": 8.5,
+            "min": 8.0,
+            "median": 8.25,
+            "mean": 8.25,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "AppleWalkingSteadiness": {
+            "unit": "%",
+            "max": 1.0,
+            "min": 0.989896,
+            "median": 1.0,
+            "mean": 0.9999164958677687,
+            "1_month_trend": -0.20208000000000448,
+            "6_month_trend": -0.038861538461532064
+        },
+        "RunningStrideLength": {
+            "unit": "m",
+            "max": 1.18521,
+            "min": 0.978908,
+            "median": 1.0338815000000001,
+            "mean": 1.061374,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "RunningVerticalOscillation": {
+            "unit": "cm",
+            "max": 10.1176,
+            "min": 9.41212,
+            "median": 9.818675,
+            "mean": 9.796131666666666,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "RunningGroundContactTime": {
+            "unit": "ms",
+            "max": 278.655,
+            "min": 244.6,
+            "median": 256.414,
+            "mean": 258.14966666666663,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "HeartRateRecoveryOneMinute": {
+            "unit": "count/min",
+            "max": 45.6027,
+            "min": 27.7151,
+            "median": 37.5414,
+            "mean": 36.71370645161291,
+            "1_month_trend": -7.620194138049645,
+            "6_month_trend": null
+        },
+        "RunningPower": {
+            "unit": "W",
+            "max": 254.185,
+            "min": 155.513,
+            "median": 200.0915,
+            "mean": 204.51025000000004,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "EnvironmentalSoundReduction": {
+            "unit": "dBASPL",
+            "max": 24.0,
+            "min": 1.00058,
+            "median": 19.2605,
+            "mean": 18.819889109748782,
+            "1_month_trend": 11.329497791075042,
+            "6_month_trend": -14.24920172942469
+        },
+        "RunningSpeed": {
+            "unit": "mi/hr",
+            "max": 7.69099,
+            "min": 2.50692,
+            "median": 5.82991,
+            "mean": 5.691585,
+            "1_month_trend": null,
+            "6_month_trend": null
+        },
+        "TimeInDaylight": {
+            "unit": "min",
+            "max": 5.0,
+            "min": 1.0,
+            "median": 5.0,
+            "mean": 4.25,
+            "1_month_trend": -4.156373517786563,
+            "6_month_trend": null
+        },
+        "PhysicalEffort": {
+            "unit": "kcal/hr\u00b7kg",
+            "max": 20.0,
+            "min": 1.0,
+            "median": 4.1,
+            "mean": 3.8782920932878278,
+            "1_month_trend": -0.1586117172291561,
+            "6_month_trend": null
+        },
+        "SleepAnalysis": {
+            "data_points": [],
+            "unit": null
+        },
+        "AppleStandHour": {
+            "data_points": [],
+            "unit": null
+        },
+        "MindfulSession": {
+            "data_points": [],
+            "unit": null
+        },
+        "HighHeartRateEvent": {
+            "data_points": [],
+            "unit": null
+        },
+        "LowHeartRateEvent": {
+            "data_points": [],
+            "unit": null
+        },
+        "AudioExposureEvent": {
+            "data_points": [],
+            "unit": null
+        },
+        "ToothbrushingEvent": {
+            "data_points": [],
+            "unit": null
+        },
+        "HeadphoneAudioExposureEvent": {
+            "data_points": [],
+            "unit": null
+        },
+        "HandwashingEvent": {
+            "data_points": [],
+            "unit": null
+        },
+        "HeartRateVariabilitySDNN": {
+            "unit": "ms",
+            "max": 258.783,
+            "min": 4.68818,
+            "median": 38.2402,
+            "mean": 47.3860839064222,
+            "1_month_trend": 1.2612678452552035,
+            "6_month_trend": 5.037334776444992
+        }
+    }
+}
