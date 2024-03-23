@@ -73,579 +73,1084 @@
     "data": {
         "DietaryWater": {
             "unit": "mL",
+            "type": "cumulative",
             "max": 1000.0,
             "min": 0.0,
             "median": 0.0,
             "mean": 208.33333333333334,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 6,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "BodyMassIndex": {
             "unit": "count",
+            "type": "average",
             "max": 17.4855,
             "min": 17.4855,
             "median": 17.4855,
             "mean": 17.4855,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 1,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "Height": {
             "unit": "ft",
+            "type": "average",
             "max": 5.83333,
             "min": 5.08333,
             "median": 5.5,
             "mean": 5.499998333333333,
             "1_month_trend": null,
-            "6_month_trend": 1.44921739130435
+            "6_month_trend": 1.44921739130435,
+            "datapoint_count": {
+                "2018": 1,
+                "2019": 2,
+                "2020": 1,
+                "2022": 2,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "BodyMass": {
             "unit": "lb",
+            "type": "average",
             "max": 150.0,
             "min": 115.0,
-            "median": 137.2,
-            "mean": 137.85794392523363,
+            "median": 137.7,
+            "mean": 137.7896551724138,
             "1_month_trend": -0.9132420091324266,
-            "6_month_trend": -0.4592422502870199
+            "6_month_trend": -0.5168594634506523,
+            "datapoint_count": {
+                "2018": 1,
+                "2019": 1,
+                "2020": 6,
+                "2021": 21,
+                "2022": 7,
+                "2023": 18,
+                "2024": 4,
+                "last_6_months": 5,
+                "last_1_month": 0
+            }
         },
         "HeartRate": {
             "unit": "count/min",
-            "max": 196.0,
-            "min": 38.0,
-            "median": 91.0,
-            "mean": 92.44891846206912,
-            "1_month_trend": -0.36431810741446424,
-            "6_month_trend": 5.397564033634755
+            "type": "average",
+            "max": 127.38365668161435,
+            "min": 63.91282047244095,
+            "median": 87.12108405315614,
+            "mean": 88.39888270013527,
+            "1_month_trend": -2.194186703016774,
+            "6_month_trend": 5.0139260850076806,
+            "datapoint_count": {
+                "2019": 1,
+                "2020": 330,
+                "2021": 271,
+                "2022": 208,
+                "2023": 365,
+                "2024": 82,
+                "last_6_months": 181,
+                "last_1_month": 28
+            }
         },
         "OxygenSaturation": {
             "unit": "%",
-            "max": 1.0,
-            "min": 0.81,
-            "median": 0.96,
-            "mean": 0.9638227710679875,
-            "1_month_trend": -0.3049101830298449,
-            "6_month_trend": -0.37267392870750127
+            "type": "average",
+            "max": 0.99,
+            "min": 0.895,
+            "median": 0.9640000000000001,
+            "mean": 0.9639257624394477,
+            "1_month_trend": -0.5455556074899108,
+            "6_month_trend": -0.46122835325922534,
+            "datapoint_count": {
+                "2022": 61,
+                "2023": 365,
+                "2024": 81,
+                "last_6_months": 180,
+                "last_1_month": 28
+            }
         },
         "BloodPressureSystolic": {
             "unit": "mmHg",
+            "type": "average",
             "max": 124.0,
             "min": 106.0,
             "median": 113.0,
             "mean": 114.33333333333333,
             "1_month_trend": null,
-            "6_month_trend": 9.734513274336283
+            "6_month_trend": 9.734513274336283,
+            "datapoint_count": {
+                "2022": 1,
+                "2023": 14,
+                "last_6_months": 1,
+                "last_1_month": 0
+            }
         },
         "BloodPressureDiastolic": {
             "unit": "mmHg",
+            "type": "average",
             "max": 75.0,
             "min": 64.0,
             "median": 71.0,
             "mean": 70.4,
             "1_month_trend": null,
-            "6_month_trend": 7.142857142857142
+            "6_month_trend": 7.142857142857142,
+            "datapoint_count": {
+                "2022": 1,
+                "2023": 14,
+                "last_6_months": 1,
+                "last_1_month": 0
+            }
         },
         "RespiratoryRate": {
             "unit": "count/min",
-            "max": 36.0,
-            "min": 7.5,
-            "median": 16.0,
-            "mean": 16.72933808404349,
-            "1_month_trend": -0.9150276994261882,
-            "6_month_trend": 1.9192620473593391
+            "type": "average",
+            "max": 23.25,
+            "min": 8.0,
+            "median": 16.698039215686272,
+            "mean": 16.883794959864606,
+            "1_month_trend": 0.9357203583661677,
+            "6_month_trend": 2.2237864860064205,
+            "datapoint_count": {
+                "2022": 190,
+                "2023": 353,
+                "2024": 71,
+                "last_6_months": 166,
+                "last_1_month": 24
+            }
         },
         "StepCount": {
             "unit": "count",
-            "max": 1940.0,
-            "min": 1.0,
-            "median": 46.0,
-            "mean": 116.82584116462493,
-            "1_month_trend": -1.1851981940879979,
-            "6_month_trend": 54.794933723700154
+            "type": "cumulative",
+            "max": 67256.0,
+            "min": 6.0,
+            "median": 9581.0,
+            "mean": 11951.333690987125,
+            "1_month_trend": -12.12131746756988,
+            "6_month_trend": -13.035195196347718,
+            "datapoint_count": {
+                "2018": 51,
+                "2019": 329,
+                "2020": 352,
+                "2021": 363,
+                "2022": 321,
+                "2023": 365,
+                "2024": 83,
+                "last_6_months": 182,
+                "last_1_month": 29
+            }
         },
         "DistanceWalkingRunning": {
             "unit": "mi",
-            "max": 1.73592,
-            "min": 2.75064e-06,
-            "median": 0.017719,
-            "mean": 0.03690585657306773,
-            "1_month_trend": -16.964598277994334,
-            "6_month_trend": 5.390163919873813
+            "type": "cumulative",
+            "max": 32.836778577,
+            "min": 0.002976,
+            "median": 4.478615998000002,
+            "mean": 5.5853964834329295,
+            "1_month_trend": -11.29509054779084,
+            "6_month_trend": -13.509559968461584,
+            "datapoint_count": {
+                "2018": 51,
+                "2019": 329,
+                "2020": 352,
+                "2021": 363,
+                "2022": 321,
+                "2023": 365,
+                "2024": 83,
+                "last_6_months": 182,
+                "last_1_month": 29
+            }
         },
         "BasalEnergyBurned": {
             "unit": "Cal",
-            "max": 71.419,
-            "min": 0.043,
-            "median": 0.675,
-            "mean": 5.4058020386745556,
-            "1_month_trend": -3.460491606044785,
-            "6_month_trend": -8.08502600828368
+            "type": "cumulative",
+            "max": 1933.648000000004,
+            "min": 37.833,
+            "median": 1703.3579999999984,
+            "mean": 1653.9515898437483,
+            "1_month_trend": -6.625980690604223,
+            "6_month_trend": -2.816840917664958,
+            "datapoint_count": {
+                "2019": 5,
+                "2020": 343,
+                "2021": 274,
+                "2022": 210,
+                "2023": 365,
+                "2024": 83,
+                "last_6_months": 182,
+                "last_1_month": 29
+            }
         },
         "ActiveEnergyBurned": {
             "unit": "Cal",
-            "max": 181.0,
-            "min": 0.001,
-            "median": 0.269,
-            "mean": 0.6298361919834331,
-            "1_month_trend": -12.111013142297747,
-            "6_month_trend": 93.35446329186571
+            "type": "cumulative",
+            "max": 1534.8499999999995,
+            "min": 1.144,
+            "median": 450.54549999999983,
+            "mean": 475.0424507936508,
+            "1_month_trend": -16.32446363488446,
+            "6_month_trend": -15.611243706637534,
+            "datapoint_count": {
+                "2019": 2,
+                "2020": 330,
+                "2021": 271,
+                "2022": 209,
+                "2023": 365,
+                "2024": 83,
+                "last_6_months": 182,
+                "last_1_month": 29
+            }
         },
         "FlightsClimbed": {
             "unit": "count",
-            "max": 30.0,
+            "type": "cumulative",
+            "max": 236.0,
             "min": 1.0,
-            "median": 1.0,
-            "mean": 1.9314594384784578,
-            "1_month_trend": -4.576639166304819,
-            "6_month_trend": 1.8665699360585621
+            "median": 20.0,
+            "mean": 33.100332594235034,
+            "1_month_trend": -1.5748031496062977,
+            "6_month_trend": -21.97420458676229,
+            "datapoint_count": {
+                "2018": 48,
+                "2019": 296,
+                "2020": 348,
+                "2021": 360,
+                "2022": 310,
+                "2023": 359,
+                "2024": 83,
+                "last_6_months": 179,
+                "last_1_month": 29
+            }
         },
         "DietaryFatTotal": {
             "unit": "g",
+            "type": "average",
             "max": 114.5,
-            "min": 0.0,
-            "median": 22.000500000000002,
-            "mean": 26.811640337837833,
-            "1_month_trend": -20.275049476000653,
-            "6_month_trend": null
+            "min": 2.5066666666666664,
+            "median": 27.4829875,
+            "mean": 30.064145036231885,
+            "1_month_trend": -21.02016779109038,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 12,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryFatPolyunsaturated": {
             "unit": "g",
-            "max": 15.3805,
-            "min": 0.0,
-            "median": 1.0,
-            "mean": 2.069104834586466,
-            "1_month_trend": 23.700777262544246,
-            "6_month_trend": null
+            "type": "average",
+            "max": 14.0,
+            "min": 0.16666666666666666,
+            "median": 1.7321325,
+            "mean": 2.458594864814815,
+            "1_month_trend": 24.17463838473006,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 11,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryFatMonounsaturated": {
             "unit": "g",
-            "max": 47.6796,
+            "type": "average",
+            "max": 29.2155,
             "min": 0.0,
-            "median": 2.0,
-            "mean": 5.71893067669173,
-            "1_month_trend": -44.64478306008643,
-            "6_month_trend": null
+            "median": 5.0,
+            "mean": 6.4484801185185185,
+            "1_month_trend": -44.179440260714465,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 11,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryFatSaturated": {
             "unit": "g",
+            "type": "average",
             "max": 40.0,
-            "min": 0.0,
-            "median": 4.85,
-            "mean": 7.050768952380953,
-            "1_month_trend": 14.72249959212817,
-            "6_month_trend": null
+            "min": 0.4816666666666667,
+            "median": 7.233816666666667,
+            "mean": 7.938893508799174,
+            "1_month_trend": 10.892702128306752,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 12,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryCholesterol": {
             "unit": "mg",
-            "max": 770.284,
+            "type": "average",
+            "max": 265.0946666666667,
             "min": 0.0,
-            "median": 7.0,
-            "mean": 38.68985815602837,
-            "1_month_trend": 13.735467059320108,
-            "6_month_trend": null
+            "median": 20.625,
+            "mean": 38.701794202898554,
+            "1_month_trend": -2.0630422922246336,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 12,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietarySodium": {
             "unit": "mg",
-            "max": 4557.69,
-            "min": 0.0,
-            "median": 563.075,
-            "mean": 777.8001841059602,
-            "1_month_trend": -4.959484462444228,
-            "6_month_trend": null
+            "type": "average",
+            "max": 3075.0,
+            "min": 155.29500000000002,
+            "median": 645.8942916666666,
+            "mean": 878.0682184178744,
+            "1_month_trend": -7.485716656351587,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 12,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryCarbohydrates": {
             "unit": "g",
+            "type": "average",
             "max": 332.75,
-            "min": 0.0,
-            "median": 65.3763,
-            "mean": 78.69067647058824,
-            "1_month_trend": 2.075331987127568,
-            "6_month_trend": null
+            "min": 28.4,
+            "median": 80.03016666666667,
+            "mean": 90.20910229468599,
+            "1_month_trend": 0.07297829271764054,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 12,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryFiber": {
             "unit": "g",
-            "max": 43.5588,
-            "min": 0.0,
-            "median": 5.0,
-            "mean": 6.62251306122449,
-            "1_month_trend": 4.648884810121317,
-            "6_month_trend": null
+            "type": "average",
+            "max": 22.5,
+            "min": 1.78229,
+            "median": 5.9527149999999995,
+            "mean": 6.871806524327122,
+            "1_month_trend": 6.439381175298014,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 12,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietarySugar": {
             "unit": "g",
-            "max": 174.0,
-            "min": 0.0,
-            "median": 16.942,
-            "mean": 26.960914385620917,
-            "1_month_trend": 13.123891500243253,
-            "6_month_trend": null
+            "type": "average",
+            "max": 123.75,
+            "min": 2.3469666666666664,
+            "median": 23.0996375,
+            "mean": 31.88300305193237,
+            "1_month_trend": 21.266641638007275,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 12,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryEnergyConsumed": {
             "unit": "Cal",
+            "type": "average",
             "max": 2612.5,
-            "min": 0.0,
-            "median": 542.1925,
-            "mean": 610.321,
-            "1_month_trend": -10.846974762291502,
-            "6_month_trend": null
+            "min": 211.66666666666666,
+            "median": 626.5891666666666,
+            "mean": 701.3825815217391,
+            "1_month_trend": -12.19232451152178,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 12,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryProtein": {
             "unit": "g",
+            "type": "average",
             "max": 86.25,
-            "min": 0.0,
-            "median": 15.54375,
-            "mean": 18.972312171052632,
-            "1_month_trend": -16.39259080384065,
-            "6_month_trend": null
+            "min": 6.12,
+            "median": 18.0,
+            "mean": 20.85015008865248,
+            "1_month_trend": -15.967536783103672,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2019": 1,
+                "2020": 12,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryVitaminC": {
             "unit": "mg",
-            "max": 324.335,
+            "type": "average",
+            "max": 108.11166666666666,
             "min": 0.0,
-            "median": 4.8,
-            "mean": 20.035124060150377,
-            "1_month_trend": -46.47115700639038,
-            "6_month_trend": null
+            "median": 14.66453,
+            "mean": 20.617554814814817,
+            "1_month_trend": -36.614070347045356,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 11,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryCalcium": {
             "unit": "mg",
-            "max": 3463.88,
+            "type": "average",
+            "max": 1167.96,
             "min": 0.0,
-            "median": 81.575,
-            "mean": 212.46135864661656,
-            "1_month_trend": 50.56708317188442,
-            "6_month_trend": null
+            "median": 139.94813333333335,
+            "mean": 214.91386222222224,
+            "1_month_trend": 47.37814682875497,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 11,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryIron": {
             "unit": "mg",
+            "type": "average",
             "max": 27.155,
             "min": 0.0,
-            "median": 1.99623,
-            "mean": 2.657724842105263,
-            "1_month_trend": 71.59754126779785,
-            "6_month_trend": null
+            "median": 2.22877,
+            "mean": 3.0512348185185183,
+            "1_month_trend": 105.54191101856563,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 11,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DietaryPotassium": {
             "unit": "mg",
-            "max": 2269.13,
-            "min": 0.0,
-            "median": 289.14,
-            "mean": 407.884995890411,
-            "1_month_trend": -38.16962329843735,
-            "6_month_trend": null
+            "type": "average",
+            "max": 1317.6585,
+            "min": 113.29723333333334,
+            "median": 393.26208333333335,
+            "mean": 442.5439873188406,
+            "1_month_trend": -36.915222787789354,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 12,
+                "2022": 34,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "NumberOfTimesFallen": {
             "unit": "count",
+            "type": "cumulative",
             "max": 1.0,
             "min": 1.0,
             "median": 1.0,
             "mean": 1.0,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2021": 1,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "AppleExerciseTime": {
             "unit": "min",
-            "max": 1.0,
+            "type": "cumulative",
+            "max": 250.0,
             "min": 1.0,
-            "median": 1.0,
-            "mean": 1.0,
-            "1_month_trend": 0.0,
-            "6_month_trend": 0.0
+            "median": 46.0,
+            "mean": 52.675977653631286,
+            "1_month_trend": -11.780277961614825,
+            "6_month_trend": -15.763041649137572,
+            "datapoint_count": {
+                "2019": 1,
+                "2020": 329,
+                "2021": 270,
+                "2022": 207,
+                "2023": 363,
+                "2024": 83,
+                "last_6_months": 181,
+                "last_1_month": 29
+            }
         },
         "DietaryCaffeine": {
             "unit": "mg",
-            "max": 220.0,
-            "min": 28.0,
-            "median": 79.5,
-            "mean": 95.92307692307692,
+            "type": "cumulative",
+            "max": 246.0,
+            "min": 63.0,
+            "median": 124.0,
+            "mean": 138.55555555555554,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2022": 18,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DistanceCycling": {
             "unit": "mi",
-            "max": 1.67513,
-            "min": 2.26054e-15,
-            "median": 0.005371245,
-            "mean": 0.12429351839973589,
+            "type": "cumulative",
+            "max": 18.6930061230853,
+            "min": 1.1720126000000002,
+            "median": 3.121438029022123,
+            "mean": 4.71072434734999,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 33,
+                "2021": 20,
+                "2023": 7,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "DistanceSwimming": {
             "unit": "yd",
-            "max": 302.599,
-            "min": 15.7836,
-            "median": 50.0,
-            "mean": 61.211441379310344,
+            "type": "cumulative",
+            "max": 729.7908,
+            "min": 350.0,
+            "median": 695.3409999999999,
+            "mean": 591.7106,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 1,
+                "2023": 2,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "SwimmingStrokeCount": {
             "unit": "count",
-            "max": 60.0,
-            "min": 3.0,
-            "median": 14.0,
-            "mean": 13.206896551724139,
+            "type": "cumulative",
+            "max": 162.0,
+            "min": 76.0,
+            "median": 145.0,
+            "mean": 127.66666666666667,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 1,
+                "2023": 2,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "RestingHeartRate": {
             "unit": "count/min",
+            "type": "average",
             "max": 95.0,
             "min": 51.0,
             "median": 67.0,
-            "mean": 68.37906423473434,
-            "1_month_trend": 4.452592980618129,
-            "6_month_trend": -0.8147140494778367
+            "mean": 68.38164251207729,
+            "1_month_trend": 4.011442032643445,
+            "6_month_trend": -1.0456680066936173,
+            "datapoint_count": {
+                "2020": 328,
+                "2021": 268,
+                "2022": 203,
+                "2023": 364,
+                "2024": 79,
+                "last_6_months": 178,
+                "last_1_month": 28
+            }
         },
         "VO2Max": {
             "unit": "mL/min\u00b7kg",
+            "type": "average",
             "max": 48.7075,
             "min": 34.41,
-            "median": 42.835,
-            "mean": 42.901075694444444,
-            "1_month_trend": 6.0932856999766205,
-            "6_month_trend": -1.556209471710876
+            "median": 42.705,
+            "mean": 42.70012933042212,
+            "1_month_trend": 6.202744438797439,
+            "6_month_trend": -1.265502487745127,
+            "datapoint_count": {
+                "2020": 26,
+                "2022": 31,
+                "2023": 156,
+                "2024": 16,
+                "last_6_months": 49,
+                "last_1_month": 5
+            }
         },
         "WalkingHeartRateAverage": {
             "unit": "count/min",
+            "type": "average",
             "max": 154.0,
             "min": 77.0,
-            "median": 113.5,
-            "mean": 113.40361445783132,
-            "1_month_trend": -0.15564202334629468,
-            "6_month_trend": 0.8483308065744528
+            "median": 113.75,
+            "mean": 113.45004078303425,
+            "1_month_trend": -0.42311351459616336,
+            "6_month_trend": 0.7230126771419552,
+            "datapoint_count": {
+                "2019": 1,
+                "2020": 313,
+                "2021": 267,
+                "2022": 205,
+                "2023": 360,
+                "2024": 80,
+                "last_6_months": 177,
+                "last_1_month": 28
+            }
         },
         "EnvironmentalAudioExposure": {
             "unit": "dBASPL",
-            "max": 109.363,
-            "min": 31.288,
-            "median": 60.84825,
-            "mean": 59.658646194665835,
-            "1_month_trend": 2.887574000417301,
-            "6_month_trend": -2.806133420272366
+            "type": "average",
+            "max": 76.21615,
+            "min": 45.25953636363638,
+            "median": 59.560310830241185,
+            "mean": 59.918490088470286,
+            "1_month_trend": 4.258526374671028,
+            "6_month_trend": -2.5789380870176934,
+            "datapoint_count": {
+                "2020": 330,
+                "2021": 271,
+                "2022": 208,
+                "2023": 365,
+                "2024": 82,
+                "last_6_months": 181,
+                "last_1_month": 28
+            }
         },
         "HeadphoneAudioExposure": {
             "unit": "dBASPL",
-            "max": 102.738,
+            "type": "average",
+            "max": 98.24133333333333,
             "min": 0.0,
-            "median": 70.27235,
-            "mean": 66.53899553173666,
-            "1_month_trend": 3.6079515836358955,
-            "6_month_trend": 2.303153299020109
+            "median": 66.66417105597961,
+            "mean": 65.5603818216827,
+            "1_month_trend": 3.738573455090032,
+            "6_month_trend": 3.8950480358707065,
+            "datapoint_count": {
+                "2020": 163,
+                "2021": 227,
+                "2022": 271,
+                "2023": 351,
+                "2024": 78,
+                "last_6_months": 174,
+                "last_1_month": 26
+            }
         },
         "WalkingDoubleSupportPercentage": {
             "unit": "%",
-            "max": 0.332,
-            "min": 0.181,
-            "median": 0.268,
-            "mean": 0.2680365443930381,
-            "1_month_trend": -0.5441432972544238,
-            "6_month_trend": -1.60172170022951
+            "type": "average",
+            "max": 0.2953333333333333,
+            "min": 0.245,
+            "median": 0.2677215189873417,
+            "mean": 0.26781305708045744,
+            "1_month_trend": -0.339269298849191,
+            "6_month_trend": -1.2545717224572142,
+            "datapoint_count": {
+                "2021": 96,
+                "2022": 294,
+                "2023": 364,
+                "2024": 83,
+                "last_6_months": 182,
+                "last_1_month": 29
+            }
         },
         "SixMinuteWalkTestDistance": {
             "unit": "m",
+            "type": "average",
             "max": 500.0,
             "min": 493.0,
             "median": 500.0,
             "mean": 499.89814814814815,
             "1_month_trend": 0.0,
-            "6_month_trend": 0.0
+            "6_month_trend": 0.0,
+            "datapoint_count": {
+                "2020": 7,
+                "2021": 20,
+                "2022": 23,
+                "2023": 46,
+                "2024": 12,
+                "last_6_months": 22,
+                "last_1_month": 4
+            }
         },
         "AppleStandTime": {
             "unit": "min",
-            "max": 5.0,
+            "type": "average",
+            "max": 3.981132075471698,
             "min": 1.0,
-            "median": 2.0,
-            "mean": 2.3365664245909894,
-            "1_month_trend": 1.0326284513956558,
-            "6_month_trend": -0.8253950058043521
+            "median": 2.2238805970149254,
+            "mean": 2.2586649082057857,
+            "1_month_trend": -1.77496884173164,
+            "6_month_trend": -1.5728174567038018,
+            "datapoint_count": {
+                "2020": 330,
+                "2021": 273,
+                "2022": 208,
+                "2023": 365,
+                "2024": 83,
+                "last_6_months": 182,
+                "last_1_month": 29
+            }
         },
         "WalkingSpeed": {
             "unit": "mi/hr",
-            "max": 4.98837,
-            "min": 0.850036,
-            "median": 2.84091,
-            "mean": 2.8194603093827277,
-            "1_month_trend": 0.42195723798294965,
-            "6_month_trend": 3.366170236064302
+            "type": "average",
+            "max": 3.441567777777777,
+            "min": 2.0244275,
+            "median": 2.827608558558558,
+            "mean": 2.8245804213105212,
+            "1_month_trend": -0.2550714948695495,
+            "6_month_trend": 2.1225346863495007,
+            "datapoint_count": {
+                "2021": 96,
+                "2022": 294,
+                "2023": 364,
+                "2024": 83,
+                "last_6_months": 182,
+                "last_1_month": 29
+            }
         },
         "WalkingStepLength": {
             "unit": "in",
-            "max": 54.3307,
-            "min": 10.2362,
-            "median": 28.7402,
-            "mean": 28.278948150048993,
-            "1_month_trend": -0.43162156867331336,
-            "6_month_trend": -0.8252507197278353
+            "type": "average",
+            "max": 34.05515,
+            "min": 20.4724,
+            "median": 28.359401639344256,
+            "mean": 28.28876988958378,
+            "1_month_trend": -1.4557206023196172,
+            "6_month_trend": -1.0756868127879067,
+            "datapoint_count": {
+                "2021": 96,
+                "2022": 294,
+                "2023": 364,
+                "2024": 83,
+                "last_6_months": 182,
+                "last_1_month": 29
+            }
         },
         "WalkingAsymmetryPercentage": {
             "unit": "%",
-            "max": 1.0,
+            "type": "average",
+            "max": 0.4353846153846155,
             "min": 0.0,
-            "median": 0.0,
-            "mean": 0.01976727618142959,
-            "1_month_trend": 45.436424100156465,
-            "6_month_trend": -18.912157957411484
+            "median": 0.012727272727272728,
+            "mean": 0.021130777818383618,
+            "1_month_trend": 62.047368098246835,
+            "6_month_trend": -18.62494423541129,
+            "datapoint_count": {
+                "2021": 89,
+                "2022": 291,
+                "2023": 362,
+                "2024": 79,
+                "last_6_months": 178,
+                "last_1_month": 29
+            }
         },
         "StairAscentSpeed": {
             "unit": "ft/s",
-            "max": 3.86805,
-            "min": 0.656362,
-            "median": 1.00976,
-            "mean": 1.0820915486820872,
-            "1_month_trend": 8.700936386487292,
-            "6_month_trend": 1.226884014308337
+            "type": "average",
+            "max": 2.1220813333333335,
+            "min": 0.710865,
+            "median": 1.05482,
+            "mean": 1.0845869776244481,
+            "1_month_trend": 10.794487492872525,
+            "6_month_trend": 0.9846442964401542,
+            "datapoint_count": {
+                "2022": 60,
+                "2023": 339,
+                "2024": 74,
+                "last_6_months": 159,
+                "last_1_month": 25
+            }
         },
         "StairDescentSpeed": {
             "unit": "ft/s",
-            "max": 3.08003,
-            "min": 0.65675,
-            "median": 1.0823200000000002,
-            "mean": 1.2253981604991393,
-            "1_month_trend": -1.8382636675919304,
-            "6_month_trend": 4.5660030544124846
+            "type": "average",
+            "max": 2.42499,
+            "min": 0.662087,
+            "median": 1.1804565714285715,
+            "mean": 1.2574605714782037,
+            "1_month_trend": -0.4906766536539398,
+            "6_month_trend": 2.6858982810325664,
+            "datapoint_count": {
+                "2022": 57,
+                "2023": 292,
+                "2024": 66,
+                "last_6_months": 139,
+                "last_1_month": 23
+            }
         },
         "HKDataTypeSleepDurationGoal": {
             "unit": "hr",
+            "type": "average",
             "max": 8.5,
             "min": 8.0,
             "median": 8.25,
             "mean": 8.25,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2020": 1,
+                "2021": 1,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "AppleWalkingSteadiness": {
             "unit": "%",
+            "type": "average",
             "max": 1.0,
             "min": 0.989896,
             "median": 1.0,
             "mean": 0.9999164958677687,
             "1_month_trend": -0.20208000000000448,
-            "6_month_trend": -0.038861538461532064
+            "6_month_trend": -0.038861538461532064,
+            "datapoint_count": {
+                "2021": 12,
+                "2022": 46,
+                "2023": 52,
+                "2024": 11,
+                "last_6_months": 25,
+                "last_1_month": 3
+            }
         },
         "RunningStrideLength": {
             "unit": "m",
-            "max": 1.18521,
-            "min": 0.978908,
-            "median": 1.0338815000000001,
-            "mean": 1.061374,
+            "type": "average",
+            "max": 1.14485,
+            "min": 0.9880146666666666,
+            "median": 1.1296750000000002,
+            "mean": 1.0875132222222221,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2022": 1,
+                "2023": 2,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "RunningVerticalOscillation": {
             "unit": "cm",
-            "max": 10.1176,
-            "min": 9.41212,
-            "median": 9.818675,
-            "mean": 9.796131666666666,
+            "type": "average",
+            "max": 9.904063333333333,
+            "min": 9.668665,
+            "median": 9.72727,
+            "mean": 9.766666111111112,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2022": 1,
+                "2023": 2,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "RunningGroundContactTime": {
             "unit": "ms",
-            "max": 278.655,
-            "min": 244.6,
-            "median": 256.414,
-            "mean": 258.14966666666663,
+            "type": "average",
+            "max": 268.87899999999996,
+            "min": 244.89249999999998,
+            "median": 252.476,
+            "mean": 255.41583333333332,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2022": 1,
+                "2023": 2,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "HeartRateRecoveryOneMinute": {
             "unit": "count/min",
+            "type": "average",
             "max": 45.6027,
             "min": 27.7151,
-            "median": 37.5414,
-            "mean": 36.71370645161291,
+            "median": 35.9388,
+            "mean": 36.46683035714286,
             "1_month_trend": -7.620194138049645,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2022": 3,
+                "2023": 25,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "RunningPower": {
             "unit": "W",
-            "max": 254.185,
-            "min": 155.513,
-            "median": 200.0915,
-            "mean": 204.51025000000004,
+            "type": "average",
+            "max": 228.0615,
+            "min": 184.72366666666665,
+            "median": 222.41449999999998,
+            "mean": 211.73322222222222,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2022": 1,
+                "2023": 2,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "EnvironmentalSoundReduction": {
             "unit": "dBASPL",
+            "type": "average",
             "max": 24.0,
-            "min": 1.00058,
-            "median": 19.2605,
-            "mean": 18.819889109748782,
-            "1_month_trend": 11.329497791075042,
-            "6_month_trend": -14.24920172942469
+            "min": 1.09457,
+            "median": 18.830166203703705,
+            "mean": 17.550119784106116,
+            "1_month_trend": 6.703707538987651,
+            "6_month_trend": -8.96605631392455,
+            "datapoint_count": {
+                "2022": 50,
+                "2023": 331,
+                "2024": 73,
+                "last_6_months": 166,
+                "last_1_month": 23
+            }
         },
         "RunningSpeed": {
             "unit": "mi/hr",
-            "max": 7.69099,
+            "type": "average",
+            "max": 6.388486,
             "min": 2.50692,
-            "median": 5.82991,
-            "mean": 5.691585,
+            "median": 5.596952142857143,
+            "mean": 5.022327571428572,
             "1_month_trend": null,
-            "6_month_trend": null
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2022": 1,
+                "2023": 3,
+                "last_6_months": 0,
+                "last_1_month": 0
+            }
         },
         "TimeInDaylight": {
             "unit": "min",
+            "type": "average",
             "max": 5.0,
             "min": 1.0,
-            "median": 5.0,
-            "mean": 4.25,
-            "1_month_trend": -4.156373517786563,
-            "6_month_trend": null
+            "median": 4.2,
+            "mean": 4.056108880501417,
+            "1_month_trend": -6.793913904744017,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2023": 79,
+                "2024": 57,
+                "last_6_months": 132,
+                "last_1_month": 21
+            }
         },
         "PhysicalEffort": {
             "unit": "kcal/hr\u00b7kg",
-            "max": 20.0,
-            "min": 1.0,
-            "median": 4.1,
-            "mean": 3.8782920932878278,
-            "1_month_trend": -0.1586117172291561,
-            "6_month_trend": null
+            "type": "average",
+            "max": 5.179848866498735,
+            "min": 2.225,
+            "median": 3.810660267597439,
+            "mean": 3.8449974034631818,
+            "1_month_trend": 0.08719360046787752,
+            "6_month_trend": null,
+            "datapoint_count": {
+                "2023": 105,
+                "2024": 83,
+                "last_6_months": 182,
+                "last_1_month": 29
+            }
         },
         "SleepAnalysis": {
-            "data_points": [],
-            "unit": null
+            "data_points": {},
+            "unit": null,
+            "type": "average"
         },
         "AppleStandHour": {
-            "data_points": [],
-            "unit": null
+            "data_points": {},
+            "unit": null,
+            "type": "average"
         },
         "MindfulSession": {
-            "data_points": [],
-            "unit": null
+            "data_points": {},
+            "unit": null,
+            "type": "average"
         },
         "HighHeartRateEvent": {
-            "data_points": [],
-            "unit": null
+            "data_points": {},
+            "unit": null,
+            "type": "average"
         },
         "LowHeartRateEvent": {
-            "data_points": [],
-            "unit": null
+            "data_points": {},
+            "unit": null,
+            "type": "average"
         },
         "AudioExposureEvent": {
-            "data_points": [],
-            "unit": null
+            "data_points": {},
+            "unit": null,
+            "type": "average"
         },
         "ToothbrushingEvent": {
-            "data_points": [],
-            "unit": null
+            "data_points": {},
+            "unit": null,
+            "type": "average"
         },
         "HeadphoneAudioExposureEvent": {
-            "data_points": [],
-            "unit": null
+            "data_points": {},
+            "unit": null,
+            "type": "average"
         },
         "HandwashingEvent": {
-            "data_points": [],
-            "unit": null
+            "data_points": {},
+            "unit": null,
+            "type": "average"
         },
         "HeartRateVariabilitySDNN": {
             "unit": "ms",
-            "max": 258.783,
-            "min": 4.68818,
-            "median": 38.2402,
-            "mean": 47.3860839064222,
-            "1_month_trend": 1.2612678452552035,
-            "6_month_trend": 5.037334776444992
+            "type": "average",
+            "max": 99.82226666666666,
+            "min": 14.6575,
+            "median": 44.93796666666666,
+            "mean": 46.208033049804946,
+            "1_month_trend": -1.090592272632075,
+            "6_month_trend": 4.331039140217764,
+            "datapoint_count": {
+                "2019": 1,
+                "2020": 328,
+                "2021": 270,
+                "2022": 207,
+                "2023": 365,
+                "2024": 82,
+                "last_6_months": 181,
+                "last_1_month": 28
+            }
         }
     }
 }

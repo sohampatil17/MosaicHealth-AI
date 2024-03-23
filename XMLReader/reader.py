@@ -13,6 +13,25 @@ def remove_prefix(text, prefix):
         return text[len(prefix):]
     return text
 
+average_categories = [
+    "BodyMassIndex", "Height", "BodyMass", "HeartRate", "OxygenSaturation",
+    "BloodPressureSystolic", "BloodPressureDiastolic", "RespiratoryRate", 
+    "DietaryFatTotal", "DietaryFatPolyunsaturated", "DietaryFatMonounsaturated", 
+    "DietaryFatSaturated", "DietaryCholesterol", "DietarySodium", "DietaryCarbohydrates",
+    "DietaryFiber", "DietarySugar", "DietaryEnergyConsumed", "DietaryProtein", 
+    "DietaryVitaminC", "DietaryCalcium", "DietaryIron", "DietaryPotassium", 
+    "RestingHeartRate", "VO2Max", "WalkingHeartRateAverage", "EnvironmentalAudioExposure",
+    "HeadphoneAudioExposure", "WalkingDoubleSupportPercentage", "SixMinuteWalkTestDistance",
+    "AppleStandTime", "WalkingSpeed", "WalkingStepLength", "WalkingAsymmetryPercentage",
+    "StairAscentSpeed", "StairDescentSpeed", "HKDataTypeSleepDurationGoal",
+    "AppleWalkingSteadiness", "RunningStrideLength", "RunningVerticalOscillation",
+    "RunningGroundContactTime", "HeartRateRecoveryOneMinute", "RunningPower",
+    "EnvironmentalSoundReduction", "RunningSpeed", "TimeInDaylight", "PhysicalEffort",
+    "SleepAnalysis", "AppleStandHour", "MindfulSession", "HighHeartRateEvent",
+    "LowHeartRateEvent", "AudioExposureEvent", "ToothbrushingEvent",
+    "HeadphoneAudioExposureEvent", "HandwashingEvent", "HeartRateVariabilitySDNN"
+]
+
 def process_records(root):
     data = {}
 
@@ -21,7 +40,10 @@ def process_records(root):
         rec_type = remove_prefix(rec_type, 'HKCategoryTypeIdentifier')
 
         if rec_type not in data:
-            data[rec_type] = {'data_points': [], 'unit': record.get('unit')}
+            data[rec_type] = {
+                'data_points': {}, 'unit': record.get('unit'), 
+                'type': 'average' if rec_type in average_categories else 'cumulative'
+            }
 
         value = record.get('value')
         try:
@@ -30,11 +52,19 @@ def process_records(root):
             continue
 
         date_str = record.get('startDate')
-        date = datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S %z') if date_str else None
+        date = datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S %z').date() if date_str else None
 
-        data[rec_type]['data_points'].append({'date': date, 'value': value})
+        if rec_type in average_categories:
+            # Average: Recalculate the average for the day
+            day_data = data[rec_type]['data_points'].setdefault(date, {'total': 0, 'count': 0})
+            day_data['total'] += value
+            day_data['count'] += 1
+        else:
+            # Cumulative: Add to the day's total
+            data[rec_type]['data_points'][date] = data[rec_type]['data_points'].get(date, 0) + value
 
     return data
+
 
 def calculate_trend(df, period_days):
     end_date = df.index.max()
@@ -64,10 +94,17 @@ def calculate_statistics(data):
         if not value['data_points']:  # Skip if no data points
             continue
 
-        df = pd.DataFrame(value['data_points'])
-        if 'date' not in df.columns:  # Skip if 'date' column is missing
-            continue
+        # Prepare data for DataFrame
+        prepared_data = []
+        for date, stats in value['data_points'].items():
+            if value['type'] == 'average':
+                avg_value = stats['total'] / stats['count'] if stats['count'] > 0 else 0
+                prepared_data.append({'date': date, 'value': avg_value})
+            else:
+                prepared_data.append({'date': date, 'value': stats})
 
+        df = pd.DataFrame(prepared_data)
+        df['date'] = pd.to_datetime(df['date'])
         df.set_index('date', inplace=True)
         df.sort_index(inplace=True)
 
@@ -85,6 +122,12 @@ def calculate_statistics(data):
         for stat_key in ['max', 'min', 'median', 'mean', '1_month_trend', '6_month_trend']:
             if pd.isna(value[stat_key]):
                 value[stat_key] = None
+
+        # Count data points by year and recent periods
+        value['datapoint_count'] = df['value'].groupby(df.index.year).count().to_dict()
+        current_date = pd.to_datetime('today', utc=True) if df.index.tz is not None else pd.to_datetime('today')
+        value['datapoint_count']['last_6_months'] = df.loc[current_date - pd.DateOffset(months=6):].shape[0]
+        value['datapoint_count']['last_1_month'] = df.loc[current_date - pd.DateOffset(months=1):].shape[0]
 
         # Remove raw data points if not needed
         del value['data_points']
