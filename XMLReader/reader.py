@@ -36,6 +36,12 @@ def process_records(root):
     data = {}
 
     for record in root.findall('.//Record'):
+        device_info = record.get('device', '')
+
+        # Filter out records not from Apple Watch
+        if 'model:Watch' not in device_info:
+            continue
+
         rec_type = remove_prefix(record.get('type'), 'HKQuantityTypeIdentifier')
         rec_type = remove_prefix(rec_type, 'HKCategoryTypeIdentifier')
 
@@ -53,7 +59,7 @@ def process_records(root):
 
         date_str = record.get('startDate')
         date = datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S %z').date() if date_str else None
-
+        
         if rec_type in average_categories:
             # Average: Recalculate the average for the day
             day_data = data[rec_type]['data_points'].setdefault(date, {'total': 0, 'count': 0})
@@ -61,7 +67,8 @@ def process_records(root):
             day_data['count'] += 1
         else:
             # Cumulative: Add to the day's total
-            data[rec_type]['data_points'][date] = data[rec_type]['data_points'].get(date, 0) + value
+            day_data = data[rec_type]['data_points'].setdefault(date, 0)
+            data[rec_type]['data_points'][date] += value
 
     return data
 
@@ -91,26 +98,29 @@ def calculate_trend(df, period_days):
 
 def calculate_statistics(data):
     for key, value in data.items():
-        if not value['data_points']:  # Skip if no data points
+        if not value['data_points']:
             continue
 
-        # Prepare data for DataFrame
         prepared_data = []
-        for date, stats in value['data_points'].items():
-            if value['type'] == 'average':
+        if value['type'] == 'average':
+            for date, stats in value['data_points'].items():
                 avg_value = stats['total'] / stats['count'] if stats['count'] > 0 else 0
                 prepared_data.append({'date': date, 'value': avg_value})
-            else:
-                prepared_data.append({'date': date, 'value': stats})
+        else:
+            prepared_data = [{'date': date, 'value': value} for date, value in value['data_points'].items()]
 
         df = pd.DataFrame(prepared_data)
         df['date'] = pd.to_datetime(df['date'])
         df.set_index('date', inplace=True)
         df.sort_index(inplace=True)
 
-        # Calculate basic statistics
-        value['max'] = df['value'].max()
-        value['min'] = df['value'].min()
+        # Calculate basic statistics with dates for max and min
+        max_value = df['value'].max()
+        min_value = df['value'].min()
+        max_date = df[df['value'] == max_value].index.max()
+        min_date = df[df['value'] == min_value].index.min()
+        value['max'] = {'value': max_value, 'date': max_date}
+        value['min'] = {'value': min_value, 'date': min_date}
         value['median'] = df['value'].median()
         value['mean'] = df['value'].mean()
 
