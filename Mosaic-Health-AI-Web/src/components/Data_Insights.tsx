@@ -7,7 +7,7 @@ import { Key, useEffect, useState } from 'react';
 // todo: implement an AI model to predict what data is actually important
 const importantData = [
     {
-        reasoning: "Mentioned *muscle pain* which can be caused by *vitamin d deficiency*",
+        reasoning: "Mentioned *muscle pain* which can be caused by vitamin d deficiency",
         category: "Time In Daylight",
         data1_time: "6 month",
         data1_type: "mean",
@@ -15,12 +15,12 @@ const importantData = [
         data2_type: "trend"
     },
     {
-        reasoning: "Waking up in the night might indicate ",
-        category: "Sleep Awake Time",
+        reasoning: "Shortness of breath might indicate oxygen issues",
+        category: "Oxygen Saturation",
         data1_time: "1 week",
-        data1_type: "trend",
+        data1_type: "min",
         data2_time: "6 month",
-        data2_type: "min"
+        data2_type: "mean"
     },
 ];
 
@@ -58,15 +58,15 @@ export default function DataInsights() {
     }, [appleHealthData, importantData]);
 
     return (
-        <Card color='primary' sx={{ margin: 2, justifyItems: 'top', alignItems: 'center', width: '60%' }}>
+        <Card color='primary' sx={{ margin: 2, justifyItems: 'top', alignItems: 'center', width: '40%' }}>
             <Typography level='h2'>Data Insights</Typography>
-            <Sheet sx={{ width: '100%', height: 'calc(90vh - 120px)', overflowY: 'auto' }}>
+            <Sheet sx={{ width: '100%', height: 'calc(100vh - 220px)', overflowY: 'auto' }}>
                 {enrichedData && enrichedData.map((data: any, index: Key | null | undefined) => (
                     <Card key={index} sx={{ width: '100%', marginTop: 2, marginBottom: 2 }}>
-                        <Sheet sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', overflowX: 'auto', flexWrap: 'nowrap' }}>
-                            <Typography level='h3'>{data.category}</Typography>
-                            <Chip size="lg" variant="soft" color='primary'>{data.data1_time} {data.data1_type}: {data.data1_value} {data.unit}</Chip>
-                            <Chip size="lg" variant="soft" color='primary'>{data.data2_time} {data.data2_type}: {data.data2_value}</Chip>
+                        <Typography level='h3'>{data.category}</Typography>
+                        <Sheet sx={{ alignItems: 'center', overflowX: 'auto', flexWrap: 'nowrap' }}>
+                            <Chip size="lg" variant="soft" color='primary' sx={{ marginRight: 1 }}>{data.data1_time} {data.data1_type}: {data.data1_value} {data.unit}</Chip>
+                            <Chip size="lg" variant="soft" color='primary'>{data.data2_time} {data.data2_type}: {data.data2_value} {data.unit}</Chip>
                         </Sheet>
                         <Typography>{data.reasoning}</Typography>
                     </Card>
