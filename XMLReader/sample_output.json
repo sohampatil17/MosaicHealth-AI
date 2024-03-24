@@ -211,14 +211,14 @@
                 "min": 143.5,
                 "median": 145.0,
                 "mean": 145.0,
-                "trend": "0.3%"
+                "trend": "+0.3%"
             },
             "Last six months": {
                 "max": 146.5,
                 "min": 142.5,
                 "median": 144.25,
                 "mean": 144.5,
-                "trend": "0.4%"
+                "trend": "+0.4%"
             },
             "All time": {
                 "max": 150.0,
@@ -256,7 +256,7 @@
                 "min": 63.913,
                 "median": 94.001,
                 "mean": 93.993,
-                "trend": "5.0%"
+                "trend": "+5.0%"
             },
             "All time": {
                 "max": 127.384,
@@ -273,7 +273,7 @@
                 "min": 0.955,
                 "median": 0.959,
                 "mean": 0.96,
-                "trend": "0.2%"
+                "trend": "+0.2%"
             },
             "Last month": {
                 "max": 0.972,
@@ -332,7 +332,7 @@
                 "min": 124.0,
                 "median": 124.0,
                 "mean": 124.0,
-                "trend": "9.5%"
+                "trend": "+9.5%"
             },
             "All time": {
                 "max": 124.0,
@@ -370,7 +370,7 @@
                 "min": 75.0,
                 "median": 75.0,
                 "mean": 75.0,
-                "trend": "8.3%"
+                "trend": "+8.3%"
             },
             "All time": {
                 "max": 75.0,
@@ -394,7 +394,7 @@
                 "min": 16.017,
                 "median": 17.054,
                 "mean": 17.466,
-                "trend": "1.1%"
+                "trend": "+1.1%"
             },
             "Last three months": {
                 "max": 21.333,
@@ -408,7 +408,7 @@
                 "min": 15.686,
                 "median": 17.142,
                 "mean": 17.418,
-                "trend": "2.2%"
+                "trend": "+2.2%"
             },
             "All time": {
                 "max": 23.25,
@@ -439,7 +439,7 @@
                 "min": 540.0,
                 "median": 8049.0,
                 "mean": 8669.022,
-                "trend": "17.4%"
+                "trend": "+17.4%"
             },
             "Last six months": {
                 "max": 25459.0,
@@ -477,7 +477,7 @@
                 "min": 0.264,
                 "median": 4.028,
                 "mean": 4.35,
-                "trend": "16.6%"
+                "trend": "+16.6%"
             },
             "Last six months": {
                 "max": 13.705,
@@ -553,7 +553,7 @@
                 "min": 56.741,
                 "median": 447.707,
                 "mean": 484.467,
-                "trend": "15.3%"
+                "trend": "+15.3%"
             },
             "Last six months": {
                 "max": 1334.775,
@@ -584,14 +584,14 @@
                 "min": 1.0,
                 "median": 5.0,
                 "mean": 8.821,
-                "trend": "8.4%"
+                "trend": "+8.4%"
             },
             "Last three months": {
                 "max": 53.0,
                 "min": 1.0,
                 "median": 8.0,
                 "mean": 10.345,
-                "trend": "25.7%"
+                "trend": "+25.7%"
             },
             "Last six months": {
                 "max": 53.0,
@@ -1223,7 +1223,7 @@
                 "min": 8.0,
                 "median": 18.0,
                 "mean": 36.286,
-                "trend": "16.5%"
+                "trend": "+16.5%"
             },
             "Last month": {
                 "max": 250.0,
@@ -1237,7 +1237,7 @@
                 "min": 1.0,
                 "median": 34.0,
                 "mean": 48.1,
-                "trend": "19.5%"
+                "trend": "+19.5%"
             },
             "Last six months": {
                 "max": 250.0,
@@ -1413,14 +1413,14 @@
                 "min": 52.0,
                 "median": 72.0,
                 "mean": 69.714,
-                "trend": "8.6%"
+                "trend": "+8.6%"
             },
             "Last month": {
                 "max": 84.0,
                 "min": 52.0,
                 "median": 66.0,
                 "mean": 66.276,
-                "trend": "4.5%"
+                "trend": "+4.5%"
             },
             "Last three months": {
                 "max": 84.0,
@@ -1458,14 +1458,14 @@
                 "min": 44.65,
                 "median": 45.5,
                 "mean": 45.276,
-                "trend": "6.2%"
+                "trend": "+6.2%"
             },
             "Last three months": {
                 "max": 45.73,
                 "min": 40.99,
                 "median": 43.305,
                 "mean": 43.424,
-                "trend": "2.9%"
+                "trend": "+2.9%"
             },
             "Last six months": {
                 "max": 45.77,
@@ -1489,7 +1489,7 @@
                 "min": 88.0,
                 "median": 103.0,
                 "mean": 108.857,
-                "trend": "1.3%"
+                "trend": "+1.3%"
             },
             "Last month": {
                 "max": 145.0,
@@ -1510,7 +1510,7 @@
                 "min": 79.0,
                 "median": 106.0,
                 "mean": 107.937,
-                "trend": "0.7%"
+                "trend": "+0.7%"
             },
             "All time": {
                 "max": 154.0,
@@ -1534,14 +1534,14 @@
                 "min": 51.188,
                 "median": 60.809,
                 "mean": 62.204,
-                "trend": "4.8%"
+                "trend": "+4.8%"
             },
             "Last three months": {
                 "max": 76.216,
                 "min": 50.025,
                 "median": 60.238,
                 "mean": 61.236,
-                "trend": "3.9%"
+                "trend": "+3.9%"
             },
             "Last six months": {
                 "max": 76.216,
@@ -1565,14 +1565,14 @@
                 "min": 64.344,
                 "median": 69.165,
                 "mean": 68.769,
-                "trend": "11.6%"
+                "trend": "+11.6%"
             },
             "Last month": {
                 "max": 74.619,
                 "min": 50.483,
                 "median": 68.293,
                 "mean": 67.187,
-                "trend": "4.2%"
+                "trend": "+4.2%"
             },
             "Last three months": {
                 "max": 77.947,
@@ -1586,7 +1586,7 @@
                 "min": 40.601,
                 "median": 68.745,
                 "mean": 67.779,
-                "trend": "3.7%"
+                "trend": "+3.7%"
             },
             "All time": {
                 "max": 98.241,
@@ -1617,7 +1617,7 @@
                 "min": 0.25,
                 "median": 0.266,
                 "mean": 0.267,
-                "trend": "0.7%"
+                "trend": "+0.7%"
             },
             "Last six months": {
                 "max": 0.295,
@@ -1693,7 +1693,7 @@
                 "min": 8.0,
                 "median": 110.0,
                 "mean": 121.967,
-                "trend": "17.9%"
+                "trend": "+17.9%"
             },
             "Last six months": {
                 "max": 325.0,
@@ -1717,7 +1717,7 @@
                 "min": 2.78,
                 "median": 2.957,
                 "mean": 2.984,
-                "trend": "5.7%"
+                "trend": "+5.7%"
             },
             "Last month": {
                 "max": 3.284,
@@ -1738,7 +1738,7 @@
                 "min": 2.024,
                 "median": 2.898,
                 "mean": 2.871,
-                "trend": "2.1%"
+                "trend": "+2.1%"
             },
             "All time": {
                 "max": 3.442,
@@ -1755,7 +1755,7 @@
                 "min": 26.979,
                 "median": 28.346,
                 "mean": 28.23,
-                "trend": "2.7%"
+                "trend": "+2.7%"
             },
             "Last month": {
                 "max": 30.474,
@@ -1800,7 +1800,7 @@
                 "min": 0.0,
                 "median": 0.013,
                 "mean": 0.019,
-                "trend": "64.5%"
+                "trend": "+64.5%"
             },
             "Last three months": {
                 "max": 0.104,
@@ -1831,28 +1831,28 @@
                 "min": 0.834,
                 "median": 1.215,
                 "mean": 1.272,
-                "trend": "19.2%"
+                "trend": "+19.2%"
             },
             "Last month": {
                 "max": 2.06,
                 "min": 0.772,
                 "median": 1.046,
                 "mean": 1.133,
-                "trend": "11.3%"
+                "trend": "+11.3%"
             },
             "Last three months": {
                 "max": 2.06,
                 "min": 0.772,
                 "median": 1.07,
                 "mean": 1.123,
-                "trend": "5.3%"
+                "trend": "+5.3%"
             },
             "Last six months": {
                 "max": 2.06,
                 "min": 0.711,
                 "median": 1.046,
                 "mean": 1.096,
-                "trend": "1.1%"
+                "trend": "+1.1%"
             },
             "All time": {
                 "max": 2.122,
@@ -1869,28 +1869,28 @@
                 "min": 0.857,
                 "median": 1.056,
                 "mean": 1.208,
-                "trend": "4.6%"
+                "trend": "+4.6%"
             },
             "Last month": {
                 "max": 2.278,
                 "min": 0.792,
                 "median": 1.165,
                 "mean": 1.239,
-                "trend": "0.1%"
+                "trend": "+0.1%"
             },
             "Last three months": {
                 "max": 2.289,
                 "min": 0.726,
                 "median": 1.252,
                 "mean": 1.347,
-                "trend": "17.2%"
+                "trend": "+17.2%"
             },
             "Last six months": {
                 "max": 2.289,
                 "min": 0.677,
                 "median": 1.166,
                 "mean": 1.254,
-                "trend": "2.8%"
+                "trend": "+2.8%"
             },
             "All time": {
                 "max": 2.425,
@@ -2180,7 +2180,7 @@
                 "min": 1.778,
                 "median": 19.478,
                 "mean": 15.209,
-                "trend": "14.0%"
+                "trend": "+14.0%"
             },
             "Last three months": {
                 "max": 24.0,
@@ -2249,14 +2249,14 @@
                 "min": 7.0,
                 "median": 41.0,
                 "mean": 49.833,
-                "trend": "183.1%"
+                "trend": "+183.1%"
             },
             "Last month": {
                 "max": 101.0,
                 "min": 1.0,
                 "median": 25.0,
                 "mean": 35.19,
-                "trend": "14.8%"
+                "trend": "+14.8%"
             },
             "Last three months": {
                 "max": 103.0,
@@ -2301,14 +2301,14 @@
                 "min": 3.242,
                 "median": 3.808,
                 "mean": 3.877,
-                "trend": "1.6%"
+                "trend": "+1.6%"
             },
             "Last six months": {
                 "max": 5.18,
                 "min": 3.148,
                 "median": 3.808,
                 "mean": 3.847,
-                "trend": "1.2%"
+                "trend": "+1.2%"
             },
             "All time": {
                 "max": 5.18,
@@ -2522,7 +2522,7 @@
                 "min": 41.605,
                 "median": 51.607,
                 "mean": 58.555,
-                "trend": "13.9%"
+                "trend": "+13.9%"
             },
             "Last month": {
                 "max": 85.383,
@@ -2536,14 +2536,14 @@
                 "min": 25.214,
                 "median": 57.572,
                 "mean": 58.051,
-                "trend": "10.1%"
+                "trend": "+10.1%"
             },
             "Last six months": {
                 "max": 96.04,
                 "min": 19.419,
                 "median": 55.862,
                 "mean": 55.377,
-                "trend": "4.2%"
+                "trend": "+4.2%"
             },
             "All time": {
                 "max": 99.822,

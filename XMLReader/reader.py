@@ -156,7 +156,13 @@ def calculate_statistics(data):
 
             trend = ((current_period['value'].mean() - earlier_period['value'].mean()) 
                      / earlier_period['value'].mean()) * 100
-            return f"{round(trend, 1)}%"
+            #% and +
+            if trend is None:
+                return None
+            trend = round(trend, 1)
+            if trend > 0:
+                return f"+{trend}%"
+            return f"{trend}%"
 
         # Last 1 week statistics and trend
         value['Previous week'] = calculate_period_stats(df, 7)
