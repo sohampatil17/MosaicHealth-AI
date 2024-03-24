@@ -2,9 +2,35 @@ import { useState, useEffect, useRef } from 'react';
 import { Box, Button, Card, Typography } from '@mui/joy';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 
-const SpeechToText = () => {
+const placeholderImportantData = [
+  {
+    reasoning: "Mentioned *muscle pain* which can be caused by vitamin d deficiency",
+    category: "Time In Daylight",
+    data1_time: "6 month",
+    data1_type: "mean",
+    data2_time: "3 month",
+    data2_type: "trend"
+  },
+  {
+    reasoning: "Shortness of breath might indicate oxygen issues",
+    category: "Oxygen Saturation",
+    data1_time: "1 week",
+    data1_type: "min",
+    data2_time: "6 month",
+    data2_type: "mean"
+  },
+];
+
+// Define the props type
+interface TranscriptionProps {
+  transcript: string;
+  setTranscript: React.Dispatch<React.SetStateAction<string>>;
+  setImportantData: React.Dispatch<React.SetStateAction<any>>;
+}
+
+function Transcription({ transcript, setTranscript, setImportantData }: TranscriptionProps) {
+
   const [isListening, setIsListening] = useState(false);
-  const [transcript, setTranscript] = useState('');
   const [interimTranscript, setInterimTranscript] = useState('');
 
   // set up transcription listener on component mount
@@ -21,6 +47,8 @@ const SpeechToText = () => {
 
       recognition.onend = () => {
         setIsListening(false);
+        // todo: generate this for real with an API call 
+        setImportantData(placeholderImportantData);
       };
 
       recognition.onresult = (event: any) => {
@@ -109,4 +137,4 @@ const SpeechToText = () => {
   );
 };
 
-export default SpeechToText;
+export default Transcription;

@@ -4,6 +4,7 @@ import NavBar from './components/Navbar';
 import Data_Insights from './components/Data_Insights';
 import Transcription from './components/Transcription';
 import Report from './components/Report';
+import { useState } from 'react';
 
 const my_theme = extendTheme({
   colorSchemes: {
@@ -24,6 +25,10 @@ const my_theme = extendTheme({
 
 export default function App() {
 
+  const [transcript, setTranscript] = useState('');
+  const [importantData, setImportantData] = useState<any[]>([]);
+  const [outline, setOutline] = useState<string>("");
+
   return (
     <CssVarsProvider
       defaultMode="system"
@@ -31,13 +36,13 @@ export default function App() {
       modeStorageKey="joy-identify-system-mode"
     >
       <CssBaseline />
-      <NavBar />
+      <NavBar setTranscript={setTranscript} setImportantData={setImportantData} setOutline={setOutline} />
       <Box sx={{ display: 'flex', width: '100%' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, maxWidth: '50%', minWidth: '50%' }}>
-          <Transcription />
-          <Data_Insights />
+          <Transcription transcript={transcript} setTranscript={setTranscript} setImportantData={setImportantData} />
+          <Data_Insights importantData={importantData} setOutline={setOutline} />
         </Box>
-        <Report />
+        <Report outline={outline} />
       </Box>
     </CssVarsProvider >
   );
