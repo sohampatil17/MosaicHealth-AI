@@ -1,9 +1,9 @@
 import { Box, CssBaseline } from '@mui/joy';
 import { CssVarsProvider, extendTheme } from '@mui/joy/styles';
 import NavBar from './components/Navbar';
-import Left_Pane from './components/Left_Pane';
 import Data_Insights from './components/Data_Insights';
-import { useState } from 'react';
+import Transcription from './components/Transcription';
+import Report from './components/Report';
 
 const my_theme = extendTheme({
   colorSchemes: {
@@ -24,8 +24,6 @@ const my_theme = extendTheme({
 
 export default function App() {
 
-  const [transcript, setTranscript] = useState("");
-
   return (
     <CssVarsProvider
       defaultMode="system"
@@ -34,8 +32,11 @@ export default function App() {
     >
       <CssBaseline />
       <NavBar />
-      <Box sx={{ display: 'flex', width: '100%', flexFlow: 1 }}>
-        <Left_Pane />
+      <Box sx={{ display: 'flex', width: '100%' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+          <Transcription />
+          <Report />
+        </Box>
         <Data_Insights />
       </Box>
     </CssVarsProvider >

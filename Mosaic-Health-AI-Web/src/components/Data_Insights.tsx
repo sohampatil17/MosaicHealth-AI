@@ -23,8 +23,7 @@ const importantData = [
 export default function DataInsights() {
     const [appleHealthData, setAppleHealthData] = useState<any | null>(null);
     const [enrichedData, setEnrichedData] = useState<any | null>([]);
-
-    const [selectedData, setSelectedData] = useState<string[]>([]); //example selecteeddata = ["Oxygen Saturation 1 week min: 0.955 %", "Time In Daylight 6 month mean: 37.938 min"]
+    const [selectedData, setSelectedData] = useState<string[]>([]);
 
     // load JSON data when component mounts 
     useEffect(() => {
@@ -65,7 +64,6 @@ export default function DataInsights() {
         }
     };
 
-
     return (
         <Card color='primary' sx={{ margin: 2, justifyItems: 'top', alignItems: 'center', width: '40%' }}>
             <Typography level='h2'>Data Insights</Typography>
@@ -97,7 +95,7 @@ export default function DataInsights() {
                     </Card>
                 ))}
             </Sheet>
-            <Button>✨Get AI Recommended Data✨</Button>
+            <Button>✨Get AI Recommended Data From Apple Health✨</Button>
         </Card>
     );
 }
