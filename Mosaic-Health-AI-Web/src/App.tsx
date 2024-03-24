@@ -33,11 +33,11 @@ export default function App() {
       <CssBaseline />
       <NavBar />
       <Box sx={{ display: 'flex', width: '100%' }}>
-        <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, maxWidth: '50%', minWidth: '50%' }}>
           <Transcription />
-          <Report />
+          <Data_Insights />
         </Box>
-        <Data_Insights />
+        <Report />
       </Box>
     </CssVarsProvider >
   );

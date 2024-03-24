@@ -1,90 +1,112 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Button from '@mui/joy/Button'; // Import MUI Joy UI Button
-import { keyframes } from '@emotion/react';
-import { Card } from '@mui/joy';
+import { useState, useEffect, useRef } from 'react';
+import { Box, Button, Card, Typography } from '@mui/joy';
+import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 
-declare global {
-  interface Window {
-    webkitSpeechRecognition: any;
-  }
-}
-
-const pulseAnimation = keyframes`
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-`;
-
-const Transcription: React.FC = () => {
-  const recognitionRef = useRef<typeof window.webkitSpeechRecognition | null>(null);
-  const [isRecording, setIsRecording] = useState(false);
+const SpeechToText = () => {
+  const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
+  const [interimTranscript, setInterimTranscript] = useState('');
 
+  // set up transcription listener on component mount
   useEffect(() => {
-    recognitionRef.current = new window.webkitSpeechRecognition();
-    recognitionRef.current.continuous = true;
-    recognitionRef.current.interimResults = true;
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      const recognition = new SpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = true;
 
-    recognitionRef.current.onresult = (event: any) => {
-      let interimTranscript = '';
-      for (let i = event.resultIndex; i < event.results.length; i++) {
-        const transcript = event.results[i][0].transcript;
-        if (event.results[i].isFinal) {
-          setTranscript(prevTranscript => prevTranscript + transcript + '.');
-        } else {
-          interimTranscript += transcript;
+      recognition.onstart = () => {
+        setIsListening(true);
+      };
+
+      recognition.onend = () => {
+        setIsListening(false);
+      };
+
+      recognition.onresult = (event: any) => {
+        console.log(event);
+        setInterimTranscript("");
+        for (var i = event.resultIndex; i < event.results.length; i++) {
+          var transcript = event.results[i][0].transcript;
+          transcript.replace("\n", "<br>");
+          if (event.results[i].isFinal) {
+            setTranscript((prevTranscript) => prevTranscript + ' ' + transcript + '.');
+          }
+          else {
+            setInterimTranscript((prevTranscript) => prevTranscript + ' ' + transcript);
+          }
         }
-      }
-    };
+      };
 
-    recognitionRef.current.onerror = (event: any) => {
-      console.error('Speech recognition error:', event.error);
-    };
-
-    return () => {
-      if (recognitionRef.current) {
-        recognitionRef.current.stop();
-      }
-    };
-  }, []);
-
-  const toggleRecording = () => {
-    if (recognitionRef.current) {
-      if (isRecording) {
-        recognitionRef.current.stop();
+      if (isListening) {
+        recognition.start();
       } else {
-        recognitionRef.current.start();
-        setTranscript('');
+        recognition.stop();
       }
+
+      return () => {
+        recognition.stop();
+      };
     }
-    setIsRecording(!isRecording);
-  };
+  }, [isListening]);
+
+  // Create a ref for the Card component that needs to auto-scroll
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+
+  // Use useEffect to scroll to the bottom every time transcript or interimTranscript changes
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [transcript, interimTranscript]);
 
   return (
-    <Card color='primary' sx={{ margin: 2, marginRight: 0, justifyContent: 'center', height: '15vh' }}>
+    <Card color='primary' sx={{ margin: 2, marginRight: 0, marginBottom: 0, justifyContent: 'center', height: '12vh', display: 'flex', flexDirection: 'row' }}>
       <Button
-        onClick={toggleRecording}
-        variant={isRecording ? 'outlined' : 'solid'}
-        color={isRecording ? 'danger' : 'primary'}
         sx={{
-          animation: isRecording ? `${pulseAnimation} 1s infinite` : 'none',
+          minWidth: 200,
+          maxWidth: 200,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
+        onClick={() => setIsListening((prevState) => !prevState)}
       >
-        {isRecording ? 'Stop Recording' : 'Start Recording'}
+        <Box component="span" sx={{ display: 'flex', alignItems: 'center' }}>
+          {isListening ? (
+            <>
+              <Box
+                component="img"
+                src="/public/assets/speech-animation.gif" // Your GIF file path
+                sx={{ width: 30, height: 'auto', marginRight: 1 }} // Adjust the size as needed
+                alt="Transcribing"
+              />
+              Stop Transcription
+            </>
+          ) : (
+            <>
+              <Box
+                component={KeyboardVoiceIcon}
+                sx={{ width: 30, height: 30, marginRight: 1 }} // Match the size and margin with the GIF
+              />
+              Start Transcription
+            </>
+          )}
+        </Box>
       </Button>
-      <div>
-        <p>Transcript:</p>
-        <div>{transcript}</div>
-      </div>
+      <Card sx={{ flexGrow: 1, overflowY: 'auto', paddingBottom: 0 }}>
+        <Typography sx={{ marginBottom: 0, paddingBottom: 0 }}>{transcript} {interimTranscript}</Typography>
+        {/* Invisible div at the bottom of the Card content */}
+        <div
+          ref={messagesEndRef}
+          style={{
+            height: 0, // Set height to 0
+            margin: 0, // Remove margins
+            padding: 0, // Remove padding
+            border: 'none', // Ensure there's no border
+          }}
+        />
+      </Card>
     </Card >
-
   );
 };
 
-export default Transcription;
+export default SpeechToText;
