@@ -1,5 +1,16 @@
 import xml.etree.ElementTree as ET
 import modin.pandas as pd
+#Intel Modin significantly enhances the performance of data processing tasks by distributing 
+#them across multiple CPU cores, enabling parallel execution. 
+
+#This is especially beneficial for busy doctors analyzing patient data, 
+# as it drastically reduces the time required to compute and analyze large datasets from Apple Watches. 
+
+#The reason we chose Modin is that operations that are traditionally 
+#time-consuming in Pandas, such as data aggregation, filtering, and statistical calculations, 
+#are executed much faster. This allows doctors to quickly access critical patient insights, our AI tools to
+#run more efficiently and quicker, and also therefore facilitating more efficient decision-making and patient care.
+
 from datetime import datetime
 import json
 import numpy as np
@@ -14,7 +25,7 @@ def remove_prefix(text, prefixes):
             return text[len(prefix):]
     return text
 
-
+# Some categories need to be averaged, while others are cumulative
 average_categories = [
     "BodyMassIndex", "Height", "BodyMass", "HeartRate", "OxygenSaturation",
     "BloodPressureSystolic", "BloodPressureDiastolic", "RespiratoryRate", 
@@ -30,6 +41,8 @@ average_categories = [
     "HeadphoneAudioExposureEvent", "HeartRateVariabilitySDNN"
 ]
 
+#This method processes the records in the XML file, storing them as datapoints with a date
+#This allows for efficient usage for statistics calculations later.
 def process_records(root):
     data = {}
     watch_prioritized_categories = [
@@ -116,12 +129,13 @@ def process_records(root):
 
     return data
 
+#This calculates important statistics for physicians to use such as averages, weekly and monthly trends, and maxes and minimums.
 def calculate_statistics(data):
     for key, value in data.items():
         if not value['data_points']:  # Skip if no data points
             continue
 
-        # Prepare data for DataFrame
+        # Prepare data for DataFrame - Here, Intel Modin helps speed up the DataFrame process drastically
         prepared_data = []
         for date, stats in value['data_points'].items():
             if value['type'] == 'average':
@@ -211,7 +225,7 @@ def export_to_json(data, file_name):
     }
     with open(file_name, 'w') as file:
         json.dump(output, file, indent=4, default=lambda x: x.isoformat() if isinstance(x, datetime) else x)
-
+        
 def format_category_name(category_name):
     # Adds spaces before each capital letter in the category name,
     # except where it follows another capital letter, a number, or already has a space.
