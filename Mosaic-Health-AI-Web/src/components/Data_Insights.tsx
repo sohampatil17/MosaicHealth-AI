@@ -1,12 +1,13 @@
-import { Button, Card, Typography, Sheet, Chip } from '@mui/joy';
+import { Button, Card, Typography, Sheet, Chip, CircularProgress, Box } from '@mui/joy';
 import { useEffect, useState } from 'react';
 
 interface DataInsightsProps {
     importantData: any;
+    loadingDataSuggestions: boolean;
     setOutline: React.Dispatch<React.SetStateAction<string>>
 }
 
-export default function DataInsights({ importantData, setOutline }: DataInsightsProps) {
+export default function DataInsights({ importantData, loadingDataSuggestions, setOutline }: DataInsightsProps) {
     const [appleHealthData, setAppleHealthData] = useState<any | null>(null);
     const [enrichedData, setEnrichedData] = useState<any | null>([]);
     const [selectedData, setSelectedData] = useState<string[]>([]);
@@ -59,50 +60,53 @@ export default function DataInsights({ importantData, setOutline }: DataInsights
     return (
         <Card color='primary' sx={{ margin: 2, marginRight: 0, justifyItems: 'top', alignItems: 'center' }}>
             <Typography level='h3'>Data Insights</Typography>
-            <Sheet sx={{ width: '100%', minHeight: '58vh', overflowY: 'auto' }}>
-                {enrichedData && enrichedData.length > 0 ? (
-                    // If there is enriched data, display the chips and other content
-                    <>
-                        <Typography>Select data chips to include them in the AI report outline</Typography>
-                        {enrichedData.map((data: any, index: any) => (
-                            <Card key={index} sx={{ width: '100%', marginTop: 0, marginBottom: 2 }}>
-                                <Typography level='h3'>{data.category}</Typography>
-                                <Sheet sx={{ alignItems: 'center', overflowX: 'auto', flexWrap: 'nowrap' }}>
-                                    <Chip
-                                        size="lg"
-                                        variant={selectedData.includes(`${data.data1_time} ${data.data1_type}: ${data.data1_value} ${data.unit}`) ? 'solid' : 'soft'}
-                                        color='primary'
-                                        sx={{ marginRight: 1, marginBottom: 1 }}
-                                        onClick={() => handleChipClick(data)}
-                                    >
-                                        {data.data1_time} {data.data1_type}: {data.data1_value} {data.unit}
-                                    </Chip>
-                                    <Chip
-                                        size="lg"
-                                        variant={selectedData.includes(`${data.data2_time} ${data.data2_type}: ${data.data2_value} ${data.unit}`) ? 'solid' : 'soft'}
-                                        color='primary'
-                                        sx={{ marginRight: 0, marginBottom: 1 }}
-                                        onClick={() => handleChipClick({ ...data, data1_time: data.data2_time, data1_type: data.data2_type, data1_value: data.data2_value })}
-                                    >
-                                        {data.data2_time} {data.data2_type}: {data.data2_value} {data.unit}
-                                    </Chip>
-                                </Sheet>
-                                <Typography sx={{ marginTop: 0 }}>{data.reasoning}</Typography>
-                            </Card>
-                        ))}
-                    </>
-                ) : (
-                    // Fallback UI when there is no enriched data
-                    <Card sx={{ width: '100%', marginTop: 0, marginBottom: 2 }}>
-                        <Typography>To see data insights, first start and end transcription.</Typography>
-                    </Card>
-                )
-                }
-            </Sheet >
-            <Button size='lg' onClick={handleOutlineGenerator}>
+
+            {loadingDataSuggestions ? (
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '58vh' }}>
+                    <CircularProgress />
+                </Box>
+            ) : (
+                <Sheet sx={{ width: '100%', minHeight: '58vh', overflowY: 'auto' }}>
+                    {enrichedData && enrichedData.length > 0 ? (
+                        <>
+                            <Typography>Select data chips to include them in the AI report outline</Typography>
+                            {enrichedData.map((data: any, index: number) => (
+                                <Card key={index} sx={{ width: '100%', marginTop: 0, marginBottom: 2 }}>
+                                    <Typography level='h3'>{data.category}</Typography>
+                                    <Sheet sx={{ alignItems: 'center', overflowX: 'auto', flexWrap: 'nowrap' }}>
+                                        <Chip
+                                            size="lg"
+                                            variant={selectedData.includes(`${data.data1_time} ${data.data1_type}: ${data.data1_value} ${data.unit}`) ? 'solid' : 'soft'}
+                                            color='primary'
+                                            sx={{ marginRight: 1, marginBottom: 1 }}
+                                            onClick={() => handleChipClick(data)}
+                                        >
+                                            {data.data1_time} {data.data1_type}: {data.data1_value} {data.unit}
+                                        </Chip>
+                                        <Chip
+                                            size="lg"
+                                            variant={selectedData.includes(`${data.data2_time} ${data.data2_type}: ${data.data2_value} ${data.unit}`) ? 'solid' : 'soft'}
+                                            color='primary'
+                                            sx={{ marginRight: 0, marginBottom: 1 }}
+                                            onClick={() => handleChipClick({ ...data, data1_time: data.data2_time, data1_type: data.data2_type, data1_value: data.data2_value })}
+                                        >
+                                            {data.data2_time} {data.data2_type}: {data.data2_value} {data.unit}
+                                        </Chip>
+                                    </Sheet>
+                                    <Typography sx={{ marginTop: 0 }}>{data.reasoning}</Typography>
+                                </Card>
+                            ))}
+                        </>
+                    ) : (
+                        <Typography>To see data insights, first start and end a transcription.</Typography>
+                    )}
+                </Sheet>
+            )}
+
+            <Button size='lg' onClick={handleOutlineGenerator} sx={{ marginTop: 2 }}>
                 ✨ Generate Outline From Selected Data and Transcript ✨
             </Button>
-        </Card >
+        </Card>
     );
 
 }

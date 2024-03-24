@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Box, Button, Card, Typography } from '@mui/joy';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
+import axios from 'axios';
 
 const placeholderImportantData = [
   {
@@ -26,9 +27,10 @@ interface TranscriptionProps {
   transcript: string;
   setTranscript: React.Dispatch<React.SetStateAction<string>>;
   setImportantData: React.Dispatch<React.SetStateAction<any>>;
+  setLoadingDataSuggestions: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function Transcription({ transcript, setTranscript, setImportantData }: TranscriptionProps) {
+function Transcription({ transcript, setTranscript, setImportantData, setLoadingDataSuggestions }: TranscriptionProps) {
 
   const [isListening, setIsListening] = useState(false);
   const [interimTranscript, setInterimTranscript] = useState('');
@@ -42,17 +44,31 @@ function Transcription({ transcript, setTranscript, setImportantData }: Transcri
       recognition.interimResults = true;
 
       recognition.onstart = () => {
+        console.log("transcrption started");
         setIsListening(true);
       };
 
       recognition.onend = () => {
         setIsListening(false);
-        // todo: generate this for real with an API call 
-        setImportantData(placeholderImportantData);
+        setLoadingDataSuggestions(true);
+        console.log("transcrption ended");
+
+        // Make a POST request to send the transcript to your Flask backend
+        axios.post('http://127.0.0.1:5000/process_transcript', { transcript })
+          .then(response => {
+            // Handle the response from Flask, assuming it's the modified important data
+            setLoadingDataSuggestions(false);
+            console.log(response);
+            const result = JSON.parse(response.data.result); // This is the content returned from Flask
+            console.log(result);
+            //setImportantData(result);
+          })
+          .catch(error => {
+            console.error('There was an error processing the transcript:', error);
+          });
       };
 
       recognition.onresult = (event: any) => {
-        console.log(event);
         setInterimTranscript("");
         for (var i = event.resultIndex; i < event.results.length; i++) {
           var transcript = event.results[i][0].transcript;
@@ -101,6 +117,7 @@ function Transcription({ transcript, setTranscript, setImportantData }: Transcri
         <Box component="span" sx={{ display: 'flex', alignItems: 'center' }}>
           {isListening ? (
             <>
+              {/* 'Transcribing...' Button */}
               <Box
                 component="img"
                 src="/public/assets/speech-animation.gif" // Your GIF file path
@@ -111,6 +128,7 @@ function Transcription({ transcript, setTranscript, setImportantData }: Transcri
             </>
           ) : (
             <>
+              {/* 'Start Transcription' Button */}
               <Box
                 component={KeyboardVoiceIcon}
                 sx={{ width: 30, height: 30, marginRight: 1 }} // Match the size and margin with the GIF

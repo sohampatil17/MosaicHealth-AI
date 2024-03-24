@@ -28,6 +28,7 @@ export default function App() {
   const [transcript, setTranscript] = useState('');
   const [importantData, setImportantData] = useState<any[]>([]);
   const [outline, setOutline] = useState<string>("");
+  const [loadingDataSuggestions, setLoadingDataSuggestions] = useState(false);
 
   return (
     <CssVarsProvider
@@ -39,8 +40,8 @@ export default function App() {
       <NavBar setTranscript={setTranscript} setImportantData={setImportantData} setOutline={setOutline} />
       <Box sx={{ display: 'flex', width: '100%' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, maxWidth: '50%', minWidth: '50%' }}>
-          <Transcription transcript={transcript} setTranscript={setTranscript} setImportantData={setImportantData} />
-          <Data_Insights importantData={importantData} setOutline={setOutline} />
+          <Transcription transcript={transcript} setTranscript={setTranscript} setImportantData={setImportantData} setLoadingDataSuggestions={setLoadingDataSuggestions} />
+          <Data_Insights importantData={importantData} setOutline={setOutline} loadingDataSuggestions={loadingDataSuggestions} />
         </Box>
         <Report outline={outline} />
       </Box>

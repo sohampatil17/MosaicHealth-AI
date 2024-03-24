@@ -1,13 +1,22 @@
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
 import json
 import predictionguard as pg
 
+app = Flask(__name__)
+CORS(app) # Initialize CORS to prevent errors
 
 os.environ["PREDICTIONGUARD_TOKEN"] = "q1VuOjnffJ3NO2oFN8Q9m8vghYc84ld13jaqdF7E"
 
-transcript = "good morning doctor its been a few weeks since my knee surgery and i wanted to check in on my recovery progress..."
+@app.route('/process_transcript', methods=['POST'])
+def process_transcript():
+    data = request.json
+    transcript = data.get('transcript', '') # something like "good morning doctor its been a few weeks since my knee surgery..."
+    print(transcript)
 
-messages = [
+    # processing logic here
+    messages = [
     {
         "role": "system",
         "content": """You are a helpful medical data assistant. Your job is to understand the doctor-patient interaction an array of two data objects to extract important health data relating to a patients condition
@@ -135,18 +144,21 @@ messages = [
     },
     {
         "role": "user",
-        "content": transcript
-    }
-]
+        "content": "I've had back issues recently"
+    }]
 
+    result = pg.Chat.create(
+        model="Neural-Chat-7B",
+        messages=messages,
+        max_tokens=1000
+    )
+    
+    content = result['choices'][0]['message']['content']
 
-result = pg.Chat.create(
-model="Neural-Chat-7B",
-messages=messages,
-max_tokens=1000
-)
+    # Return the processed content as a JSON response
+    print(content)
+    print(jsonify({"result": content}))
+    return jsonify({"result": content})
 
-
-content = result['choices'][0]['message']['content']
-print(content)
-# print(json.dumps(result['output'], sort_keys=True, indent=4, separators=(',', ': ')))
+if __name__ == '__main__':
+    app.run(debug=True)
