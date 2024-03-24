@@ -67,7 +67,8 @@ export default function DataInsights() {
     return (
         <Card color='primary' sx={{ margin: 2, justifyItems: 'top', alignItems: 'center', width: '40%' }}>
             <Typography level='h2'>Data Insights</Typography>
-            <Sheet sx={{ width: '100%', height: 'calc(100vh - 220px)', overflowY: 'auto' }}>
+            <Typography> Select data chips to include them in the AI report outline</Typography>
+            <Sheet sx={{ width: '100%', height: 'calc(100vh - 250px)', overflowY: 'auto' }}>
                 {enrichedData && enrichedData.map((data: any, index: any) => (
                     <Card key={index} sx={{ width: '100%', marginTop: 2, marginBottom: 2 }}>
                         <Typography level='h3'>{data.category}</Typography>
