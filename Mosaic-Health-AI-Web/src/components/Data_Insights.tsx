@@ -19,7 +19,7 @@ export default function DataInsights({ importantData, setOutline }: DataInsights
             .catch(error => console.error('Error fetching data: ', error));
     }, []);
 
-    // Extract data when either the input health data changes, or the 'important information' object updates
+    // Extract data when either the apple health data changes, or the 'important information' object updates
     useEffect(() => {
         if (appleHealthData) {
             const enrichedData = importantData.map((dataPoint: { category: string | number; data1_time: string | number; data1_type: string | number; data2_time: string | number; data2_type: string | number; }) => {
@@ -52,9 +52,9 @@ export default function DataInsights({ importantData, setOutline }: DataInsights
 
     // Function to handle generating the initial report
     const handleOutlineGenerator = () => {
+
         setOutline("AI generated this magical outline")
     }
-
 
     return (
         <Card color='primary' sx={{ margin: 2, marginRight: 0, justifyItems: 'top', alignItems: 'center' }}>
@@ -94,7 +94,7 @@ export default function DataInsights({ importantData, setOutline }: DataInsights
                 ) : (
                     // Fallback UI when there is no enriched data
                     <Card sx={{ width: '100%', marginTop: 0, marginBottom: 2 }}>
-                        <Typography>To see data insights, first start and end a transcript.</Typography>
+                        <Typography>To see data insights, first start and end transcription.</Typography>
                     </Card>
                 )
                 }

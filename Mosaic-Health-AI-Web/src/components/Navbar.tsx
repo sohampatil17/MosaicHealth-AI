@@ -6,7 +6,6 @@ interface NavbarProps {
     setImportantData: React.Dispatch<React.SetStateAction<any>>;
 }
 
-
 export default function NavBar({ setTranscript, setOutline, setImportantData }: NavbarProps) {
 
     function handleClear() {

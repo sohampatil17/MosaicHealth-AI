@@ -5,103 +5,145 @@ import predictionguard as pg
 
 os.environ["PREDICTIONGUARD_TOKEN"] = "q1VuOjnffJ3NO2oFN8Q9m8vghYc84ld13jaqdF7E"
 
+transcript = "good morning doctor its been a few weeks since my knee surgery and i wanted to check in on my recovery progress..."
+
 messages = [
     {
         "role": "system",
-        "content": """You are a helpful medical data assistant. Your job is to understand the doctor-patient interaction and output relevant data needed strictly in the format of- 
+        "content": """You are a helpful medical data assistant. Your job is to understand the doctor-patient interaction an array of two data objects to extract important health data relating to a patients condition
+            Example1 input: "Patient looks pale and is experiencing shortness of breath"
+            Example1 output:
+            [
+                {
+                    reasoning: "Mentioned muscle pain which can be caused by vitamin d deficiency",
+                    category: "Time In Daylight",
+                    data1_time: "6 month",
+                    data1_type: "mean",
+                    data2_time: "3 month",
+                    data2_type: "trend"
+                },
+                {
+                    reasoning: "Shortness of breath might indicate oxygen issues",
+                    category: "Oxygen Saturation",
+                    data1_time: "1 week",
+                    data1_type: "min",
+                    data2_time: "6 month",
+                    data2_type: "mean"
+                }
+            ]
+
+            Example2 Input: "Patient is experiencing rapid weight gain and feels constantly tired"
+            Example2 Output:
+            [
+                {
+                    "reasoning": "Constant fatigue could be related to poor sleep quality",
+                    "category": "Sleep Time",
+                    "data1_time": "1 month",
+                    "data1_type": "min",
+                    "data2_time": "1 week",
+                    "data2_type": "mean"
+                },
+                {
+                    "reasoning": "Weight gain might also affect heart health",
+                    "category": "Resting Heart Rate",
+                    "data1_time": "3 month",
+                    "data1_type": "max",
+                    "data2_time": "1 month",
+                    "data2_type": "mean"
+                }
+            ]
+
+            Example3 Input: "Patient has been feeling very anxious and has trouble sleeping"
+            Example3 Output:
+            [
+                {
+                    "reasoning": "Anxiety can elevate heart rate",
+                    "category": "Heart Rate",
+                    "data1_time": "1 week",
+                    "data1_type": "mean",
+                    "data2_time": "1 month",
+                    "data2_type": "trend"
+                },
+                {
+                    "reasoning": "Trouble sleeping might indicate irregular sleep patterns",
+                    "category": "Sleep Time",
+                    "data1_time": "1 week",
+                    "data1_type": "min",
+                    "data2_time": "6 month",
+                    "data2_type": "mean"
+                }
+            ]
+
+            Format options of each object:
             {
-                "reasoning": "",
-                "category": "",
-                "data1_time": "",
-                "data1_type": "",
-                "data2_time": "",
-                "data2_type": ""
-            }. Possible data types are "max", "min", "mean", "median", "trend" and possible data times are "1_week", "1_month", "3_month", "6_month", "all_time".
-            Possible categories are "DietaryWater" or
-            "BodyMassIndex" or
-            "Height" or
-            "BodyMass" or
-            "HeartRate" or
-            "OxygenSaturation" or
-            "BloodPressureSystolic" or
-            "BloodPressureDiastolic" or
-            "RespiratoryRate" or
-            "StepCount" or
-            "DistanceWalkingRunning" or
-            "BasalEnergyBurned" or
-            "ActiveEnergyBurned" or
-            "FlightsClimbed" or
-            "DietaryFatTotal" or
-            "DietaryFatPolyunsaturated" or
-            "DietaryFatMonounsaturated" or
-            "DietaryFatSaturated" or
-            "DietaryCholesterol" or
-            "DietarySodium" or
-            "DietaryCarbohydrates" or
-            "DietaryFiber" or
-            "DietarySugar" or
-            "DietaryEnergyConsumed" or
-            "DietaryProtein" or
-            "DietaryVitaminC" or
-            "DietaryCalcium" or
-            "DietaryIron" or
-            "DietaryPotassium" or
-            "NumberOfTimesFallen" or
-            "AppleExerciseTime" or
-            "DietaryCaffeine" or
-            "DistanceCycling" or
-            "DistanceSwimming" or
-            "SwimmingStrokeCount" or
-            "RestingHeartRate" or
-            "VO2Max" or
-            "WalkingHeartRateAverage" or
-            "EnvironmentalAudioExposure" or
-            "WalkingDoubleSupportPercentage" or
-            "SixMinuteWalkTestDistance" or
-            "AppleStandTime" or
-            "WalkingAsymmetryPercentage" or
-            "StairAscentSpeed" or
-            "StairDescentSpeed" or
-            "SleepDurationGoal" or
-            "AppleWalkingSteadiness" or
-            "RunningStrideLength" or
-            "RunningVerticalOscillation" or
-            "RunningGroundContactTime" or
-            "HeartRateRecoveryOneMinute" or
-            "RunningPower" or
-            "EnvironmentalSoundReduction" or
-            "RunningSpeed" or
-            "TimeInDaylight" or
-            "PhysicalEffort" or
-            "SleepAnalysis" or
-            "AppleStandHour" or
-            "MindfulSession" or
-            "HighHeartRateEvent" or
-            "LowHeartRateEvent" or
-            "AudioExposureEvent" or
-            "ToothbrushingEvent" or
-            "HeadphoneAudioExposureEvent" or
-            "HandwashingEvent" or
-            "HeartRateVariabilitySDNN"
-            . Ensure outputted data is in the format of {
-                "reasoning": "add reason here",
-                "category": "add category from the list I gave you earlier",
-                "data1_time": "add data time from options I gave you here",
-                "data1_type": "add data type from options I gave you here",
-                "data2_time": "add data time from options I gave you here",
-                "data2_type": "add data type from options I gave you here"
-            } and that categories are only from the ones I listed."""
+                "reasoning": "short sentence explaining reasoning for ",
+                "category":  
+                    "Body Mass Index",
+                    "Height",
+                    "Body Mass",
+                    "Heart Rate",
+                    "Oxygen Saturation",
+                    "Blood Pressure Systolic",
+                    "Blood Pressure Diastolic",
+                    "Respiratory Rate",
+                    "Step Count",
+                    "Distance Walking Running",
+                    "Basal Energy Burned",
+                    "Active Energy Burned",
+                    "Flights Climbed",
+                    "Number Of Times Fallen",
+                    "Apple Exercise Time",
+                    "Dietary Caffeine",
+                    "Distance Cycling",
+                    "Resting Heart Rate",
+                    "VO2 Max",
+                    "Walking Heart Rate Average",
+                    "Environmental Audio Exposure",
+                    "Headphone Audio Exposure",
+                    "Walking Double Support Percentage",
+                    "Six Minute Walk Test Distance",
+                    "Apple Stand Time",
+                    "Walking Speed",
+                    "Walking Step Length",
+                    "Walking Asymmetry Percentage",
+                    "Stair Ascent Speed",
+                    "Stair Descent Speed",
+                    "Sleep Duration Goal",
+                    "Apple Walking Steadiness",
+                    "Running Stride Length",
+                    "Running Vertical Oscillation",
+                    "Running Ground Contact Time",
+                    "Heart Rate Recovery One Minute",
+                    "Running Power",
+                    "Environmental Sound Reduction",
+                    "Running Speed",
+                    "Time In Daylight",
+                    "Physical Effort",
+                    "Core Sleep",
+                    "Sleep Time",
+                    "Sleep Awake Time",
+                    "Deep Sleep",
+                    "REM Sleep",
+                    "Heart Rate Variability SDNN"
+                "data1_time": "1 week", "1 month", "3 month", "6 month", "All time"
+                "data1_type": "max", "min", "mean", "median", "trend" (if time is "all time" then type CANNOT be "trend")
+                "data2_time": same options as data1_type
+                "data2_type": same options as data2_type
+            }
+            Remember you can ONLY select data categories from the list above, and you should output an array of two objects.
+            """
     },
     {
         "role": "user",
-        "content": "Good morning! I understand you've been experiencing some neck pain since yesterday. Could you describe the pain for me? Good morning. Yes, it started yesterday morning. It's a sharp pain, mostly at the back of my neck. It gets worse when I turn my head. I see. Have you done anything unusual that might have triggered this pain? Perhaps new exercises or a change in your sleeping position? Not that I can recall. I've been following my usual routine, though I did spend a few extra hours at my desk working on my computer yesterday. That could be a contributing factor. Poor posture or prolonged periods in one position can lead to neck strain. Have you taken any medication for the pain? I took some over-the-counter pain relief last night. It helped a little, but the pain is still there, especially when I move. Alright. It's good that you took steps to manage the pain. For now, I recommend continuing with the pain relief as needed, but let's also add some gentle neck stretches to your routine. Additionally, ensure your workstation is ergonomically set up to prevent straining your neck further. I'll do that. Should I be worried about the pain, or will it likely go away on its own? Neck pain like this is often due to muscle strain and usually resolves with proper care. However, if the pain persists for more than a week or worsens, I'd like you to come back for a follow-up. We may need to conduct further tests to rule out other causes. Got it. I'll follow your advice and keep an eye on the pain. Thank you for your help. You're welcome! Remember to take breaks, stretch, and adjust your posture while working. If there's anything else or if the pain intensifies, don't hesitate to contact me. Take care!"
+        "content": transcript
     }
 ]
 
 
 result = pg.Chat.create(
 model="Neural-Chat-7B",
-messages=messages
+messages=messages,
+max_tokens=1000
 )
 
 
