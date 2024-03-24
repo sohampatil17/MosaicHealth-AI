@@ -8,10 +8,12 @@ def parse_xml(file_path):
     tree = ET.parse(file_path)
     return tree.getroot()
 
-def remove_prefix(text, prefix):
-    if text.startswith(prefix):
-        return text[len(prefix):]
+def remove_prefix(text, prefixes):
+    for prefix in prefixes:
+        if text.startswith(prefix):
+            return text[len(prefix):]
     return text
+
 
 average_categories = [
     "BodyMassIndex", "Height", "BodyMass", "HeartRate", "OxygenSaturation",
@@ -34,16 +36,25 @@ average_categories = [
 
 def process_records(root):
     data = {}
+    watch_prioritized_categories = [
+        "StepCount", "DistanceWalkingRunning", "ActiveEnergyBurned",
+        "FlightsClimbed", "AppleExerciseTime", "DistanceCycling",
+        "DistanceSwimming", "SwimmingStrokeCount", "WalkingSpeed",
+        "WalkingStepLength", "RunningStrideLength", "RunningSpeed",
+        "EnvironmentalAudioExposure", "HeadphoneAudioExposure"
+    ]
+    #Remove the average categories from this, as it doesn't matter that they are doubled
+    watch_prioritized_categories = list(set(watch_prioritized_categories) - set(average_categories))
+
+    prefixes = ["HKQuantityTypeIdentifier", "HKCategoryTypeIdentifier", "HKDataType"]
 
     for record in root.findall('.//Record'):
+        rec_type = remove_prefix(record.get('type'), prefixes)
         device_info = record.get('device', '')
 
-        # Filter out records not from Apple Watch
-        if 'model:Watch' not in device_info:
+        # Skip data from non-Apple Watch sources for prioritized categories
+        if rec_type in watch_prioritized_categories and "model:Watch" not in device_info:
             continue
-
-        rec_type = remove_prefix(record.get('type'), 'HKQuantityTypeIdentifier')
-        rec_type = remove_prefix(rec_type, 'HKCategoryTypeIdentifier')
 
         if rec_type not in data:
             data[rec_type] = {
@@ -73,29 +84,6 @@ def process_records(root):
     return data
 
 
-def calculate_trend(df, period_days):
-    end_date = df.index.max()
-    start_date = df.index.min()
-
-    if end_date - start_date < pd.Timedelta(days=period_days * 2):
-        return None  # Not enough data for the trend calculation
-
-    current_period_end = end_date
-    current_period_start = current_period_end - pd.Timedelta(days=period_days)
-    previous_period_start = current_period_start - pd.Timedelta(days=period_days)
-    previous_period_end = current_period_start
-
-    current_period = df.loc[current_period_start:current_period_end]
-    previous_period = df.loc[previous_period_start:previous_period_end]
-
-    if previous_period['value'].mean() == 0:
-        return None  # Avoid division by zero
-
-    trend = ((current_period['value'].mean() - previous_period['value'].mean()) 
-             / previous_period['value'].mean()) * 100
-    return trend
-
-
 def calculate_statistics(data):
     for key, value in data.items():
         if not value['data_points']:  # Skip if no data points
@@ -123,10 +111,10 @@ def calculate_statistics(data):
                 period_df = df
 
             return {
-                'max': period_df['value'].max(),
-                'min': period_df['value'].min(),
-                'median': period_df['value'].median(),
-                'mean': period_df['value'].mean()
+                'max': round(period_df['value'].max(), 3),
+                'min': round(period_df['value'].min(), 3),
+                'median': round(period_df['value'].median(), 3),
+                'mean': round(period_df['value'].mean(), 3)
             }
 
         # Function to calculate trend
@@ -143,7 +131,7 @@ def calculate_statistics(data):
 
             trend = ((current_period['value'].mean() - earlier_period['value'].mean()) 
                      / earlier_period['value'].mean()) * 100
-            return trend
+            return round(trend, 3)
 
         # Last 1 week statistics and trend
         value['1_week'] = calculate_period_stats(df, 7)
@@ -171,13 +159,13 @@ def calculate_statistics(data):
                 if pd.isna(value[period][stat_key]):
                     value[period][stat_key] = None
 
-        # Count data points by year and recent periods
-        value['datapoint_count'] = df['value'].groupby(df.index.year).count().to_dict()
-        current_date = pd.to_datetime('today', utc=True) if df.index.tz is not None else pd.to_datetime('today')
-        value['datapoint_count']['last_6_months'] = df.loc[current_date - pd.DateOffset(months=6):].shape[0]
-        value['datapoint_count']['last_1_month'] = df.loc[current_date - pd.DateOffset(months=1):].shape[0]
+        ## Count data points by year and recent periods
+        #value['datapoint_count'] = df['value'].groupby(df.index.year).count().to_dict()
+        #current_date = pd.to_datetime('today', utc=True) if df.index.tz is not None else pd.to_datetime('today')
+        #value['datapoint_count']['last_6_months'] = df.loc[current_date - pd.DateOffset(months=6):].shape[0]
+        #value['datapoint_count']['last_1_month'] = df.loc[current_date - pd.DateOffset(months=1):].shape[0]
 
-        # Remove raw data points if not needed
+        # Remove raw data points
         del value['data_points']
 
     return data
