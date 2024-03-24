@@ -165,27 +165,27 @@ def calculate_statistics(data):
             return f"{trend}%"
 
         # Last 1 week statistics and trend
-        value['Previous week'] = calculate_period_stats(df, 7)
-        value['Previous week']['trend'] = calculate_trend(df, 7)
+        value['1 week'] = calculate_period_stats(df, 7)
+        value['1 week']['trend'] = calculate_trend(df, 7)
 
         # Last 1 month statistics and trend
-        value['Last month'] = calculate_period_stats(df, 30)
-        value['Last month']['trend'] = calculate_trend(df, 30)
+        value['1 month'] = calculate_period_stats(df, 30)
+        value['1 month']['trend'] = calculate_trend(df, 30)
 
         # Last 3 months statistics and trend
-        value['Last three months'] = calculate_period_stats(df, 90)
-        value['Last three months']['trend'] = calculate_trend(df, 90)
+        value['3 month'] = calculate_period_stats(df, 90)
+        value['3 month']['trend'] = calculate_trend(df, 90)
 
         # Last 6 months statistics and trend
-        value['Last six months'] = calculate_period_stats(df, 180)
-        value['Last six months']['trend'] = calculate_trend(df, 180)
+        value['6 month'] = calculate_period_stats(df, 180)
+        value['6 month']['trend'] = calculate_trend(df, 180)
 
         # All-time statistics
         value['All time'] = calculate_period_stats(df)
 
 
         # Convert NaNs and 'nan%' to None in the stats
-        for period in ['Previous week', 'Last month', 'Last three months', 'Last six months', 'All time']:
+        for period in ['1 week', '1 month', '3 month', '6 month', 'All time']:
             for stat_key in value[period]:
                 if pd.isna(value[period][stat_key]) or value[period][stat_key] == 'nan%':
                     value[period][stat_key] = None
