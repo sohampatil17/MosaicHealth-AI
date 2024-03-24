@@ -62,11 +62,11 @@ export default function DataInsights({ importantData, loadingDataSuggestions, se
             <Typography level='h3'>Data Insights</Typography>
 
             {loadingDataSuggestions ? (
-                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '58vh' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '56vh' }}>
                     <CircularProgress />
                 </Box>
             ) : (
-                <Sheet sx={{ width: '100%', minHeight: '58vh', overflowY: 'auto' }}>
+                <Sheet sx={{ width: '100%', minHeight: '56vh', overflowY: 'auto' }}>
                     {enrichedData && enrichedData.length > 0 ? (
                         <>
                             <Typography>Select data chips to include them in the AI report outline</Typography>
@@ -108,5 +108,4 @@ export default function DataInsights({ importantData, loadingDataSuggestions, se
             </Button>
         </Card>
     );
-
 }

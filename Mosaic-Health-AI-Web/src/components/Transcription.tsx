@@ -61,7 +61,7 @@ function Transcription({ transcript, setTranscript, setImportantData, setLoading
             console.log(response);
             const result = JSON.parse(response.data.result); // This is the content returned from Flask
             console.log(result);
-            //setImportantData(result);
+            setImportantData(result);
           })
           .catch(error => {
             console.error('There was an error processing the transcript:', error);
