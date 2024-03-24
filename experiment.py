@@ -2,7 +2,6 @@ import os
 import json
 import predictionguard as pg
 
-
 os.environ["PREDICTIONGUARD_TOKEN"] = "q1VuOjnffJ3NO2oFN8Q9m8vghYc84ld13jaqdF7E"
 
 messages = [
@@ -20,7 +19,6 @@ result = pg.Chat.create(
 model="Neural-Chat-7B",
 messages=messages
 )
-
 
 print(json.dumps(
 result,
