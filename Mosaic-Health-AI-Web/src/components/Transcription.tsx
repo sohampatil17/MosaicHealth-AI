@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Button from '@mui/joy/Button'; // Import MUI Joy UI Button
 import { keyframes } from '@emotion/react';
+import { Card } from '@mui/joy';
 
 declare global {
   interface Window {
@@ -66,7 +67,7 @@ const Transcription: React.FC = () => {
   };
 
   return (
-    <div>
+    <Card color='primary' sx={{ margin: 2, marginRight: 0, justifyContent: 'center', height: '15vh' }}>
       <Button
         onClick={toggleRecording}
         variant={isRecording ? 'outlined' : 'solid'}
@@ -81,7 +82,8 @@ const Transcription: React.FC = () => {
         <p>Transcript:</p>
         <div>{transcript}</div>
       </div>
-    </div>
+    </Card >
+
   );
 };
 
