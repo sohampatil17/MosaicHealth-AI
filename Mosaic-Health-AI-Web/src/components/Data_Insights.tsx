@@ -1,10 +1,13 @@
-import { Card, Typography } from '@mui/joy';
+import { Button, Card, Typography, Sheet, Chip } from '@mui/joy';
 import { Key, useEffect, useState } from 'react';
+
+// todo: add +/- % to trend data
+// todo: rounding
 
 // todo: implement an AI model to predict what data is actually important
 const importantData = [
     {
-        reasoning: "Patient mentioned *muscle pain* which can be caused by *vitamin d deficiency*",
+        reasoning: "Mentioned *muscle pain* which can be caused by *vitamin d deficiency*",
         category: "TimeInDaylight",
         data1_time: "6_month",
         data1_type: "mean",
@@ -12,7 +15,7 @@ const importantData = [
         data2_type: "trend"
     },
     {
-        reasoning: "second example important data point",
+        reasoning: "Waking up in the night might indicate ",
         category: "RespiratoryRate",
         data1_time: "1_week",
         data1_type: "trend",
@@ -37,12 +40,14 @@ export default function DataInsights() {
     useEffect(() => {
         if (appleHealthData) {
             const enrichedData = importantData.map(dataPoint => {
+                const unit = appleHealthData.data[dataPoint.category]?.unit;
                 const data1_value = appleHealthData.data[dataPoint.category]?.[dataPoint.data1_time]?.[dataPoint.data1_type];
                 const data2_value = appleHealthData.data[dataPoint.category]?.[dataPoint.data2_time]?.[dataPoint.data2_type];
 
                 // Return a new object that includes the extracted values
                 return {
                     ...dataPoint, // Spread the existing dataPoint properties
+                    unit,
                     data1_value,  // Add the new data1_value
                     data2_value   // Add the new data2_value
                 };
@@ -53,15 +58,22 @@ export default function DataInsights() {
     }, [appleHealthData, importantData]);
 
     return (
-        <Card color='primary' sx={{ margin: 2, justifyContent: 'center', width: '60%' }}>
-            <Typography> Data Insights </Typography>
-            {enrichedData && enrichedData.map((data: any, index: Key | null | undefined) => (
-                <div key={index}>
-                    <div>{data.category}</div>
-                    <div>{data.data1_time} {data.data1_type}: {data.data1_value}</div>
-                    <div>{data.data2_time} {data.data2_type}: {data.data2_value}</div>
-                </div>
-            ))}
-        </Card>
+        <Card color='primary' sx={{ margin: 2, justifyItems: 'top', alignItems: 'center', width: '60%' }}>
+            <Typography level='h2'>Data Insights</Typography>
+            <Sheet sx={{ width: '100%' }}>
+                {enrichedData && enrichedData.map((data: any, index: Key | null | undefined) => (
+                    <Card key={index} sx={{ width: '100%', marginTop: 2, marginBottom: 2 }}>
+                        <Sheet sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', overflowX: 'auto', flexWrap: 'nowrap' }}>
+                            <Typography level='h3'>{data.category}</Typography>
+                            <Chip size="lg" variant="soft" color='primary'>{data.data1_time} {data.data1_type}: {data.data1_value} {data.unit}</Chip>
+                            <Chip size="lg" variant="soft" color='primary'>{data.data2_time} {data.data2_type}: {data.data2_value}</Chip>
+                        </Sheet>
+                        <Typography>{data.reasoning}</Typography>
+                    </Card>
+                ))
+                }
+            </Sheet >
+            <Button>✨Get AI Recommended Data✨</Button>
+        </Card >
     );
 }
