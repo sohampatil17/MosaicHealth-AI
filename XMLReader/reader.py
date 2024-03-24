@@ -63,31 +63,48 @@ def process_records(root):
             if sleep_stage:
                 start_time = datetime.strptime(record.get('startDate'), '%Y-%m-%d %H:%M:%S %z')
                 end_time = datetime.strptime(record.get('endDate'), '%Y-%m-%d %H:%M:%S %z')
-                duration_hours = (end_time - start_time).total_seconds() / 3600
-
-                if sleep_stage not in data:
-                    data[sleep_stage] = {'data_points': {}, 'unit': 'hours', 'type': 'cumulative'}
                 
+                if sleep_stage == "SleepAwakeTime":
+                    duration_minutes = (end_time - start_time).total_seconds() / 60
+                    unit = 'minutes'
+                else:
+                    duration_hours = (end_time - start_time).total_seconds() / 3600
+                    unit = 'hours'
+
                 date = start_time.date()
-                data[sleep_stage]['data_points'][date] = data[sleep_stage]['data_points'].get(date, 0) + duration_hours
+                if sleep_stage not in data:
+                    data[sleep_stage] = {'data_points': {}, 'unit': unit, 'type': 'cumulative'}
+                
+                if unit == 'hours':
+                    data[sleep_stage]['data_points'][date] = data[sleep_stage]['data_points'].get(date, 0) + duration_hours
+                else:
+                    data[sleep_stage]['data_points'][date] = data[sleep_stage]['data_points'].get(date, 0) + duration_minutes
+
+                if 'SleepTime' not in data and sleep_stage != 'SleepAwakeTime':
+                    data['SleepTime'] = {'data_points': {}, 'unit': 'hours', 'type': 'cumulative'}
+                if sleep_stage != 'SleepAwakeTime':
+                    data['SleepTime']['data_points'][date] = data['SleepTime']['data_points'].get(date, 0) + duration_hours
 
         else:
-            rec_type = remove_prefix(record.get('type'), prefixes)
+            if rec_type == "OxygenSaturation":
+                try:
+                    value = float(record.get('value')) * 100
+                except (ValueError, TypeError):
+                    continue
+            else:
+                try:
+                    value = float(record.get('value'))
+                except (ValueError, TypeError):
+                    continue
+
+            date_str = record.get('startDate')
+            date = datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S %z').date() if date_str else None
 
             if rec_type not in data:
                 data[rec_type] = {
                     'data_points': {}, 'unit': record.get('unit'), 
                     'type': 'average' if rec_type in average_categories else 'cumulative'
                 }
-
-            value = record.get('value')
-            try:
-                value = float(value)
-            except (ValueError, TypeError):
-                continue
-
-            date_str = record.get('startDate')
-            date = datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S %z').date() if date_str else None
 
             if rec_type in average_categories:
                 day_data = data[rec_type]['data_points'].setdefault(date, {'total': 0, 'count': 0})
@@ -97,17 +114,7 @@ def process_records(root):
                 day_data = data[rec_type]['data_points'].setdefault(date, 0)
                 data[rec_type]['data_points'][date] += value
 
-    # Calculate total sleep time
-    total_sleep_categories = ["REMSleep", "DeepSleep", "CoreSleep"]
-    for date in data.get("REMSleep", {'data_points': {}})['data_points']:
-        total_sleep = sum(data[cat]['data_points'].get(date, 0) for cat in total_sleep_categories)
-        if "SleepTime" not in data:
-            data["SleepTime"] = {'data_points': {}, 'unit': 'hours', 'type': 'cumulative'}
-        data["SleepTime"]['data_points'][date] = total_sleep
-
     return data
-
-
 
 def calculate_statistics(data):
     for key, value in data.items():
@@ -136,10 +143,10 @@ def calculate_statistics(data):
                 period_df = df
 
             return {
-                'max': round(period_df['value'].max(), 3),
-                'min': round(period_df['value'].min(), 3),
-                'median': round(period_df['value'].median(), 3),
-                'mean': round(period_df['value'].mean(), 3)
+                'max': round(period_df['value'].max(), 2),
+                'min': round(period_df['value'].min(), 2),
+                'median': round(period_df['value'].median(), 2),
+                'mean': round(period_df['value'].mean(), 2)
             }
 
         # Function to calculate trend
@@ -207,12 +214,12 @@ def export_to_json(data, file_name):
 
 def format_category_name(category_name):
     # Adds spaces before each capital letter in the category name,
-    # except where it follows another capital letter or a number.
+    # except where it follows another capital letter, a number, or already has a space.
 
     formatted_name = ""  # Start with an empty string
 
     for i in range(len(category_name)):
-        if i > 0 and category_name[i].isupper() and not category_name[i-1].isupper():
+        if i > 0 and category_name[i].isupper() and not category_name[i-1].isupper() and category_name[i-1] != ' ':
             formatted_name += ' ' + category_name[i]
         else:
             formatted_name += category_name[i]
@@ -223,7 +230,7 @@ def main():
     root = parse_xml('export.xml')
     data = process_records(root)
     data_with_stats = calculate_statistics(data)
-    export_to_json(data_with_stats, 'output.json')
+    export_to_json(data_with_stats, 'sample_output.json')
 
 if __name__ == "__main__":
     main()

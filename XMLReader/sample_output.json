@@ -59,19 +59,11 @@
         "Running Speed",
         "Time In Daylight",
         "Physical Effort",
-        "Sleep Analysis",
         "Core Sleep",
+        "Sleep Time",
         "Sleep Awake Time",
         "Deep Sleep",
-        "REM  Sleep",
-        "Apple Stand Hour",
-        "Mindful Session",
-        "High Heart Rate Event",
-        "Low Heart Rate Event",
-        "Audio Exposure Event",
-        "Toothbrushing Event",
-        "Headphone Audio Exposure Event",
-        "Handwashing Event",
+        "REM Sleep",
         "Heart Rate Variability SDNN"
     ],
     "data": {
@@ -89,102 +81,102 @@
                 "max": 1000.0,
                 "min": 0.0,
                 "median": 0.0,
-                "mean": 208.333,
+                "mean": 208.33,
                 "trend": null
             },
             "3 month": {
                 "max": 1000.0,
                 "min": 0.0,
                 "median": 0.0,
-                "mean": 208.333,
+                "mean": 208.33,
                 "trend": null
             },
             "6 month": {
                 "max": 1000.0,
                 "min": 0.0,
                 "median": 0.0,
-                "mean": 208.333,
+                "mean": 208.33,
                 "trend": null
             },
             "All time": {
                 "max": 1000.0,
                 "min": 0.0,
                 "median": 0.0,
-                "mean": 208.333
+                "mean": 208.33
             }
         },
         "Body Mass Index": {
             "unit": "count",
             "type": "average",
             "1 week": {
-                "max": 17.486,
-                "min": 17.486,
-                "median": 17.486,
-                "mean": 17.486,
+                "max": 17.49,
+                "min": 17.49,
+                "median": 17.49,
+                "mean": 17.49,
                 "trend": null
             },
             "1 month": {
-                "max": 17.486,
-                "min": 17.486,
-                "median": 17.486,
-                "mean": 17.486,
+                "max": 17.49,
+                "min": 17.49,
+                "median": 17.49,
+                "mean": 17.49,
                 "trend": null
             },
             "3 month": {
-                "max": 17.486,
-                "min": 17.486,
-                "median": 17.486,
-                "mean": 17.486,
+                "max": 17.49,
+                "min": 17.49,
+                "median": 17.49,
+                "mean": 17.49,
                 "trend": null
             },
             "6 month": {
-                "max": 17.486,
-                "min": 17.486,
-                "median": 17.486,
-                "mean": 17.486,
+                "max": 17.49,
+                "min": 17.49,
+                "median": 17.49,
+                "mean": 17.49,
                 "trend": null
             },
             "All time": {
-                "max": 17.486,
-                "min": 17.486,
-                "median": 17.486,
-                "mean": 17.486
+                "max": 17.49,
+                "min": 17.49,
+                "median": 17.49,
+                "mean": 17.49
             }
         },
         "Height": {
             "unit": "ft",
             "type": "average",
             "1 week": {
-                "max": 5.833,
-                "min": 5.833,
-                "median": 5.833,
-                "mean": 5.833,
+                "max": 5.83,
+                "min": 5.83,
+                "median": 5.83,
+                "mean": 5.83,
                 "trend": null
             },
             "1 month": {
-                "max": 5.833,
-                "min": 5.833,
-                "median": 5.833,
-                "mean": 5.833,
+                "max": 5.83,
+                "min": 5.83,
+                "median": 5.83,
+                "mean": 5.83,
                 "trend": null
             },
             "3 month": {
-                "max": 5.833,
-                "min": 5.833,
-                "median": 5.833,
-                "mean": 5.833,
+                "max": 5.83,
+                "min": 5.83,
+                "median": 5.83,
+                "mean": 5.83,
                 "trend": null
             },
             "6 month": {
-                "max": 5.833,
-                "min": 5.833,
-                "median": 5.833,
-                "mean": 5.833,
+                "max": 5.83,
+                "min": 5.83,
+                "median": 5.83,
+                "mean": 5.83,
                 "trend": null
             },
             "All time": {
-                "max": 5.833,
-                "min": 5.083,
+                "max": 5.83,
+                "min": 5.08,
                 "median": 5.5,
                 "mean": 5.5
             }
@@ -196,14 +188,14 @@
                 "max": 146.5,
                 "min": 143.5,
                 "median": 144.0,
-                "mean": 144.667,
+                "mean": 144.67,
                 "trend": null
             },
             "1 month": {
                 "max": 146.5,
                 "min": 143.5,
                 "median": 144.0,
-                "mean": 144.667,
+                "mean": 144.67,
                 "trend": null
             },
             "3 month": {
@@ -231,76 +223,76 @@
             "unit": "count/min",
             "type": "average",
             "1 week": {
-                "max": 110.453,
-                "min": 66.363,
-                "median": 91.264,
-                "mean": 92.898,
-                "trend": "-3.0%"
+                "max": 110.45,
+                "min": 66.36,
+                "median": 91.26,
+                "mean": 92.9,
+                "trend": "-2.6%"
             },
             "1 month": {
-                "max": 121.553,
-                "min": 66.363,
-                "median": 90.944,
-                "mean": 92.945,
-                "trend": "-2.3%"
+                "max": 121.55,
+                "min": 66.36,
+                "median": 90.94,
+                "mean": 92.95,
+                "trend": "-2.0%"
             },
             "3 month": {
-                "max": 125.876,
-                "min": 63.913,
-                "median": 91.518,
-                "mean": 92.847,
-                "trend": "-2.4%"
+                "max": 125.88,
+                "min": 63.91,
+                "median": 91.52,
+                "mean": 92.85,
+                "trend": "-2.2%"
             },
             "6 month": {
-                "max": 125.876,
-                "min": 63.913,
-                "median": 94.001,
-                "mean": 93.993,
+                "max": 125.88,
+                "min": 63.91,
+                "median": 94.0,
+                "mean": 93.99,
                 "trend": "+5.0%"
             },
             "All time": {
-                "max": 127.384,
-                "min": 63.913,
-                "median": 87.121,
-                "mean": 88.399
+                "max": 127.38,
+                "min": 63.91,
+                "median": 87.12,
+                "mean": 88.4
             }
         },
         "Oxygen Saturation": {
             "unit": "%",
             "type": "average",
             "1 week": {
-                "max": 0.967,
-                "min": 0.955,
-                "median": 0.959,
-                "mean": 0.96,
-                "trend": "+0.2%"
+                "max": 96.75,
+                "min": 95.5,
+                "median": 95.89,
+                "mean": 96.02,
+                "trend": "0.0%"
             },
             "1 month": {
-                "max": 0.972,
-                "min": 0.895,
-                "median": 0.959,
-                "mean": 0.955,
+                "max": 97.25,
+                "min": 89.5,
+                "median": 95.9,
+                "mean": 95.53,
                 "trend": "-0.6%"
             },
             "3 month": {
-                "max": 0.99,
-                "min": 0.895,
-                "median": 0.962,
-                "mean": 0.961,
+                "max": 99.0,
+                "min": 89.5,
+                "median": 96.16,
+                "mean": 96.09,
                 "trend": "-0.0%"
             },
             "6 month": {
-                "max": 0.99,
-                "min": 0.895,
-                "median": 0.961,
-                "mean": 0.961,
+                "max": 99.0,
+                "min": 89.5,
+                "median": 96.14,
+                "mean": 96.1,
                 "trend": "-0.5%"
             },
             "All time": {
-                "max": 0.99,
-                "min": 0.895,
-                "median": 0.964,
-                "mean": 0.964
+                "max": 99.0,
+                "min": 89.5,
+                "median": 96.4,
+                "mean": 96.39
             }
         },
         "Blood Pressure Systolic": {
@@ -338,7 +330,7 @@
                 "max": 124.0,
                 "min": 106.0,
                 "median": 113.0,
-                "mean": 114.333
+                "mean": 114.33
             }
         },
         "Blood Pressure Diastolic": {
@@ -383,38 +375,38 @@
             "unit": "count/min",
             "type": "average",
             "1 week": {
-                "max": 21.333,
-                "min": 16.472,
-                "median": 16.797,
-                "mean": 17.571,
-                "trend": "-2.4%"
+                "max": 21.33,
+                "min": 16.47,
+                "median": 16.8,
+                "mean": 17.57,
+                "trend": "-4.3%"
             },
             "1 month": {
-                "max": 21.333,
-                "min": 16.017,
-                "median": 17.054,
-                "mean": 17.466,
-                "trend": "+1.1%"
+                "max": 21.33,
+                "min": 16.02,
+                "median": 17.05,
+                "mean": 17.47,
+                "trend": "+0.7%"
             },
             "3 month": {
-                "max": 21.333,
-                "min": 15.686,
-                "median": 17.016,
-                "mean": 17.242,
-                "trend": "-1.9%"
+                "max": 21.33,
+                "min": 15.69,
+                "median": 17.02,
+                "mean": 17.24,
+                "trend": "-1.5%"
             },
             "6 month": {
                 "max": 23.25,
-                "min": 15.686,
-                "median": 17.142,
-                "mean": 17.418,
-                "trend": "+2.2%"
+                "min": 15.69,
+                "median": 17.14,
+                "mean": 17.42,
+                "trend": "+1.8%"
             },
             "All time": {
                 "max": 23.25,
                 "min": 8.0,
-                "median": 16.698,
-                "mean": 16.884
+                "median": 16.7,
+                "mean": 16.88
             }
         },
         "Step Count": {
@@ -424,149 +416,149 @@
                 "max": 14015.0,
                 "min": 2463.0,
                 "median": 3555.0,
-                "mean": 6449.429,
-                "trend": "-11.3%"
+                "mean": 6449.43,
+                "trend": "+1.8%"
             },
             "1 month": {
                 "max": 25459.0,
                 "min": 1425.0,
                 "median": 6237.0,
                 "mean": 7575.7,
-                "trend": "-17.1%"
+                "trend": "-15.8%"
             },
             "3 month": {
                 "max": 25459.0,
                 "min": 540.0,
                 "median": 8049.0,
-                "mean": 8669.022,
-                "trend": "+17.4%"
+                "mean": 8669.02,
+                "trend": "+17.2%"
             },
             "6 month": {
                 "max": 25459.0,
                 "min": 273.0,
                 "median": 7413.5,
-                "mean": 8026.961,
-                "trend": "-19.3%"
+                "mean": 8026.96,
+                "trend": "-18.5%"
             },
             "All time": {
                 "max": 33639.0,
                 "min": 8.0,
                 "median": 7385.0,
-                "mean": 8028.529
+                "mean": 8028.53
             }
         },
         "Distance Walking Running": {
             "unit": "mi",
             "type": "cumulative",
             "1 week": {
-                "max": 7.057,
-                "min": 1.202,
-                "median": 1.753,
-                "mean": 3.236,
-                "trend": "-11.2%"
+                "max": 7.06,
+                "min": 1.2,
+                "median": 1.75,
+                "mean": 3.24,
+                "trend": "+3.3%"
             },
             "1 month": {
-                "max": 13.705,
-                "min": 0.758,
-                "median": 3.112,
-                "mean": 3.819,
-                "trend": "-16.4%"
+                "max": 13.7,
+                "min": 0.76,
+                "median": 3.11,
+                "mean": 3.82,
+                "trend": "-15.1%"
             },
             "3 month": {
-                "max": 13.705,
-                "min": 0.264,
-                "median": 4.028,
+                "max": 13.7,
+                "min": 0.26,
+                "median": 4.03,
                 "mean": 4.35,
-                "trend": "+16.6%"
+                "trend": "+16.3%"
             },
             "6 month": {
-                "max": 13.705,
-                "min": 0.145,
-                "median": 3.741,
-                "mean": 4.041,
-                "trend": "-17.2%"
+                "max": 13.7,
+                "min": 0.14,
+                "median": 3.74,
+                "mean": 4.04,
+                "trend": "-16.4%"
             },
             "All time": {
-                "max": 16.311,
-                "min": 0.004,
-                "median": 3.647,
-                "mean": 3.968
+                "max": 16.31,
+                "min": 0.0,
+                "median": 3.65,
+                "mean": 3.97
             }
         },
         "Basal Energy Burned": {
             "unit": "Cal",
             "type": "cumulative",
             "1 week": {
-                "max": 1842.237,
-                "min": 562.351,
-                "median": 1770.541,
-                "mean": 1522.943,
-                "trend": "-10.2%"
+                "max": 1842.24,
+                "min": 562.35,
+                "median": 1770.54,
+                "mean": 1522.94,
+                "trend": "+10.9%"
             },
             "1 month": {
-                "max": 1933.648,
-                "min": 484.399,
+                "max": 1933.65,
+                "min": 484.4,
                 "median": 1783.8,
-                "mean": 1645.002,
-                "trend": "-6.8%"
+                "mean": 1645.0,
+                "trend": "-7.1%"
             },
             "3 month": {
-                "max": 1933.648,
-                "min": 484.399,
-                "median": 1787.687,
-                "mean": 1729.945,
-                "trend": "-2.5%"
+                "max": 1933.65,
+                "min": 484.4,
+                "median": 1787.69,
+                "mean": 1729.95,
+                "trend": "-2.6%"
             },
             "6 month": {
-                "max": 1933.648,
-                "min": 484.399,
-                "median": 1781.195,
-                "mean": 1752.035,
+                "max": 1933.65,
+                "min": 484.4,
+                "median": 1781.19,
+                "mean": 1752.04,
                 "trend": "-2.8%"
             },
             "All time": {
-                "max": 1933.648,
-                "min": 37.833,
-                "median": 1703.358,
-                "mean": 1653.952
+                "max": 1933.65,
+                "min": 37.83,
+                "median": 1703.36,
+                "mean": 1653.95
             }
         },
         "Active Energy Burned": {
             "unit": "Cal",
             "type": "cumulative",
             "1 week": {
-                "max": 757.199,
-                "min": 190.799,
-                "median": 268.505,
-                "mean": 386.671,
-                "trend": "-3.8%"
+                "max": 757.2,
+                "min": 190.8,
+                "median": 268.51,
+                "mean": 386.67,
+                "trend": "+9.4%"
             },
             "1 month": {
-                "max": 1334.775,
-                "min": 89.187,
-                "median": 411.456,
-                "mean": 434.084,
-                "trend": "-16.2%"
+                "max": 1334.78,
+                "min": 89.19,
+                "median": 411.46,
+                "mean": 434.08,
+                "trend": "-15.0%"
             },
             "3 month": {
-                "max": 1334.775,
-                "min": 56.741,
-                "median": 447.707,
-                "mean": 484.467,
-                "trend": "+15.3%"
+                "max": 1334.78,
+                "min": 56.74,
+                "median": 447.71,
+                "mean": 484.47,
+                "trend": "+14.9%"
             },
             "6 month": {
-                "max": 1334.775,
-                "min": 56.741,
+                "max": 1334.78,
+                "min": 56.74,
                 "median": 432.23,
-                "mean": 452.395,
-                "trend": "-15.4%"
+                "mean": 452.4,
+                "trend": "-14.9%"
             },
             "All time": {
                 "max": 1534.85,
-                "min": 1.144,
-                "median": 450.545,
-                "mean": 474.899
+                "min": 1.14,
+                "median": 450.55,
+                "mean": 474.9
             }
         },
         "Flights Climbed": {
@@ -576,21 +568,21 @@
                 "max": 18.0,
                 "min": 1.0,
                 "median": 5.0,
-                "mean": 6.571,
-                "trend": "-29.6%"
+                "mean": 6.57,
+                "trend": "-15.7%"
             },
             "1 month": {
                 "max": 53.0,
                 "min": 1.0,
                 "median": 5.0,
-                "mean": 8.821,
-                "trend": "+8.4%"
+                "mean": 8.82,
+                "trend": "+14.4%"
             },
             "3 month": {
                 "max": 53.0,
                 "min": 1.0,
                 "median": 8.0,
-                "mean": 10.345,
+                "mean": 10.34,
                 "trend": "+25.7%"
             },
             "6 month": {
@@ -598,127 +590,127 @@
                 "min": 1.0,
                 "median": 7.0,
                 "mean": 9.32,
-                "trend": "-20.4%"
+                "trend": "-20.3%"
             },
             "All time": {
                 "max": 189.0,
                 "min": 1.0,
                 "median": 20.0,
-                "mean": 33.289
+                "mean": 33.29
             }
         },
         "Dietary Fat Total": {
             "unit": "g",
             "type": "cumulative",
             "1 week": {
-                "max": 160.832,
-                "min": 78.928,
-                "median": 106.012,
-                "mean": 114.003,
+                "max": 160.83,
+                "min": 78.93,
+                "median": 106.01,
+                "mean": 114.0,
                 "trend": null
             },
             "1 month": {
-                "max": 160.832,
-                "min": 4.566,
-                "median": 86.164,
-                "mean": 85.524,
+                "max": 160.83,
+                "min": 4.57,
+                "median": 86.16,
+                "mean": 85.52,
                 "trend": null
             },
             "3 month": {
-                "max": 160.832,
-                "min": 4.566,
-                "median": 96.346,
-                "mean": 93.783,
+                "max": 160.83,
+                "min": 4.57,
+                "median": 96.35,
+                "mean": 93.78,
                 "trend": null
             },
             "6 month": {
-                "max": 160.832,
-                "min": 4.566,
-                "median": 96.346,
-                "mean": 93.783,
+                "max": 160.83,
+                "min": 4.57,
+                "median": 96.35,
+                "mean": 93.78,
                 "trend": null
             },
             "All time": {
-                "max": 160.832,
-                "min": 4.566,
+                "max": 160.83,
+                "min": 4.57,
                 "median": 89.78,
-                "mean": 86.264
+                "mean": 86.26
             }
         },
         "Dietary Fat Polyunsaturated": {
             "unit": "g",
             "type": "cumulative",
             "1 week": {
-                "max": 19.494,
-                "min": 1.862,
-                "median": 7.279,
-                "mean": 9.114,
+                "max": 19.49,
+                "min": 1.86,
+                "median": 7.28,
+                "mean": 9.11,
                 "trend": null
             },
             "1 month": {
-                "max": 19.494,
+                "max": 19.49,
                 "min": 1.77,
-                "median": 5.469,
-                "mean": 6.891,
+                "median": 5.47,
+                "mean": 6.89,
                 "trend": null
             },
             "3 month": {
-                "max": 19.494,
+                "max": 19.49,
                 "min": 0.5,
-                "median": 5.469,
-                "mean": 6.456,
+                "median": 5.47,
+                "mean": 6.46,
                 "trend": null
             },
             "6 month": {
-                "max": 19.494,
+                "max": 19.49,
                 "min": 0.5,
-                "median": 5.469,
-                "mean": 6.456,
+                "median": 5.47,
+                "mean": 6.46,
                 "trend": null
             },
             "All time": {
-                "max": 19.494,
+                "max": 19.49,
                 "min": 0.5,
-                "median": 4.682,
-                "mean": 6.115
+                "median": 4.68,
+                "mean": 6.12
             }
         },
         "Dietary Fat Monounsaturated": {
             "unit": "g",
             "type": "cumulative",
             "1 week": {
-                "max": 31.197,
-                "min": 4.505,
-                "median": 17.843,
-                "mean": 17.743,
+                "max": 31.2,
+                "min": 4.51,
+                "median": 17.84,
+                "mean": 17.74,
                 "trend": null
             },
             "1 month": {
-                "max": 31.197,
-                "min": 0.794,
-                "median": 15.533,
-                "mean": 14.285,
+                "max": 31.2,
+                "min": 0.79,
+                "median": 15.53,
+                "mean": 14.29,
                 "trend": null
             },
             "3 month": {
-                "max": 58.431,
+                "max": 58.43,
                 "min": 0.0,
-                "median": 16.126,
-                "mean": 18.492,
+                "median": 16.13,
+                "mean": 18.49,
                 "trend": null
             },
             "6 month": {
-                "max": 58.431,
+                "max": 58.43,
                 "min": 0.0,
-                "median": 16.126,
-                "mean": 18.492,
+                "median": 16.13,
+                "mean": 18.49,
                 "trend": null
             },
             "All time": {
-                "max": 58.431,
+                "max": 58.43,
                 "min": 0.0,
-                "median": 15.775,
-                "mean": 16.903
+                "median": 15.77,
+                "mean": 16.9
             }
         },
         "Dietary Fat Saturated": {
@@ -726,75 +718,75 @@
             "type": "cumulative",
             "1 week": {
                 "max": 60.27,
-                "min": 16.553,
-                "median": 27.264,
-                "mean": 33.228,
+                "min": 16.55,
+                "median": 27.26,
+                "mean": 33.23,
                 "trend": null
             },
             "1 month": {
                 "max": 60.27,
-                "min": 0.556,
-                "median": 22.759,
-                "mean": 24.692,
+                "min": 0.56,
+                "median": 22.76,
+                "mean": 24.69,
                 "trend": null
             },
             "3 month": {
                 "max": 60.27,
-                "min": 0.556,
-                "median": 23.568,
+                "min": 0.56,
+                "median": 23.57,
                 "mean": 23.69,
                 "trend": null
             },
             "6 month": {
                 "max": 60.27,
-                "min": 0.556,
-                "median": 23.568,
+                "min": 0.56,
+                "median": 23.57,
                 "mean": 23.69,
                 "trend": null
             },
             "All time": {
                 "max": 60.27,
-                "min": 0.556,
-                "median": 21.982,
-                "mean": 22.532
+                "min": 0.56,
+                "median": 21.98,
+                "mean": 22.53
             }
         },
         "Dietary Cholesterol": {
             "unit": "mg",
             "type": "cumulative",
             "1 week": {
-                "max": 373.103,
+                "max": 373.1,
                 "min": 60.0,
-                "median": 132.802,
-                "mean": 170.638,
+                "median": 132.8,
+                "mean": 170.64,
                 "trend": null
             },
             "1 month": {
                 "max": 521.57,
                 "min": 0.0,
                 "median": 86.3,
-                "mean": 138.324,
+                "mean": 138.32,
                 "trend": null
             },
             "3 month": {
-                "max": 795.284,
+                "max": 795.28,
                 "min": 0.0,
                 "median": 80.77,
-                "mean": 133.089,
+                "mean": 133.09,
                 "trend": null
             },
             "6 month": {
-                "max": 795.284,
+                "max": 795.28,
                 "min": 0.0,
                 "median": 80.77,
-                "mean": 133.089,
+                "mean": 133.09,
                 "trend": null
             },
             "All time": {
-                "max": 795.284,
+                "max": 795.28,
                 "min": 0.0,
-                "median": 63.918,
-                "mean": 118.593
+                "median": 63.92,
+                "mean": 118.59
             }
         },
         "Dietary Sodium": {
@@ -803,264 +795,264 @@
             "1 week": {
                 "max": 7805.12,
                 "min": 1640.77,
-                "median": 3553.745,
-                "mean": 3937.143,
+                "median": 3553.74,
+                "mean": 3937.14,
                 "trend": null
             },
             "1 month": {
                 "max": 7805.12,
                 "min": 310.59,
-                "median": 2890.445,
-                "mean": 2679.074,
+                "median": 2890.44,
+                "mean": 2679.07,
                 "trend": null
             },
             "3 month": {
                 "max": 7805.12,
                 "min": 310.59,
-                "median": 2651.976,
-                "mean": 2743.722,
+                "median": 2651.98,
+                "mean": 2743.72,
                 "trend": null
             },
             "6 month": {
                 "max": 7805.12,
                 "min": 310.59,
-                "median": 2651.976,
-                "mean": 2743.722,
+                "median": 2651.98,
+                "mean": 2743.72,
                 "trend": null
             },
             "All time": {
                 "max": 7805.12,
                 "min": 310.59,
                 "median": 2314.19,
-                "mean": 2553.214
+                "mean": 2553.21
             }
         },
         "Dietary Carbohydrates": {
             "unit": "g",
             "type": "cumulative",
             "1 week": {
-                "max": 473.824,
-                "min": 240.242,
-                "median": 328.031,
-                "mean": 349.528,
+                "max": 473.82,
+                "min": 240.24,
+                "median": 328.03,
+                "mean": 349.53,
                 "trend": null
             },
             "1 month": {
-                "max": 490.826,
-                "min": 59.599,
-                "median": 274.653,
-                "mean": 278.988,
+                "max": 490.83,
+                "min": 59.6,
+                "median": 274.65,
+                "mean": 278.99,
                 "trend": null
             },
             "3 month": {
-                "max": 490.826,
-                "min": 59.599,
-                "median": 274.653,
-                "mean": 278.471,
+                "max": 490.83,
+                "min": 59.6,
+                "median": 274.65,
+                "mean": 278.47,
                 "trend": null
             },
             "6 month": {
-                "max": 490.826,
-                "min": 59.599,
-                "median": 274.653,
-                "mean": 278.471,
+                "max": 490.83,
+                "min": 59.6,
+                "median": 274.65,
+                "mean": 278.47,
                 "trend": null
             },
             "All time": {
-                "max": 490.826,
-                "min": 59.599,
-                "median": 256.734,
-                "mean": 261.732
+                "max": 490.83,
+                "min": 59.6,
+                "median": 256.73,
+                "mean": 261.73
             }
         },
         "Dietary Fiber": {
             "unit": "g",
             "type": "cumulative",
             "1 week": {
-                "max": 54.659,
-                "min": 5.347,
-                "median": 29.682,
-                "mean": 26.994,
+                "max": 54.66,
+                "min": 5.35,
+                "median": 29.68,
+                "mean": 26.99,
                 "trend": null
             },
             "1 month": {
-                "max": 54.659,
-                "min": 3.835,
-                "median": 20.429,
+                "max": 54.66,
+                "min": 3.84,
+                "median": 20.43,
                 "mean": 20.68,
                 "trend": null
             },
             "3 month": {
-                "max": 54.659,
-                "min": 3.835,
-                "median": 20.302,
-                "mean": 20.463,
+                "max": 54.66,
+                "min": 3.84,
+                "median": 20.3,
+                "mean": 20.46,
                 "trend": null
             },
             "6 month": {
-                "max": 54.659,
-                "min": 3.835,
-                "median": 20.302,
-                "mean": 20.463,
+                "max": 54.66,
+                "min": 3.84,
+                "median": 20.3,
+                "mean": 20.46,
                 "trend": null
             },
             "All time": {
-                "max": 54.659,
-                "min": 3.835,
-                "median": 20.302,
-                "mean": 21.163
+                "max": 54.66,
+                "min": 3.84,
+                "median": 20.3,
+                "mean": 21.16
             }
         },
         "Dietary Sugar": {
             "unit": "g",
             "type": "cumulative",
             "1 week": {
-                "max": 107.227,
-                "min": 71.127,
-                "median": 101.558,
-                "mean": 96.621,
+                "max": 107.23,
+                "min": 71.13,
+                "median": 101.56,
+                "mean": 96.62,
                 "trend": null
             },
             "1 month": {
-                "max": 243.989,
-                "min": 22.161,
-                "median": 94.212,
-                "mean": 97.088,
+                "max": 243.99,
+                "min": 22.16,
+                "median": 94.21,
+                "mean": 97.09,
                 "trend": null
             },
             "3 month": {
-                "max": 243.989,
-                "min": 7.041,
-                "median": 92.163,
-                "mean": 93.579,
+                "max": 243.99,
+                "min": 7.04,
+                "median": 92.16,
+                "mean": 93.58,
                 "trend": null
             },
             "6 month": {
-                "max": 243.989,
-                "min": 7.041,
-                "median": 92.163,
-                "mean": 93.579,
+                "max": 243.99,
+                "min": 7.04,
+                "median": 92.16,
+                "mean": 93.58,
                 "trend": null
             },
             "All time": {
-                "max": 243.989,
-                "min": 7.041,
-                "median": 90.688,
-                "mean": 89.674
+                "max": 243.99,
+                "min": 7.04,
+                "median": 90.69,
+                "mean": 89.67
             }
         },
         "Dietary Energy Consumed": {
             "unit": "Cal",
             "type": "cumulative",
             "1 week": {
-                "max": 3624.819,
+                "max": 3624.82,
                 "min": 1815.11,
-                "median": 2508.105,
-                "mean": 2669.567,
+                "median": 2508.1,
+                "mean": 2669.57,
                 "trend": null
             },
             "1 month": {
-                "max": 3624.819,
+                "max": 3624.82,
                 "min": 388.35,
-                "median": 2185.035,
-                "mean": 2070.682,
+                "median": 2185.04,
+                "mean": 2070.68,
                 "trend": null
             },
             "3 month": {
-                "max": 3624.819,
+                "max": 3624.82,
                 "min": 388.35,
                 "median": 2231.18,
-                "mean": 2172.212,
+                "mean": 2172.21,
                 "trend": null
             },
             "6 month": {
-                "max": 3624.819,
+                "max": 3624.82,
                 "min": 388.35,
                 "median": 2231.18,
-                "mean": 2172.212,
+                "mean": 2172.21,
                 "trend": null
             },
             "All time": {
-                "max": 3624.819,
+                "max": 3624.82,
                 "min": 388.35,
                 "median": 2078.71,
-                "mean": 2043.249
+                "mean": 2043.25
             }
         },
         "Dietary Protein": {
             "unit": "g",
             "type": "cumulative",
             "1 week": {
-                "max": 103.516,
+                "max": 103.52,
                 "min": 40.43,
-                "median": 77.609,
-                "mean": 76.296,
+                "median": 77.61,
+                "mean": 76.3,
                 "trend": null
             },
             "1 month": {
-                "max": 103.516,
-                "min": 6.785,
-                "median": 56.594,
-                "mean": 57.315,
+                "max": 103.52,
+                "min": 6.79,
+                "median": 56.59,
+                "mean": 57.31,
                 "trend": null
             },
             "3 month": {
-                "max": 123.077,
-                "min": 6.785,
-                "median": 56.594,
-                "mean": 61.653,
+                "max": 123.08,
+                "min": 6.79,
+                "median": 56.59,
+                "mean": 61.65,
                 "trend": null
             },
             "6 month": {
-                "max": 123.077,
-                "min": 6.785,
-                "median": 56.594,
-                "mean": 61.653,
+                "max": 123.08,
+                "min": 6.79,
+                "median": 56.59,
+                "mean": 61.65,
                 "trend": null
             },
             "All time": {
                 "max": 127.0,
-                "min": 6.785,
-                "median": 55.624,
-                "mean": 61.357
+                "min": 6.79,
+                "median": 55.62,
+                "mean": 61.36
             }
         },
         "Dietary Vitamin C": {
             "unit": "mg",
             "type": "cumulative",
             "1 week": {
-                "max": 80.791,
-                "min": 0.768,
-                "median": 35.813,
-                "mean": 36.444,
+                "max": 80.79,
+                "min": 0.77,
+                "median": 35.81,
+                "mean": 36.44,
                 "trend": null
             },
             "1 month": {
-                "max": 194.595,
+                "max": 194.6,
                 "min": 0.0,
-                "median": 30.789,
-                "mean": 51.238,
+                "median": 30.79,
+                "mean": 51.24,
                 "trend": null
             },
             "3 month": {
-                "max": 324.335,
+                "max": 324.33,
                 "min": 0.0,
                 "median": 46.31,
-                "mean": 67.458,
+                "mean": 67.46,
                 "trend": null
             },
             "6 month": {
-                "max": 324.335,
+                "max": 324.33,
                 "min": 0.0,
                 "median": 46.31,
-                "mean": 67.458,
+                "mean": 67.46,
                 "trend": null
             },
             "All time": {
-                "max": 324.335,
+                "max": 324.33,
                 "min": 0.0,
                 "median": 35.4,
-                "mean": 59.215
+                "mean": 59.21
             }
         },
         "Dietary Calcium": {
@@ -1070,111 +1062,111 @@
                 "max": 3503.88,
                 "min": 214.64,
                 "median": 638.24,
-                "mean": 1081.255,
+                "mean": 1081.26,
                 "trend": null
             },
             "1 month": {
                 "max": 3503.88,
-                "min": 6.518,
-                "median": 469.894,
-                "mean": 668.127,
+                "min": 6.52,
+                "median": 469.89,
+                "mean": 668.13,
                 "trend": null
             },
             "3 month": {
                 "max": 3503.88,
-                "min": 6.518,
-                "median": 463.579,
-                "mean": 591.341,
+                "min": 6.52,
+                "median": 463.58,
+                "mean": 591.34,
                 "trend": null
             },
             "6 month": {
                 "max": 3503.88,
-                "min": 6.518,
-                "median": 463.579,
-                "mean": 591.341,
+                "min": 6.52,
+                "median": 463.58,
+                "mean": 591.34,
                 "trend": null
             },
             "All time": {
                 "max": 3503.88,
                 "min": 0.0,
-                "median": 465.517,
-                "mean": 627.941
+                "median": 465.52,
+                "mean": 627.94
             }
         },
         "Dietary Iron": {
             "unit": "mg",
             "type": "cumulative",
             "1 week": {
-                "max": 17.569,
-                "min": 7.261,
-                "median": 11.674,
-                "mean": 12.369,
+                "max": 17.57,
+                "min": 7.26,
+                "median": 11.67,
+                "mean": 12.37,
                 "trend": null
             },
             "1 month": {
-                "max": 27.155,
-                "min": 0.176,
-                "median": 8.792,
+                "max": 27.16,
+                "min": 0.18,
+                "median": 8.79,
                 "mean": 10.25,
                 "trend": null
             },
             "3 month": {
-                "max": 27.155,
-                "min": 0.176,
-                "median": 8.288,
-                "mean": 8.773,
+                "max": 27.16,
+                "min": 0.18,
+                "median": 8.29,
+                "mean": 8.77,
                 "trend": null
             },
             "6 month": {
-                "max": 27.155,
-                "min": 0.176,
-                "median": 8.288,
-                "mean": 8.773,
+                "max": 27.16,
+                "min": 0.18,
+                "median": 8.29,
+                "mean": 8.77,
                 "trend": null
             },
             "All time": {
-                "max": 27.155,
+                "max": 27.16,
                 "min": 0.0,
-                "median": 7.565,
-                "mean": 7.855
+                "median": 7.57,
+                "mean": 7.86
             }
         },
         "Dietary Potassium": {
             "unit": "mg",
             "type": "cumulative",
             "1 week": {
-                "max": 1973.975,
-                "min": 586.113,
-                "median": 1371.699,
-                "mean": 1303.098,
+                "max": 1973.98,
+                "min": 586.11,
+                "median": 1371.7,
+                "mean": 1303.1,
                 "trend": null
             },
             "1 month": {
                 "max": 2092.61,
-                "min": 146.675,
-                "median": 760.048,
-                "mean": 995.891,
+                "min": 146.68,
+                "median": 760.05,
+                "mean": 995.89,
                 "trend": null
             },
             "3 month": {
-                "max": 3214.325,
-                "min": 146.675,
-                "median": 1058.508,
-                "mean": 1221.622,
+                "max": 3214.32,
+                "min": 146.68,
+                "median": 1058.51,
+                "mean": 1221.62,
                 "trend": null
             },
             "6 month": {
-                "max": 3214.325,
-                "min": 146.675,
-                "median": 1058.508,
-                "mean": 1221.622,
+                "max": 3214.32,
+                "min": 146.68,
+                "median": 1058.51,
+                "mean": 1221.62,
                 "trend": null
             },
             "All time": {
-                "max": 3214.325,
-                "min": 146.675,
-                "median": 1211.364,
-                "mean": 1294.592
+                "max": 3214.32,
+                "min": 146.68,
+                "median": 1211.36,
+                "mean": 1294.59
             }
         },
         "Number Of Times Fallen": {
@@ -1222,35 +1214,35 @@
                 "max": 97.0,
                 "min": 8.0,
                 "median": 18.0,
-                "mean": 36.286,
-                "trend": "+16.5%"
+                "mean": 36.29,
+                "trend": "+42.1%"
             },
             "1 month": {
                 "max": 250.0,
                 "min": 8.0,
                 "median": 27.0,
                 "mean": 42.1,
-                "trend": "-12.9%"
+                "trend": "-11.2%"
             },
             "3 month": {
                 "max": 250.0,
                 "min": 1.0,
                 "median": 34.0,
                 "mean": 48.1,
-                "trend": "+19.5%"
+                "trend": "+19.7%"
             },
             "6 month": {
                 "max": 250.0,
                 "min": 1.0,
                 "median": 33.0,
                 "mean": 44.19,
-                "trend": "-15.6%"
+                "trend": "-14.5%"
             },
             "All time": {
                 "max": 250.0,
                 "min": 1.0,
                 "median": 46.0,
-                "mean": 52.615
+                "mean": 52.61
             }
         },
         "Dietary Caffeine": {
@@ -1267,104 +1259,104 @@
                 "max": 246.0,
                 "min": 63.0,
                 "median": 118.0,
-                "mean": 137.364,
+                "mean": 137.36,
                 "trend": null
             },
             "3 month": {
                 "max": 246.0,
                 "min": 63.0,
                 "median": 124.0,
-                "mean": 138.556,
+                "mean": 138.56,
                 "trend": null
             },
             "6 month": {
                 "max": 246.0,
                 "min": 63.0,
                 "median": 124.0,
-                "mean": 138.556,
+                "mean": 138.56,
                 "trend": null
             },
             "All time": {
                 "max": 246.0,
                 "min": 63.0,
                 "median": 124.0,
-                "mean": 138.556
+                "mean": 138.56
             }
         },
         "Distance Cycling": {
             "unit": "mi",
             "type": "cumulative",
             "1 week": {
-                "max": 3.407,
+                "max": 3.41,
                 "min": 2.53,
-                "median": 2.896,
-                "mean": 2.944,
+                "median": 2.9,
+                "mean": 2.94,
                 "trend": null
             },
             "1 month": {
-                "max": 3.407,
+                "max": 3.41,
                 "min": 2.53,
-                "median": 3.011,
+                "median": 3.01,
                 "mean": 2.99,
                 "trend": null
             },
             "3 month": {
-                "max": 3.407,
+                "max": 3.41,
                 "min": 2.53,
-                "median": 3.011,
+                "median": 3.01,
                 "mean": 2.99,
                 "trend": null
             },
             "6 month": {
-                "max": 7.148,
-                "min": 1.983,
-                "median": 3.126,
-                "mean": 3.507,
+                "max": 7.15,
+                "min": 1.98,
+                "median": 3.13,
+                "mean": 3.51,
                 "trend": null
             },
             "All time": {
-                "max": 18.693,
-                "min": 1.172,
-                "median": 3.121,
-                "mean": 4.711
+                "max": 18.69,
+                "min": 1.17,
+                "median": 3.12,
+                "mean": 4.71
             }
         },
         "Distance Swimming": {
             "unit": "yd",
             "type": "cumulative",
             "1 week": {
-                "max": 729.791,
-                "min": 729.791,
-                "median": 729.791,
-                "mean": 729.791,
+                "max": 729.79,
+                "min": 729.79,
+                "median": 729.79,
+                "mean": 729.79,
                 "trend": null
             },
             "1 month": {
-                "max": 729.791,
-                "min": 729.791,
-                "median": 729.791,
-                "mean": 729.791,
+                "max": 729.79,
+                "min": 729.79,
+                "median": 729.79,
+                "mean": 729.79,
                 "trend": null
             },
             "3 month": {
-                "max": 729.791,
-                "min": 729.791,
-                "median": 729.791,
-                "mean": 729.791,
+                "max": 729.79,
+                "min": 729.79,
+                "median": 729.79,
+                "mean": 729.79,
                 "trend": null
             },
             "6 month": {
-                "max": 729.791,
+                "max": 729.79,
                 "min": 350.0,
-                "median": 539.895,
-                "mean": 539.895,
+                "median": 539.9,
+                "mean": 539.9,
                 "trend": null
             },
             "All time": {
-                "max": 729.791,
+                "max": 729.79,
                 "min": 350.0,
-                "median": 695.341,
-                "mean": 591.711
+                "median": 695.34,
+                "mean": 591.71
             }
         },
         "Swimming Stroke Count": {
@@ -1402,7 +1394,7 @@
                 "max": 162.0,
                 "min": 76.0,
                 "median": 145.0,
-                "mean": 127.667
+                "mean": 127.67
             }
         },
         "Resting Heart Rate": {
@@ -1412,35 +1404,35 @@
                 "max": 84.0,
                 "min": 52.0,
                 "median": 72.0,
-                "mean": 69.714,
-                "trend": "+8.6%"
+                "mean": 69.71,
+                "trend": "+7.9%"
             },
             "1 month": {
                 "max": 84.0,
                 "min": 52.0,
                 "median": 66.0,
-                "mean": 66.276,
-                "trend": "+4.5%"
+                "mean": 66.28,
+                "trend": "+4.8%"
             },
             "3 month": {
                 "max": 84.0,
                 "min": 51.0,
                 "median": 64.0,
-                "mean": 64.674,
-                "trend": "-5.7%"
+                "mean": 64.67,
+                "trend": "-5.8%"
             },
             "6 month": {
                 "max": 91.0,
                 "min": 51.0,
                 "median": 65.0,
-                "mean": 66.659,
-                "trend": "-1.0%"
+                "mean": 66.66,
+                "trend": "-1.2%"
             },
             "All time": {
                 "max": 95.0,
                 "min": 51.0,
                 "median": 67.0,
-                "mean": 68.382
+                "mean": 68.38
             }
         },
         "VO2 Max": {
@@ -1457,27 +1449,27 @@
                 "max": 45.73,
                 "min": 44.65,
                 "median": 45.5,
-                "mean": 45.276,
+                "mean": 45.28,
                 "trend": "+6.2%"
             },
             "3 month": {
                 "max": 45.73,
                 "min": 40.99,
-                "median": 43.305,
-                "mean": 43.424,
+                "median": 43.3,
+                "mean": 43.42,
                 "trend": "+2.9%"
             },
             "6 month": {
                 "max": 45.77,
                 "min": 40.52,
                 "median": 42.45,
-                "mean": 42.676,
-                "trend": "-1.1%"
+                "mean": 42.68,
+                "trend": "-1.0%"
             },
             "All time": {
-                "max": 48.708,
+                "max": 48.71,
                 "min": 34.41,
-                "median": 42.705,
+                "median": 42.7,
                 "mean": 42.7
             }
         },
@@ -1488,29 +1480,29 @@
                 "max": 132.0,
                 "min": 88.0,
                 "median": 103.0,
-                "mean": 108.857,
-                "trend": "+1.3%"
+                "mean": 108.86,
+                "trend": "+3.0%"
             },
             "1 month": {
                 "max": 145.0,
                 "min": 79.0,
                 "median": 105.5,
-                "mean": 106.603,
-                "trend": "-0.5%"
+                "mean": 106.6,
+                "trend": "-1.7%"
             },
             "3 month": {
                 "max": 145.0,
                 "min": 79.0,
                 "median": 104.0,
-                "mean": 105.621,
+                "mean": 105.62,
                 "trend": "-4.2%"
             },
             "6 month": {
                 "max": 145.0,
                 "min": 79.0,
                 "median": 106.0,
-                "mean": 107.937,
-                "trend": "+0.7%"
+                "mean": 107.94,
+                "trend": "+0.6%"
             },
             "All time": {
                 "max": 154.0,
@@ -1523,75 +1515,75 @@
             "unit": "dBASPL",
             "type": "average",
             "1 week": {
-                "max": 70.363,
-                "min": 52.055,
-                "median": 60.809,
+                "max": 70.36,
+                "min": 52.06,
+                "median": 60.81,
                 "mean": 61.39,
-                "trend": "0.0%"
+                "trend": "-4.9%"
             },
             "1 month": {
-                "max": 73.523,
-                "min": 51.188,
-                "median": 60.809,
-                "mean": 62.204,
-                "trend": "+4.8%"
+                "max": 73.52,
+                "min": 51.19,
+                "median": 60.81,
+                "mean": 62.2,
+                "trend": "+4.7%"
             },
             "3 month": {
-                "max": 76.216,
-                "min": 50.025,
-                "median": 60.238,
-                "mean": 61.236,
-                "trend": "+3.9%"
+                "max": 76.22,
+                "min": 50.02,
+                "median": 60.24,
+                "mean": 61.24,
+                "trend": "+3.7%"
             },
             "6 month": {
-                "max": 76.216,
-                "min": 50.025,
-                "median": 59.554,
-                "mean": 60.087,
-                "trend": "-2.5%"
+                "max": 76.22,
+                "min": 50.02,
+                "median": 59.55,
+                "mean": 60.09,
+                "trend": "-2.4%"
             },
             "All time": {
-                "max": 76.216,
+                "max": 76.22,
                 "min": 45.26,
                 "median": 59.56,
-                "mean": 59.918
+                "mean": 59.92
             }
         },
         "Headphone Audio Exposure": {
             "unit": "dBASPL",
             "type": "average",
             "1 week": {
-                "max": 73.622,
-                "min": 64.344,
-                "median": 69.165,
-                "mean": 68.769,
-                "trend": "+11.6%"
+                "max": 73.62,
+                "min": 64.34,
+                "median": 69.17,
+                "mean": 68.77,
+                "trend": "+12.1%"
             },
             "1 month": {
-                "max": 74.619,
-                "min": 50.483,
-                "median": 68.293,
-                "mean": 67.187,
-                "trend": "+4.2%"
+                "max": 74.62,
+                "min": 50.48,
+                "median": 68.29,
+                "mean": 67.19,
+                "trend": "+4.1%"
             },
             "3 month": {
-                "max": 77.947,
-                "min": 50.483,
+                "max": 77.95,
+                "min": 50.48,
                 "median": 68.32,
                 "mean": 66.68,
-                "trend": "-3.4%"
+                "trend": "-3.0%"
             },
             "6 month": {
-                "max": 94.915,
-                "min": 40.601,
-                "median": 68.745,
-                "mean": 67.779,
+                "max": 94.91,
+                "min": 40.6,
+                "median": 68.74,
+                "mean": 67.78,
                 "trend": "+3.7%"
             },
             "All time": {
-                "max": 98.241,
+                "max": 98.24,
                 "min": 0.0,
-                "median": 66.664,
+                "median": 66.66,
                 "mean": 65.56
             }
         },
@@ -1601,36 +1593,36 @@
             "1 week": {
                 "max": 0.27,
                 "min": 0.25,
-                "median": 0.266,
-                "mean": 0.262,
-                "trend": "-2.3%"
+                "median": 0.27,
+                "mean": 0.26,
+                "trend": "-2.6%"
             },
             "1 month": {
-                "max": 0.286,
+                "max": 0.29,
                 "min": 0.25,
-                "median": 0.264,
-                "mean": 0.265,
-                "trend": "-0.3%"
+                "median": 0.26,
+                "mean": 0.27,
+                "trend": "+0.1%"
             },
             "3 month": {
-                "max": 0.295,
+                "max": 0.3,
                 "min": 0.25,
-                "median": 0.266,
-                "mean": 0.267,
-                "trend": "+0.7%"
+                "median": 0.27,
+                "mean": 0.27,
+                "trend": "+0.6%"
             },
             "6 month": {
-                "max": 0.295,
-                "min": 0.249,
-                "median": 0.265,
-                "mean": 0.266,
+                "max": 0.3,
+                "min": 0.25,
+                "median": 0.27,
+                "mean": 0.27,
                 "trend": "-1.2%"
             },
             "All time": {
-                "max": 0.295,
-                "min": 0.245,
-                "median": 0.268,
-                "mean": 0.268
+                "max": 0.3,
+                "min": 0.24,
+                "median": 0.27,
+                "mean": 0.27
             }
         },
         "Six Minute Walk Test Distance": {
@@ -1668,7 +1660,7 @@
                 "max": 500.0,
                 "min": 493.0,
                 "median": 500.0,
-                "mean": 499.898
+                "mean": 499.9
             }
         },
         "Apple Stand Time": {
@@ -1678,149 +1670,149 @@
                 "max": 191.0,
                 "min": 34.0,
                 "median": 72.0,
-                "mean": 87.571,
-                "trend": "-25.1%"
+                "mean": 87.57,
+                "trend": "-14.3%"
             },
             "1 month": {
                 "max": 303.0,
                 "min": 19.0,
                 "median": 86.5,
-                "mean": 112.733,
-                "trend": "-8.0%"
+                "mean": 112.73,
+                "trend": "-6.6%"
             },
             "3 month": {
                 "max": 317.0,
                 "min": 8.0,
                 "median": 110.0,
-                "mean": 121.967,
-                "trend": "+17.9%"
+                "mean": 121.97,
+                "trend": "+16.1%"
             },
             "6 month": {
                 "max": 325.0,
                 "min": 4.0,
                 "median": 100.0,
-                "mean": 112.717,
-                "trend": "-19.0%"
+                "mean": 112.72,
+                "trend": "-18.2%"
             },
             "All time": {
                 "max": 410.0,
                 "min": 1.0,
                 "median": 105.0,
-                "mean": 114.232
+                "mean": 114.23
             }
         },
         "Walking Speed": {
             "unit": "mi/hr",
             "type": "average",
             "1 week": {
-                "max": 3.167,
+                "max": 3.17,
                 "min": 2.78,
-                "median": 2.957,
-                "mean": 2.984,
-                "trend": "+5.7%"
+                "median": 2.96,
+                "mean": 2.98,
+                "trend": "+5.5%"
             },
             "1 month": {
-                "max": 3.284,
-                "min": 2.218,
-                "median": 2.909,
-                "mean": 2.902,
-                "trend": "-0.4%"
+                "max": 3.28,
+                "min": 2.22,
+                "median": 2.91,
+                "mean": 2.9,
+                "trend": "-1.5%"
             },
             "3 month": {
-                "max": 3.354,
-                "min": 2.024,
-                "median": 2.898,
-                "mean": 2.863,
-                "trend": "-0.6%"
+                "max": 3.35,
+                "min": 2.02,
+                "median": 2.9,
+                "mean": 2.86,
+                "trend": "-0.3%"
             },
             "6 month": {
-                "max": 3.354,
-                "min": 2.024,
-                "median": 2.898,
-                "mean": 2.871,
-                "trend": "+2.1%"
+                "max": 3.35,
+                "min": 2.02,
+                "median": 2.9,
+                "mean": 2.87,
+                "trend": "+2.0%"
             },
             "All time": {
-                "max": 3.442,
-                "min": 2.024,
-                "median": 2.828,
-                "mean": 2.825
+                "max": 3.44,
+                "min": 2.02,
+                "median": 2.83,
+                "mean": 2.82
             }
         },
         "Walking Step Length": {
             "unit": "in",
             "type": "average",
             "1 week": {
-                "max": 29.581,
-                "min": 26.979,
-                "median": 28.346,
+                "max": 29.58,
+                "min": 26.98,
+                "median": 28.35,
                 "mean": 28.23,
-                "trend": "+2.7%"
+                "trend": "+1.8%"
             },
             "1 month": {
-                "max": 30.474,
-                "min": 23.658,
-                "median": 28.286,
-                "mean": 27.871,
-                "trend": "-1.5%"
+                "max": 30.47,
+                "min": 23.66,
+                "median": 28.29,
+                "mean": 27.87,
+                "trend": "-1.8%"
             },
             "3 month": {
                 "max": 30.86,
-                "min": 20.472,
-                "median": 28.164,
-                "mean": 27.739,
-                "trend": "-1.1%"
+                "min": 20.47,
+                "median": 28.16,
+                "mean": 27.74,
+                "trend": "-1.0%"
             },
             "6 month": {
-                "max": 31.029,
-                "min": 20.472,
-                "median": 28.116,
-                "mean": 27.896,
+                "max": 31.03,
+                "min": 20.47,
+                "median": 28.12,
+                "mean": 27.9,
                 "trend": "-1.1%"
             },
             "All time": {
-                "max": 34.055,
-                "min": 20.472,
-                "median": 28.359,
-                "mean": 28.289
+                "max": 34.06,
+                "min": 20.47,
+                "median": 28.36,
+                "mean": 28.29
             }
         },
         "Walking Asymmetry Percentage": {
             "unit": "%",
             "type": "average",
             "1 week": {
-                "max": 0.021,
-                "min": 0.001,
-                "median": 0.017,
-                "mean": 0.014,
-                "trend": "-48.7%"
+                "max": 0.02,
+                "min": 0.0,
+                "median": 0.02,
+                "mean": 0.01,
+                "trend": "-44.5%"
             },
             "1 month": {
-                "max": 0.104,
-                "min": 0.0,
-                "median": 0.013,
-                "mean": 0.019,
-                "trend": "+64.5%"
-            },
-            "3 month": {
-                "max": 0.104,
+                "max": 0.1,
                 "min": 0.0,
                 "median": 0.01,
-                "mean": 0.016,
-                "trend": "-27.0%"
+                "mean": 0.02,
+                "trend": "+69.4%"
+            },
+            "3 month": {
+                "max": 0.1,
+                "min": 0.0,
+                "median": 0.01,
+                "mean": 0.02,
+                "trend": "-25.9%"
             },
             "6 month": {
                 "max": 0.12,
                 "min": 0.0,
-                "median": 0.012,
-                "mean": 0.019,
-                "trend": "-18.8%"
+                "median": 0.01,
+                "mean": 0.02,
+                "trend": "-18.4%"
             },
             "All time": {
-                "max": 0.435,
+                "max": 0.44,
                 "min": 0.0,
-                "median": 0.013,
-                "mean": 0.021
+                "median": 0.01,
+                "mean": 0.02
             }
         },
         "Stair Ascent Speed": {
@@ -1828,75 +1820,75 @@
             "type": "average",
             "1 week": {
                 "max": 2.06,
-                "min": 0.834,
-                "median": 1.215,
-                "mean": 1.272,
-                "trend": "+19.2%"
+                "min": 0.83,
+                "median": 1.22,
+                "mean": 1.27,
+                "trend": "-12.7%"
             },
             "1 month": {
                 "max": 2.06,
-                "min": 0.772,
-                "median": 1.046,
-                "mean": 1.133,
+                "min": 0.77,
+                "median": 1.05,
+                "mean": 1.13,
                 "trend": "+11.3%"
             },
             "3 month": {
                 "max": 2.06,
-                "min": 0.772,
+                "min": 0.77,
                 "median": 1.07,
-                "mean": 1.123,
-                "trend": "+5.3%"
+                "mean": 1.12,
+                "trend": "+4.3%"
             },
             "6 month": {
                 "max": 2.06,
-                "min": 0.711,
-                "median": 1.046,
-                "mean": 1.096,
+                "min": 0.71,
+                "median": 1.05,
+                "mean": 1.1,
                 "trend": "+1.1%"
             },
             "All time": {
-                "max": 2.122,
-                "min": 0.711,
-                "median": 1.055,
-                "mean": 1.085
+                "max": 2.12,
+                "min": 0.71,
+                "median": 1.05,
+                "mean": 1.08
             }
         },
         "Stair Descent Speed": {
             "unit": "ft/s",
             "type": "average",
             "1 week": {
-                "max": 2.049,
-                "min": 0.857,
-                "median": 1.056,
-                "mean": 1.208,
-                "trend": "+4.6%"
+                "max": 2.05,
+                "min": 0.86,
+                "median": 1.06,
+                "mean": 1.21,
+                "trend": "+2.1%"
             },
             "1 month": {
-                "max": 2.278,
-                "min": 0.792,
-                "median": 1.165,
-                "mean": 1.239,
+                "max": 2.28,
+                "min": 0.79,
+                "median": 1.16,
+                "mean": 1.24,
                 "trend": "+0.1%"
             },
             "3 month": {
-                "max": 2.289,
-                "min": 0.726,
-                "median": 1.252,
-                "mean": 1.347,
-                "trend": "+17.2%"
+                "max": 2.29,
+                "min": 0.73,
+                "median": 1.25,
+                "mean": 1.35,
+                "trend": "+16.4%"
             },
             "6 month": {
-                "max": 2.289,
-                "min": 0.677,
-                "median": 1.166,
-                "mean": 1.254,
-                "trend": "+2.8%"
+                "max": 2.29,
+                "min": 0.68,
+                "median": 1.17,
+                "mean": 1.25,
+                "trend": "+2.7%"
             },
             "All time": {
-                "max": 2.425,
-                "min": 0.662,
+                "max": 2.42,
+                "min": 0.66,
                 "median": 1.18,
-                "mean": 1.257
+                "mean": 1.26
             }
         },
         "Sleep Duration Goal": {
@@ -1951,14 +1943,14 @@
                 "max": 1.0,
                 "min": 0.99,
                 "median": 1.0,
-                "mean": 0.998,
+                "mean": 1.0,
                 "trend": "-0.3%"
             },
             "3 month": {
                 "max": 1.0,
                 "min": 0.99,
                 "median": 1.0,
-                "mean": 0.999,
+                "mean": 1.0,
                 "trend": "-0.1%"
             },
             "6 month": {
@@ -1994,211 +1986,211 @@
             },
             "3 month": {
                 "max": 1.13,
-                "min": 0.988,
-                "median": 1.059,
-                "mean": 1.059,
+                "min": 0.99,
+                "median": 1.06,
+                "mean": 1.06,
                 "trend": null
             },
             "6 month": {
                 "max": 1.13,
-                "min": 0.988,
-                "median": 1.059,
-                "mean": 1.059,
+                "min": 0.99,
+                "median": 1.06,
+                "mean": 1.06,
                 "trend": null
             },
             "All time": {
-                "max": 1.145,
-                "min": 0.988,
+                "max": 1.14,
+                "min": 0.99,
                 "median": 1.13,
-                "mean": 1.088
+                "mean": 1.09
             }
         },
         "Running Vertical Oscillation": {
             "unit": "cm",
             "type": "average",
             "1 week": {
-                "max": 9.669,
-                "min": 9.669,
-                "median": 9.669,
-                "mean": 9.669,
+                "max": 9.67,
+                "min": 9.67,
+                "median": 9.67,
+                "mean": 9.67,
                 "trend": null
             },
             "1 month": {
-                "max": 9.669,
-                "min": 9.669,
-                "median": 9.669,
-                "mean": 9.669,
+                "max": 9.67,
+                "min": 9.67,
+                "median": 9.67,
+                "mean": 9.67,
                 "trend": null
             },
             "3 month": {
-                "max": 9.904,
-                "min": 9.669,
-                "median": 9.786,
-                "mean": 9.786,
+                "max": 9.9,
+                "min": 9.67,
+                "median": 9.79,
+                "mean": 9.79,
                 "trend": null
             },
             "6 month": {
-                "max": 9.904,
-                "min": 9.669,
-                "median": 9.786,
-                "mean": 9.786,
+                "max": 9.9,
+                "min": 9.67,
+                "median": 9.79,
+                "mean": 9.79,
                 "trend": null
             },
             "All time": {
-                "max": 9.904,
-                "min": 9.669,
-                "median": 9.727,
-                "mean": 9.767
+                "max": 9.9,
+                "min": 9.67,
+                "median": 9.73,
+                "mean": 9.77
             }
         },
         "Running Ground Contact Time": {
             "unit": "ms",
             "type": "average",
             "1 week": {
-                "max": 244.892,
-                "min": 244.892,
-                "median": 244.892,
-                "mean": 244.892,
+                "max": 244.89,
+                "min": 244.89,
+                "median": 244.89,
+                "mean": 244.89,
                 "trend": null
             },
             "1 month": {
-                "max": 244.892,
-                "min": 244.892,
-                "median": 244.892,
-                "mean": 244.892,
+                "max": 244.89,
+                "min": 244.89,
+                "median": 244.89,
+                "mean": 244.89,
                 "trend": null
             },
             "3 month": {
-                "max": 268.879,
-                "min": 244.892,
-                "median": 256.886,
-                "mean": 256.886,
+                "max": 268.88,
+                "min": 244.89,
+                "median": 256.89,
+                "mean": 256.89,
                 "trend": null
             },
             "6 month": {
-                "max": 268.879,
-                "min": 244.892,
-                "median": 256.886,
-                "mean": 256.886,
+                "max": 268.88,
+                "min": 244.89,
+                "median": 256.89,
+                "mean": 256.89,
                 "trend": null
             },
             "All time": {
-                "max": 268.879,
-                "min": 244.892,
-                "median": 252.476,
-                "mean": 255.416
+                "max": 268.88,
+                "min": 244.89,
+                "median": 252.48,
+                "mean": 255.42
             }
         },
         "Heart Rate Recovery One Minute": {
             "unit": "count/min",
             "type": "average",
             "1 week": {
-                "max": 34.141,
-                "min": 34.047,
-                "median": 34.141,
-                "mean": 34.109,
+                "max": 34.14,
+                "min": 34.05,
+                "median": 34.14,
+                "mean": 34.11,
                 "trend": null
             },
             "1 month": {
-                "max": 45.412,
-                "min": 27.806,
-                "median": 34.141,
-                "mean": 35.184,
+                "max": 45.41,
+                "min": 27.81,
+                "median": 34.14,
+                "mean": 35.18,
                 "trend": null
             },
             "3 month": {
-                "max": 45.412,
-                "min": 27.806,
-                "median": 37.541,
-                "mean": 36.853,
+                "max": 45.41,
+                "min": 27.81,
+                "median": 37.54,
+                "mean": 36.85,
                 "trend": null
             },
             "6 month": {
-                "max": 45.412,
-                "min": 27.715,
-                "median": 36.742,
-                "mean": 36.486,
+                "max": 45.41,
+                "min": 27.72,
+                "median": 36.74,
+                "mean": 36.49,
                 "trend": null
             },
             "All time": {
-                "max": 45.603,
-                "min": 27.715,
-                "median": 35.939,
-                "mean": 36.467
+                "max": 45.6,
+                "min": 27.72,
+                "median": 35.94,
+                "mean": 36.47
             }
         },
         "Running Power": {
             "unit": "W",
             "type": "average",
             "1 week": {
-                "max": 222.414,
-                "min": 222.414,
-                "median": 222.414,
-                "mean": 222.414,
+                "max": 222.41,
+                "min": 222.41,
+                "median": 222.41,
+                "mean": 222.41,
                 "trend": null
             },
             "1 month": {
-                "max": 222.414,
-                "min": 222.414,
-                "median": 222.414,
-                "mean": 222.414,
+                "max": 222.41,
+                "min": 222.41,
+                "median": 222.41,
+                "mean": 222.41,
                 "trend": null
             },
             "3 month": {
-                "max": 222.414,
-                "min": 184.724,
-                "median": 203.569,
-                "mean": 203.569,
+                "max": 222.41,
+                "min": 184.72,
+                "median": 203.57,
+                "mean": 203.57,
                 "trend": null
             },
             "6 month": {
-                "max": 222.414,
-                "min": 184.724,
-                "median": 203.569,
-                "mean": 203.569,
+                "max": 222.41,
+                "min": 184.72,
+                "median": 203.57,
+                "mean": 203.57,
                 "trend": null
             },
             "All time": {
-                "max": 228.062,
-                "min": 184.724,
-                "median": 222.414,
-                "mean": 211.733
+                "max": 228.06,
+                "min": 184.72,
+                "median": 222.41,
+                "mean": 211.73
             }
         },
         "Environmental Sound Reduction": {
             "unit": "dBASPL",
             "type": "average",
             "1 week": {
-                "max": 21.665,
+                "max": 21.66,
                 "min": 1.88,
-                "median": 19.478,
-                "mean": 13.332,
-                "trend": "-33.9%"
+                "median": 19.48,
+                "mean": 13.33,
+                "trend": "-33.0%"
             },
             "1 month": {
                 "max": 24.0,
-                "min": 1.778,
-                "median": 19.478,
-                "mean": 15.209,
-                "trend": "+14.0%"
+                "min": 1.78,
+                "median": 19.48,
+                "mean": 15.21,
+                "trend": "+19.7%"
             },
             "3 month": {
                 "max": 24.0,
-                "min": 1.652,
+                "min": 1.65,
                 "median": 18.73,
-                "mean": 15.889,
-                "trend": "-12.5%"
+                "mean": 15.89,
+                "trend": "-13.2%"
             },
             "6 month": {
                 "max": 24.0,
-                "min": 1.652,
-                "median": 18.848,
-                "mean": 16.895,
-                "trend": "-7.8%"
+                "min": 1.65,
+                "median": 18.85,
+                "mean": 16.9,
+                "trend": "-7.0%"
             },
             "All time": {
                 "max": 24.0,
-                "min": 1.095,
+                "min": 1.09,
                 "median": 18.83,
                 "mean": 17.55
             }
@@ -2207,38 +2199,38 @@
             "unit": "mi/hr",
             "type": "average",
             "1 week": {
-                "max": 6.388,
-                "min": 2.507,
-                "median": 4.448,
-                "mean": 4.448,
+                "max": 6.39,
+                "min": 2.51,
+                "median": 4.45,
+                "mean": 4.45,
                 "trend": null
             },
             "1 month": {
-                "max": 6.388,
-                "min": 2.507,
-                "median": 4.448,
-                "mean": 4.448,
+                "max": 6.39,
+                "min": 2.51,
+                "median": 4.45,
+                "mean": 4.45,
                 "trend": null
             },
             "3 month": {
-                "max": 6.388,
-                "min": 2.507,
-                "median": 5.759,
-                "mean": 4.885,
+                "max": 6.39,
+                "min": 2.51,
+                "median": 5.76,
+                "mean": 4.88,
                 "trend": null
             },
             "6 month": {
-                "max": 6.388,
-                "min": 2.507,
-                "median": 5.759,
-                "mean": 4.885,
+                "max": 6.39,
+                "min": 2.51,
+                "median": 5.76,
+                "mean": 4.88,
                 "trend": null
             },
             "All time": {
-                "max": 6.388,
-                "min": 2.507,
-                "median": 5.597,
-                "mean": 5.022
+                "max": 6.39,
+                "min": 2.51,
+                "median": 5.6,
+                "mean": 5.02
             }
         },
         "Time In Daylight": {
@@ -2248,8 +2240,8 @@
                 "max": 101.0,
                 "min": 7.0,
                 "median": 41.0,
-                "mean": 49.833,
-                "trend": "+183.1%"
+                "mean": 49.83,
+                "trend": "+155.6%"
             },
             "1 month": {
                 "max": 101.0,
@@ -2262,294 +2254,287 @@
                 "max": 103.0,
                 "min": 1.0,
                 "median": 25.0,
-                "mean": 33.635,
-                "trend": "-19.9%"
+                "mean": 33.63,
+                "trend": "-17.4%"
             },
             "6 month": {
                 "max": 138.0,
                 "min": 1.0,
                 "median": 28.0,
-                "mean": 37.938,
+                "mean": 37.94,
                 "trend": "-29.1%"
             },
             "All time": {
                 "max": 138.0,
                 "min": 1.0,
                 "median": 28.0,
-                "mean": 38.625
+                "mean": 38.62
             }
         },
         "Physical Effort": {
             "unit": "kcal/hr\u00b7kg",
             "type": "average",
             "1 week": {
-                "max": 4.295,
-                "min": 3.498,
-                "median": 3.945,
-                "mean": 3.886,
-                "trend": "-0.8%"
+                "max": 4.29,
+                "min": 3.5,
+                "median": 3.95,
+                "mean": 3.89,
+                "trend": "+2.6%"
             },
             "1 month": {
-                "max": 4.689,
-                "min": 3.498,
-                "median": 3.871,
-                "mean": 3.891,
-                "trend": "-0.2%"
+                "max": 4.69,
+                "min": 3.5,
+                "median": 3.87,
+                "mean": 3.89,
+                "trend": "-0.8%"
             },
             "3 month": {
                 "max": 5.18,
-                "min": 3.242,
-                "median": 3.808,
-                "mean": 3.877,
-                "trend": "+1.6%"
+                "min": 3.24,
+                "median": 3.81,
+                "mean": 3.88,
+                "trend": "+1.7%"
             },
             "6 month": {
                 "max": 5.18,
-                "min": 3.148,
-                "median": 3.808,
-                "mean": 3.847,
+                "min": 3.15,
+                "median": 3.81,
+                "mean": 3.85,
                 "trend": "+1.2%"
             },
             "All time": {
                 "max": 5.18,
-                "min": 2.225,
-                "median": 3.811,
-                "mean": 3.845
+                "min": 2.22,
+                "median": 3.81,
+                "mean": 3.84
             }
-        },
-        "Sleep Analysis": {
-            "data_points": {},
-            "unit": null,
-            "type": "average"
         },
         "Core Sleep": {
             "unit": "hours",
             "type": "cumulative",
             "1 week": {
-                "max": 4.192,
-                "min": 2.208,
-                "median": 3.567,
-                "mean": 3.493,
+                "max": 4.19,
+                "min": 2.21,
+                "median": 3.57,
+                "mean": 3.49,
                 "trend": null
             },
             "1 month": {
-                "max": 6.025,
-                "min": 2.208,
-                "median": 4.192,
+                "max": 6.02,
+                "min": 2.21,
+                "median": 4.19,
                 "mean": 4.3,
                 "trend": null
             },
             "3 month": {
                 "max": 6.25,
-                "min": 0.233,
-                "median": 4.108,
-                "mean": 3.995,
+                "min": 0.23,
+                "median": 4.11,
+                "mean": 4.0,
                 "trend": null
             },
             "6 month": {
-                "max": 7.583,
-                "min": 0.233,
-                "median": 4.146,
-                "mean": 4.149,
+                "max": 7.58,
+                "min": 0.23,
+                "median": 4.15,
+                "mean": 4.15,
                 "trend": null
             },
             "All time": {
-                "max": 7.583,
-                "min": 0.233,
-                "median": 4.192,
-                "mean": 4.192
+                "max": 7.58,
+                "min": 0.23,
+                "median": 4.19,
+                "mean": 4.19
             }
         },
-        "Sleep Awake Time": {
+        "Sleep Time": {
             "unit": "hours",
             "type": "cumulative",
             "1 week": {
-                "max": 0.183,
-                "min": 0.008,
-                "median": 0.054,
-                "mean": 0.069,
+                "max": 7.02,
+                "min": 3.98,
+                "median": 6.06,
+                "mean": 5.91,
                 "trend": null
             },
             "1 month": {
-                "max": 0.542,
-                "min": 0.008,
-                "median": 0.112,
-                "mean": 0.159,
+                "max": 10.21,
+                "min": 3.98,
+                "median": 7.02,
+                "mean": 7.08,
                 "trend": null
             },
             "3 month": {
-                "max": 0.683,
-                "min": 0.008,
-                "median": 0.121,
-                "mean": 0.199,
+                "max": 10.21,
+                "min": 0.23,
+                "median": 6.69,
+                "mean": 6.64,
                 "trend": null
             },
             "6 month": {
-                "max": 0.742,
-                "min": 0.008,
-                "median": 0.129,
-                "mean": 0.179,
+                "max": 10.21,
+                "min": 0.23,
+                "median": 6.85,
+                "mean": 6.79,
                 "trend": null
             },
             "All time": {
-                "max": 3.675,
-                "min": 0.008,
-                "median": 0.142,
-                "mean": 0.256
+                "max": 11.72,
+                "min": 0.23,
+                "median": 6.86,
+                "mean": 6.79
+            }
+        },
+        "Sleep Awake Time": {
+            "unit": "minutes",
+            "type": "cumulative",
+            "1 week": {
+                "max": 11.0,
+                "min": 0.5,
+                "median": 3.25,
+                "mean": 4.17,
+                "trend": null
+            },
+            "1 month": {
+                "max": 32.5,
+                "min": 0.5,
+                "median": 6.75,
+                "mean": 9.56,
+                "trend": null
+            },
+            "3 month": {
+                "max": 41.0,
+                "min": 0.5,
+                "median": 7.25,
+                "mean": 11.93,
+                "trend": null
+            },
+            "6 month": {
+                "max": 44.5,
+                "min": 0.5,
+                "median": 7.75,
+                "mean": 10.76,
+                "trend": null
+            },
+            "All time": {
+                "max": 220.5,
+                "min": 0.5,
+                "median": 8.5,
+                "mean": 15.34
             }
         },
         "Deep Sleep": {
             "unit": "hours",
             "type": "cumulative",
             "1 week": {
-                "max": 1.292,
-                "min": 0.658,
-                "median": 0.875,
+                "max": 1.29,
+                "min": 0.66,
+                "median": 0.88,
                 "mean": 0.91,
                 "trend": null
             },
             "1 month": {
-                "max": 1.475,
-                "min": 0.475,
-                "median": 0.933,
-                "mean": 0.926,
+                "max": 1.48,
+                "min": 0.48,
+                "median": 0.93,
+                "mean": 0.93,
                 "trend": null
             },
             "3 month": {
-                "max": 1.617,
-                "min": 0.317,
+                "max": 1.62,
+                "min": 0.32,
                 "median": 0.9,
-                "mean": 0.913,
+                "mean": 0.91,
                 "trend": null
             },
             "6 month": {
-                "max": 1.617,
-                "min": 0.317,
-                "median": 0.904,
-                "mean": 0.906,
+                "max": 1.62,
+                "min": 0.32,
+                "median": 0.9,
+                "mean": 0.91,
                 "trend": null
             },
             "All time": {
-                "max": 1.617,
-                "min": 0.217,
-                "median": 0.892,
-                "mean": 0.888
+                "max": 1.62,
+                "min": 0.22,
+                "median": 0.89,
+                "mean": 0.89
             }
         },
-        "REM  Sleep": {
+        "REM Sleep": {
             "unit": "hours",
             "type": "cumulative",
             "1 week": {
-                "max": 2.167,
+                "max": 2.17,
                 "min": 1.05,
-                "median": 1.388,
-                "mean": 1.508,
+                "median": 1.39,
+                "mean": 1.51,
                 "trend": null
             },
             "1 month": {
-                "max": 3.083,
-                "min": 1.025,
-                "median": 1.779,
-                "mean": 1.858,
+                "max": 3.08,
+                "min": 1.02,
+                "median": 1.78,
+                "mean": 1.86,
                 "trend": null
             },
             "3 month": {
-                "max": 3.292,
+                "max": 3.29,
                 "min": 0.9,
-                "median": 1.725,
-                "mean": 1.805,
+                "median": 1.72,
+                "mean": 1.8,
                 "trend": null
             },
             "6 month": {
-                "max": 3.292,
-                "min": 0.808,
-                "median": 1.692,
-                "mean": 1.784,
+                "max": 3.29,
+                "min": 0.81,
+                "median": 1.69,
+                "mean": 1.78,
                 "trend": null
             },
             "All time": {
-                "max": 3.292,
-                "min": 0.142,
-                "median": 1.692,
-                "mean": 1.733
+                "max": 3.29,
+                "min": 0.14,
+                "median": 1.69,
+                "mean": 1.73
             }
-        },
-        "Apple Stand Hour": {
-            "data_points": {},
-            "unit": null,
-            "type": "average"
-        },
-        "Mindful Session": {
-            "data_points": {},
-            "unit": null,
-            "type": "average"
-        },
-        "High Heart Rate Event": {
-            "data_points": {},
-            "unit": null,
-            "type": "average"
-        },
-        "Low Heart Rate Event": {
-            "data_points": {},
-            "unit": null,
-            "type": "average"
-        },
-        "Audio Exposure Event": {
-            "data_points": {},
-            "unit": null,
-            "type": "average"
-        },
-        "Toothbrushing Event": {
-            "data_points": {},
-            "unit": null,
-            "type": "cumulative"
-        },
-        "Headphone Audio Exposure Event": {
-            "data_points": {},
-            "unit": null,
-            "type": "average"
-        },
-        "Handwashing Event": {
-            "data_points": {},
-            "unit": null,
-            "type": "cumulative"
         },
         "Heart Rate Variability SDNN": {
             "unit": "ms",
             "type": "average",
             "1 week": {
-                "max": 85.383,
-                "min": 41.605,
-                "median": 51.607,
-                "mean": 58.555,
-                "trend": "+13.9%"
+                "max": 85.38,
+                "min": 41.6,
+                "median": 51.61,
+                "mean": 58.55,
+                "trend": "+9.7%"
             },
             "1 month": {
-                "max": 85.383,
-                "min": 25.214,
-                "median": 55.862,
-                "mean": 56.069,
+                "max": 85.38,
+                "min": 25.21,
+                "median": 55.86,
+                "mean": 56.07,
                 "trend": "-0.3%"
             },
             "3 month": {
                 "max": 96.04,
-                "min": 25.214,
-                "median": 57.572,
-                "mean": 58.051,
-                "trend": "+10.1%"
+                "min": 25.21,
+                "median": 57.57,
+                "mean": 58.05,
+                "trend": "+10.3%"
             },
             "6 month": {
                 "max": 96.04,
-                "min": 19.419,
-                "median": 55.862,
-                "mean": 55.377,
-                "trend": "+4.2%"
+                "min": 19.42,
+                "median": 55.86,
+                "mean": 55.38,
+                "trend": "+4.4%"
             },
             "All time": {
-                "max": 99.822,
-                "min": 14.658,
-                "median": 44.938,
-                "mean": 46.208
+                "max": 99.82,
+                "min": 14.66,
+                "median": 44.94,
+                "mean": 46.21
             }
         }
     }
