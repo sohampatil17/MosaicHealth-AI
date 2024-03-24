@@ -8,18 +8,18 @@ import { Key, useEffect, useState } from 'react';
 const importantData = [
     {
         reasoning: "Mentioned *muscle pain* which can be caused by *vitamin d deficiency*",
-        category: "TimeInDaylight",
-        data1_time: "6_month",
+        category: "Time In Daylight",
+        data1_time: "6 month",
         data1_type: "mean",
-        data2_time: "3_month",
+        data2_time: "3 month",
         data2_type: "trend"
     },
     {
         reasoning: "Waking up in the night might indicate ",
-        category: "RespiratoryRate",
-        data1_time: "1_week",
+        category: "Sleep Awake Time",
+        data1_time: "1 week",
         data1_type: "trend",
-        data2_time: "6_month",
+        data2_time: "6 month",
         data2_type: "min"
     },
 ];
@@ -60,7 +60,7 @@ export default function DataInsights() {
     return (
         <Card color='primary' sx={{ margin: 2, justifyItems: 'top', alignItems: 'center', width: '60%' }}>
             <Typography level='h2'>Data Insights</Typography>
-            <Sheet sx={{ width: '100%' }}>
+            <Sheet sx={{ width: '100%', height: 'calc(90vh - 120px)', overflowY: 'auto' }}>
                 {enrichedData && enrichedData.map((data: any, index: Key | null | undefined) => (
                     <Card key={index} sx={{ width: '100%', marginTop: 2, marginBottom: 2 }}>
                         <Sheet sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', overflowX: 'auto', flexWrap: 'nowrap' }}>
