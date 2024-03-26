@@ -38,12 +38,14 @@ export default function App() {
     >
       <CssBaseline />
       <NavBar setTranscript={setTranscript} setImportantData={setImportantData} setOutline={setOutline} />
-      <Box sx={{ display: 'flex', width: '100%' }}>
-        <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, maxWidth: '50%', minWidth: '50%' }}>
+      <Box sx={{ display: 'flex', width: '100%', flexDirection: { xs: 'column', md: 'row' }, gap: 2, padding: 2 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
           <Transcription transcript={transcript} setTranscript={setTranscript} setImportantData={setImportantData} setLoadingDataSuggestions={setLoadingDataSuggestions} />
           <Data_Insights importantData={importantData} setOutline={setOutline} loadingDataSuggestions={loadingDataSuggestions} transcript={transcript} />
         </Box>
-        <Report outline={outline} />
+        <Box sx={{ minWidth: '50%' }}>
+          <Report outline={outline} />
+        </Box>
       </Box>
     </CssVarsProvider >
   );

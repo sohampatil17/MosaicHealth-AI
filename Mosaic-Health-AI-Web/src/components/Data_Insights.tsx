@@ -80,15 +80,15 @@ export default function DataInsights({ importantData, loadingDataSuggestions, se
 
 
     return (
-        <Card color='primary' sx={{ margin: 2, marginRight: 0, justifyItems: 'top', alignItems: 'center' }}>
+        <Card color='primary' sx={{ marginTop: 2, justifyItems: 'top', alignItems: 'center', flexGrow: 1, display: 'flex' }}>
             <Typography level='h3'>Data Insights</Typography>
 
             {loadingDataSuggestions ? (
-                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '52vh' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1 }}>
                     <CircularProgress />
                 </Box>
             ) : (
-                <Sheet sx={{ width: '100%', minHeight: '52vh', maxHeight: '52vh', overflowY: 'auto' }}>
+                <Sheet sx={{ width: '100%', overflowY: 'auto', flexGrow: 1 }}>
                     {enrichedData && enrichedData.length > 0 ? (
                         <>
                             <Typography>Select data chips to include them in the AI report outline</Typography>

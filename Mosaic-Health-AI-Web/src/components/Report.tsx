@@ -27,7 +27,7 @@ export default function Report({ outline }: ReportProps) {
     };
 
     return (
-        <Card variant='outlined' color='primary' sx={{ margin: 2, justifyItems: 'top', alignItems: 'center', flexGrow: 1, justifyContent: 'space-between' }}>
+        <Card variant='outlined' color='primary' sx={{ justifyItems: 'top', alignItems: 'center', flexGrow: 1, justifyContent: 'space-between' }}>
             <Typography level='h2' sx={{ marginBottom: 1, marginTop: 1, alignSelf: 'start' }}>Report Builder</Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
                 <Textarea
@@ -35,7 +35,7 @@ export default function Report({ outline }: ReportProps) {
                     placeholder='Select important data then click "Generate Report Outline" or start your own from scratch'
                     value={text}
                     onChange={(e) => setText(e.target.value)}
-                    sx={{ flexGrow: 1, marginBottom: 1, paddingBottom: 2, height: '65vh' }}
+                    sx={{ flexGrow: 1, marginBottom: 1, paddingBottom: 2, height: 'calc(100vh - 240px)' }}
                 />
                 <Button variant="soft" onClick={handleCopyText}>{copyButtonText}</Button>
             </Box>

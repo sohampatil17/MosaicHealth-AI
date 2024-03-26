@@ -15,7 +15,7 @@ export default function NavBar({ setTranscript, setOutline, setImportantData }: 
     }
 
     return (
-        <Card color='primary' variant='soft' sx={{ margin: 0, height: 50, justifyContent: 'center', alignItems: 'center' }}>
+        <Card color='primary' variant='soft' sx={{ margin: 0, height: 60, justifyContent: 'center', alignItems: 'center' }}>
             <Box sx={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Box sx={{ visibility: 'hidden' }}>
                     <Button>clear</Button> {/* Invisible button to balance the layout */}

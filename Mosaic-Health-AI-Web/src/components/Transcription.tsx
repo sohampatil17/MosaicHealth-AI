@@ -81,7 +81,7 @@ function Transcription({ transcript, setTranscript, setImportantData, setLoading
   }, [transcript, interimTranscript]);
 
   return (
-    <Card color='primary' sx={{ margin: 2, marginRight: 0, marginBottom: 0, justifyContent: 'center', height: '12vh', display: 'flex', flexDirection: 'row' }}>
+    <Card color='primary' sx={{ justifyContent: 'center', height: '50', display: 'flex', flexDirection: 'row' }}>
       <Button
         sx={{
           minWidth: 200,
