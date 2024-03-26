@@ -35,7 +35,7 @@ export default function Report({ outline }: ReportProps) {
                     placeholder='Select important data then click "Generate Report Outline" or start your own from scratch'
                     value={text}
                     onChange={(e) => setText(e.target.value)}
-                    sx={{ flexGrow: 1, marginBottom: 1, paddingBottom: 2, height: '70vh' }}
+                    sx={{ flexGrow: 1, marginBottom: 1, paddingBottom: 2, height: '65vh' }}
                 />
                 <Button variant="soft" onClick={handleCopyText}>{copyButtonText}</Button>
             </Box>

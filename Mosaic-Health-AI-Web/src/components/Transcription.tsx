@@ -3,25 +3,6 @@ import { Box, Button, Card, Typography } from '@mui/joy';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import axios from 'axios';
 
-const placeholderImportantData = [
-  {
-    reasoning: "Mentioned *muscle pain* which can be caused by vitamin d deficiency",
-    category: "Time In Daylight",
-    data1_time: "6 month",
-    data1_type: "mean",
-    data2_time: "3 month",
-    data2_type: "trend"
-  },
-  {
-    reasoning: "Shortness of breath might indicate oxygen issues",
-    category: "Oxygen Saturation",
-    data1_time: "1 week",
-    data1_type: "min",
-    data2_time: "6 month",
-    data2_type: "mean"
-  },
-];
-
 // Define the props type
 interface TranscriptionProps {
   transcript: string;
@@ -34,8 +15,14 @@ function Transcription({ transcript, setTranscript, setImportantData, setLoading
 
   const [isListening, setIsListening] = useState(false);
   const [interimTranscript, setInterimTranscript] = useState('');
+  const transcriptRef = useRef(transcript);
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
-  // set up transcription listener on component mount
+  // Update the ref whenever the transcript state changes
+  useEffect(() => {
+    transcriptRef.current = transcript;
+  }, [transcript]);
+
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (SpeechRecognition) {
@@ -44,28 +31,7 @@ function Transcription({ transcript, setTranscript, setImportantData, setLoading
       recognition.interimResults = true;
 
       recognition.onstart = () => {
-        console.log("transcrption started");
         setIsListening(true);
-      };
-
-      recognition.onend = () => {
-        setIsListening(false);
-        setLoadingDataSuggestions(true);
-        console.log("transcrption ended");
-
-        // Make a POST request to send the transcript to your Flask backend
-        axios.post('http://127.0.0.1:5000/process_transcript', { transcript })
-          .then(response => {
-            // Handle the response from Flask, assuming it's the modified important data
-            setLoadingDataSuggestions(false);
-            console.log(response);
-            const result = JSON.parse(response.data.result); // This is the content returned from Flask
-            console.log(result);
-            setImportantData(result);
-          })
-          .catch(error => {
-            console.error('There was an error processing the transcript:', error);
-          });
       };
 
       recognition.onresult = (event: any) => {
@@ -75,11 +41,27 @@ function Transcription({ transcript, setTranscript, setImportantData, setLoading
           transcript.replace("\n", "<br>");
           if (event.results[i].isFinal) {
             setTranscript((prevTranscript) => prevTranscript + ' ' + transcript + '.');
+            transcriptRef.current = transcript;
           }
           else {
             setInterimTranscript((prevTranscript) => prevTranscript + ' ' + transcript);
           }
         }
+      };
+
+      recognition.onend = () => {
+        setIsListening(false);
+        setLoadingDataSuggestions(true);
+
+        axios.post('http://127.0.0.1:5000/process_transcript', { transcript: transcriptRef.current })
+          .then((response) => {
+            setLoadingDataSuggestions(false);
+            const result = JSON.parse(response.data.result); // Assuming response.data.result is a stringified JSON
+            setImportantData(result);
+          })
+          .catch((error) => {
+            console.error('There was an error processing the transcript:', error);
+          });
       };
 
       if (isListening) {
@@ -92,12 +74,8 @@ function Transcription({ transcript, setTranscript, setImportantData, setLoading
         recognition.stop();
       };
     }
-  }, [isListening]);
+  }, [isListening, setTranscript, setImportantData, setLoadingDataSuggestions]);
 
-  // Create a ref for the Card component that needs to auto-scroll
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-
-  // Use useEffect to scroll to the bottom every time transcript or interimTranscript changes
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [transcript, interimTranscript]);

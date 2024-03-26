@@ -1,13 +1,15 @@
 import { Button, Card, Typography, Sheet, Chip, CircularProgress, Box } from '@mui/joy';
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 interface DataInsightsProps {
     importantData: any;
     loadingDataSuggestions: boolean;
-    setOutline: React.Dispatch<React.SetStateAction<string>>
+    setOutline: React.Dispatch<React.SetStateAction<string>>;
+    transcript: string;
 }
 
-export default function DataInsights({ importantData, loadingDataSuggestions, setOutline }: DataInsightsProps) {
+export default function DataInsights({ importantData, loadingDataSuggestions, setOutline, transcript }: DataInsightsProps) {
     const [appleHealthData, setAppleHealthData] = useState<any | null>(null);
     const [enrichedData, setEnrichedData] = useState<any | null>([]);
     const [selectedData, setSelectedData] = useState<string[]>([]);
@@ -23,7 +25,8 @@ export default function DataInsights({ importantData, loadingDataSuggestions, se
     // Extract data when either the apple health data changes, or the 'important information' object updates
     useEffect(() => {
         if (appleHealthData) {
-            const enrichedData = importantData.map((dataPoint: { category: string | number; data1_time: string | number; data1_type: string | number; data2_time: string | number; data2_type: string | number; }) => {
+            const enrichedData = importantData.map((dataPoint: { category: any; data1_time: string | number; data1_type: string | number; data2_time: string | number; data2_type: string | number; }) => {
+                const category = dataPoint.category;
                 const unit = appleHealthData.data[dataPoint.category]?.unit;
                 const data1_value = appleHealthData.data[dataPoint.category]?.[dataPoint.data1_time]?.[dataPoint.data1_type];
                 const data2_value = appleHealthData.data[dataPoint.category]?.[dataPoint.data2_time]?.[dataPoint.data2_type];
@@ -32,6 +35,7 @@ export default function DataInsights({ importantData, loadingDataSuggestions, se
                 return {
                     ...dataPoint, // Spread the existing dataPoint properties
                     unit,
+                    category,
                     data1_value,  // Add the new data1_value
                     data2_value   // Add the new data2_value
                 };
@@ -42,8 +46,8 @@ export default function DataInsights({ importantData, loadingDataSuggestions, se
     }, [appleHealthData, importantData]);
 
     // Function to handle chip clicks
-    const handleChipClick = (chipData: { data1_time: any; data1_type: any; data1_value: any; unit: any; }) => {
-        const chipString = `${chipData.data1_time} ${chipData.data1_type}: ${chipData.data1_value} ${chipData.unit}`;
+    const handleChipClick = (chipData: { data1_time: any; data1_type: any; data1_value: any; unit: any; category: any; }) => {
+        const chipString = `${chipData.category} ${chipData.data1_time} ${chipData.data1_type}: ${chipData.data1_value} ${chipData.unit}`;
         if (selectedData.includes(chipString)) {
             setSelectedData(selectedData.filter(data => data !== chipString)); // Remove from selectedData
         } else {
@@ -52,21 +56,39 @@ export default function DataInsights({ importantData, loadingDataSuggestions, se
     };
 
     // Function to handle generating the initial report
-    const handleOutlineGenerator = () => {
+    const handleOutlineGenerator = async () => {
+        setOutline("AI magic is happening ... this should only take a few seconds")
+        // Combine the transcript and the selected data into a single string
+        const combinedData = `${transcript} Selected Data: ${selectedData.join(', ')}`;
 
-        setOutline("AI generated this magical outline")
-    }
+        try {
+            // Make a POST request to your endpoint with the combined data
+            const response = await axios.post('http://127.0.0.1:5000/create_report', { combinedData });
+
+            // Assuming the response contains the generated outline in the 'data' property
+            console.log(response);
+            const generatedOutline = response.data.result;
+
+            // Update the outline state with the generated outline
+            setOutline(generatedOutline);
+        } catch (error) {
+            console.error('Error generating outline:', error);
+            // Optionally, update the outline state to indicate an error
+            setOutline('Error generating outline. Please try again.');
+        }
+    };
+
 
     return (
         <Card color='primary' sx={{ margin: 2, marginRight: 0, justifyItems: 'top', alignItems: 'center' }}>
             <Typography level='h3'>Data Insights</Typography>
 
             {loadingDataSuggestions ? (
-                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '56vh' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '52vh' }}>
                     <CircularProgress />
                 </Box>
             ) : (
-                <Sheet sx={{ width: '100%', minHeight: '56vh', overflowY: 'auto' }}>
+                <Sheet sx={{ width: '100%', minHeight: '52vh', maxHeight: '52vh', overflowY: 'auto' }}>
                     {enrichedData && enrichedData.length > 0 ? (
                         <>
                             <Typography>Select data chips to include them in the AI report outline</Typography>
@@ -76,7 +98,7 @@ export default function DataInsights({ importantData, loadingDataSuggestions, se
                                     <Sheet sx={{ alignItems: 'center', overflowX: 'auto', flexWrap: 'nowrap' }}>
                                         <Chip
                                             size="lg"
-                                            variant={selectedData.includes(`${data.data1_time} ${data.data1_type}: ${data.data1_value} ${data.unit}`) ? 'solid' : 'soft'}
+                                            variant={selectedData.includes(`${data.category} ${data.data1_time} ${data.data1_type}: ${data.data1_value} ${data.unit}`) ? 'solid' : 'soft'}
                                             color='primary'
                                             sx={{ marginRight: 1, marginBottom: 1 }}
                                             onClick={() => handleChipClick(data)}
@@ -85,10 +107,10 @@ export default function DataInsights({ importantData, loadingDataSuggestions, se
                                         </Chip>
                                         <Chip
                                             size="lg"
-                                            variant={selectedData.includes(`${data.data2_time} ${data.data2_type}: ${data.data2_value} ${data.unit}`) ? 'solid' : 'soft'}
+                                            variant={selectedData.includes(`${data.category} ${data.data2_time} ${data.data2_type}: ${data.data2_value} ${data.unit}`) ? 'solid' : 'soft'}
                                             color='primary'
                                             sx={{ marginRight: 0, marginBottom: 1 }}
-                                            onClick={() => handleChipClick({ ...data, data1_time: data.data2_time, data1_type: data.data2_type, data1_value: data.data2_value })}
+                                            onClick={() => handleChipClick({ ...data, category: data.category, data1_time: data.data2_time, data1_type: data.data2_type, data1_value: data.data2_value })}
                                         >
                                             {data.data2_time} {data.data2_type}: {data.data2_value} {data.unit}
                                         </Chip>

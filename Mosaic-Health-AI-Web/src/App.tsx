@@ -41,7 +41,7 @@ export default function App() {
       <Box sx={{ display: 'flex', width: '100%' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, maxWidth: '50%', minWidth: '50%' }}>
           <Transcription transcript={transcript} setTranscript={setTranscript} setImportantData={setImportantData} setLoadingDataSuggestions={setLoadingDataSuggestions} />
-          <Data_Insights importantData={importantData} setOutline={setOutline} loadingDataSuggestions={loadingDataSuggestions} />
+          <Data_Insights importantData={importantData} setOutline={setOutline} loadingDataSuggestions={loadingDataSuggestions} transcript={transcript} />
         </Box>
         <Report outline={outline} />
       </Box>
