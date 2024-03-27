@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
-import { Box, Button, Card, Typography } from '@mui/joy';
+import { Box, Button, Card, Modal, ModalClose, Sheet, Typography } from '@mui/joy';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
+import React from 'react';
 
 // Define the props type
 interface TranscriptionProps {
@@ -11,18 +13,41 @@ interface TranscriptionProps {
   setLoadingDataSuggestions: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+// Define a type for the displayed words
+type DisplayedWord = {
+  id: string;
+  word: string;
+  delay: number;
+};
+
 function Transcription({ transcript, setTranscript, setImportantData, setLoadingDataSuggestions }: TranscriptionProps) {
+
+  const transcriptRef = useRef(transcript);
 
   const [isListening, setIsListening] = useState(false);
   const [interimTranscript, setInterimTranscript] = useState('');
-  const transcriptRef = useRef(transcript);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const [displayedWords, setDisplayedWords] = useState<DisplayedWord[]>([]);
+  const [transcriptModalOpen, setTranscriptModalOpan] = useState(false);
+  const [copyButtonText, setCopyButtonText] = useState('Copy Report');
+
+  // function to handle clicking the 'copy text' button
+  const handleCopyText = async () => {
+    try {
+      await navigator.clipboard.writeText(transcript);
+      setCopyButtonText('Report Copied!'); // Update button text on successful copy
+      setTimeout(() => setCopyButtonText('Copy Report'), 2000); // Reset button text after 2 seconds
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  };
+
 
   // Update the ref whenever the transcript state changes
   useEffect(() => {
     transcriptRef.current = transcript;
   }, [transcript]);
 
+  // Speech recognition hook
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (SpeechRecognition) {
@@ -35,16 +60,26 @@ function Transcription({ transcript, setTranscript, setImportantData, setLoading
       };
 
       recognition.onresult = (event: any) => {
-        setInterimTranscript("");
+        //setInterimTranscript("");
         for (var i = event.resultIndex; i < event.results.length; i++) {
           var transcript = event.results[i][0].transcript;
           transcript.replace("\n", "<br>");
           if (event.results[i].isFinal) {
-            setTranscript((prevTranscript) => prevTranscript + ' ' + transcript + '.');
+
+            // end of a phrase of dictation
+            const finishedPhraseWords = transcript.split(' ').map((word: string, index: number) => {
+              return {
+                id: uuidv4(),
+                word,
+                delay: index * 0.2 // Calculate the delay based on the index
+              };
+            });
+            setDisplayedWords(finishedPhraseWords);
+            setTranscript((prevTranscript) => prevTranscript + ' ' + transcript + '.\n');
             transcriptRef.current = transcript;
           }
           else {
-            setInterimTranscript((prevTranscript) => prevTranscript + ' ' + transcript);
+            setInterimTranscript(transcript);
           }
         }
       };
@@ -76,16 +111,12 @@ function Transcription({ transcript, setTranscript, setImportantData, setLoading
     }
   }, [isListening, setTranscript, setImportantData, setLoadingDataSuggestions]);
 
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [transcript, interimTranscript]);
-
   return (
-    <Card color='primary' sx={{ justifyContent: 'center', height: '50', display: 'flex', flexDirection: 'row' }}>
+    <Card color='primary' sx={{ justifyContent: 'center', height: '100px', maxHeight: '80px', display: 'flex', flexDirection: 'row' }}>
       <Button
         sx={{
-          minWidth: 200,
-          maxWidth: 200,
+          minWidth: 100,
+          maxWidth: 100,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -94,41 +125,93 @@ function Transcription({ transcript, setTranscript, setImportantData, setLoading
       >
         <Box component="span" sx={{ display: 'flex', alignItems: 'center' }}>
           {isListening ? (
+            // End Transcription Button
             <>
-              {/* 'Transcribing...' Button */}
               <Box
                 component="img"
                 src="/public/assets/speech-animation.gif" // Your GIF file path
                 sx={{ width: 30, height: 'auto', marginRight: 1 }} // Adjust the size as needed
-                alt="Transcribing"
+                alt="End"
               />
-              Stop Transcription
+              End
             </>
           ) : (
+            // Start Transcription' Button
             <>
-              {/* 'Start Transcription' Button */}
               <Box
                 component={KeyboardVoiceIcon}
                 sx={{ width: 30, height: 30, marginRight: 1 }} // Match the size and margin with the GIF
               />
-              Start Transcription
+              Start
             </>
           )}
         </Box>
       </Button>
-      <Card sx={{ flexGrow: 1, overflowY: 'auto', paddingBottom: 0 }}>
-        <Typography sx={{ marginBottom: 0, paddingBottom: 0 }}>{transcript} {interimTranscript}</Typography>
-        {/* Invisible div at the bottom of the Card content */}
-        <div
-          ref={messagesEndRef}
-          style={{
-            height: 0, // Set height to 0
-            margin: 0, // Remove margins
-            padding: 0, // Remove padding
-            border: 'none', // Ensure there's no border
-          }}
-        />
+      <Card sx={{ flexGrow: 1, justifyContent: 'flex-start', flexDirection: 'row', gap: 1, padding: 1 }}>
+        {displayedWords.map(({ id, word, delay }) => (
+          <Box
+            key={id} // Unique key for each word to trigger animations correctly
+            component="span"
+            sx={{
+              animation: `fadein 1s ${delay * 0.3}s both`,
+              '@keyframes fadein': {
+                from: { opacity: 0 },
+                to: { opacity: 1 },
+              },
+              alignSelf: 'center'
+            }}
+          >
+            {word}
+          </Box>
+        ))}
       </Card>
+      <Button variant="outlined" color="neutral" onClick={() => setTranscriptModalOpan(true)}>
+        Transcript
+      </Button>
+      <Modal
+        aria-labelledby="modal-title"
+        aria-describedby="modal-desc"
+        open={transcriptModalOpen}
+        onClose={() => setTranscriptModalOpan(false)}
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      >
+        <Sheet
+          variant="outlined"
+          sx={{
+            maxWidth: 500,
+            minWidth: 500,
+            borderRadius: 'md',
+            p: 3,
+            boxShadow: 'lg',
+          }}
+        >
+          <ModalClose variant="plain" sx={{ m: 1 }} />
+          <Typography
+            level="h2"
+            mb={1}
+          >
+            Transcript
+          </Typography>
+          <Card variant='soft' sx={{ margin: '1' }}>
+            <Typography id="modal-desc" textColor="text.tertiary" sx={{ maxHeight: 400, overflowY: 'auto' }}>
+              {transcript ? (
+                // we have to do this weirdness with fragments to get multiline text in the transcript
+                transcript.split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))
+              ) : (
+                "Start dictation then view your full transcript here"
+              )}
+            </Typography>
+          </Card>
+          <Button variant="soft" onClick={handleCopyText} sx={{ marginTop: 2, justifySelf: 'center', width: '100%' }}>
+            {copyButtonText}
+          </Button>
+        </Sheet>
+      </Modal>
     </Card >
   );
 };
